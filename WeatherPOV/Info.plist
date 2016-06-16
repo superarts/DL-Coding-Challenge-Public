@@ -28,6 +28,15 @@
 	<string>Main</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Please allow this app to get the weather report of your current location.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>MuseoSans_500.otf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -541,10 +541,10 @@ extension UIFont {
 	class func print_all() {
 		let fontFamilyNames = UIFont.familyNames()
 		for familyName in fontFamilyNames {
-			print("------------------------------", terminator: "")
-			print("Font Family Name = [\(familyName)]", terminator: "")
-			let names = UIFont.fontNamesForFamilyName(familyName )
-			print("Font Names = [\(names)]", terminator: "")
+			print("------------------------------", terminator: "\n")
+			print("Font Family Name = [\(familyName)]", terminator: "\n")
+			let names = UIFont.fontNamesForFamilyName(familyName)
+			print("Font Names = [\(names)]", terminator: "\n")
 		}
 	}
 }

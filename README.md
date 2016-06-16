@@ -4,6 +4,15 @@
 
 - Added LFramework to parse HTTP requests into native objects. It's not available as a `pod` yet so sources are added.
 
+## Features
+
+- Daily forecast
+- Discussion
+
+## Issues
+
+In [Sydney](https://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/-33.863400,151.211000.json), location info shows Chapin US instead of Sydney AU. [San Francisco](http://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/37.776289,-122.395234.json) shows the correct info. Unfortunately I'll have to use weather station instead of location.
+
 # DL-Coding-Challenge
 Welcome to the Detroit Labs coding challenge. 
 

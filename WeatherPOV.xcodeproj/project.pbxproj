@@ -20,6 +20,7 @@
 		B3F8C6921D12C43000A997A5 /* LKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C68C1D12C43000A997A5 /* LKeychain.swift */; };
 		B3F8C6931D12C43000A997A5 /* LThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C68D1D12C43000A997A5 /* LThemeManager.swift */; };
 		B3F8C6941D12C43000A997A5 /* LTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C68E1D12C43000A997A5 /* LTime.swift */; };
+		B3F8C6991D12EF6300A997A5 /* MuseoSans_500.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6981D12EDB900A997A5 /* MuseoSans_500.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		B3F8C68C1D12C43000A997A5 /* LKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKeychain.swift; sourceTree = "<group>"; };
 		B3F8C68D1D12C43000A997A5 /* LThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LThemeManager.swift; sourceTree = "<group>"; };
 		B3F8C68E1D12C43000A997A5 /* LTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTime.swift; sourceTree = "<group>"; };
+		B3F8C6981D12EDB900A997A5 /* MuseoSans_500.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoSans_500.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		B3F8C6571D12C2CF00A997A5 /* WeatherPOV */ = {
 			isa = PBXGroup;
 			children = (
+				B3F8C6951D12EC8C00A997A5 /* data */,
 				B3F8C6861D12C43000A997A5 /* LFramework */,
 				B3F8C6581D12C2CF00A997A5 /* AppDelegate.swift */,
 				B3F8C65A1D12C2CF00A997A5 /* ViewController.swift */,
@@ -165,6 +168,14 @@
 				B3F8C68E1D12C43000A997A5 /* LTime.swift */,
 			);
 			path = LFoundation;
+			sourceTree = "<group>";
+		};
+		B3F8C6951D12EC8C00A997A5 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6981D12EDB900A997A5 /* MuseoSans_500.otf */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 			files = (
 				B3F8C6631D12C2D000A997A5 /* LaunchScreen.storyboard in Resources */,
 				B3F8C6601D12C2D000A997A5 /* Assets.xcassets in Resources */,
+				B3F8C6991D12EF6300A997A5 /* MuseoSans_500.otf in Resources */,
 				B3F8C65E1D12C2CF00A997A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

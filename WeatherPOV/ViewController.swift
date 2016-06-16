@@ -16,6 +16,16 @@ struct WP {
 		static let geolookup = "geolookup/q/"
 		static let forecast = "forecast/q/"
 	}
+	struct utility {
+		static func periodToString(period: Int) -> String {
+			if period == 0 {
+				return "Today"
+			} else if period == 1 {
+				return "Tomorrow"
+			}
+			return String(format: "%zi days later", period)
+		}
+	}
 }
 
 //	MARK: general
@@ -206,7 +216,7 @@ class WPClients {
 	}
 }
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: LFTableController, CLLocationManagerDelegate {
 	var locationManager: CLLocationManager!
 
 	override func viewDidLoad() {
@@ -259,7 +269,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 					if let country = station.country, let city = station.city {
 						WPClients.forecast(country, city: city) {
 							(forecast, error) -> Void in
-							print("\(forecast), \(error)")
+							//print("\(forecast), \(error)")
+							if let days = forecast?.forecast?.txt_forecast?.forecastday {
+								self.reloadTable(days)
+							}
 						}
 					}
 				}
@@ -267,5 +280,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 				LF.alert("Unknown data format from weather service", "Please make sure your app is up to date.")
 			}
 		}
+	}
+
+	func reloadTable(forecastdays: [WPForecastdayModel]) {
+		print("TABLE reload: \(forecastdays)")
+		source.counts = [forecastdays.count]
+		source.func_cell = {
+			(path) -> UITableViewCell in
+			let cell = self.table.dequeueReusableCellWithIdentifier("WPForecastCell") as! WPForecastCell
+			let forecast = forecastdays[path.row]
+			cell.forecast = forecast
+			return cell
+		}
+		table.reloadData()
+	}
+}
+
+class WPForecastCell: UITableViewCell {
+	@IBOutlet var labelTitle:	UILabel!
+	@IBOutlet var labelText:	UILabel!
+	@IBOutlet var labelPeriod:	UILabel!
+	@IBOutlet var imageIcon:	UIImageView!
+	var forecast: WPForecastdayModel!
+	override func layoutSubviews() {
+		labelTitle.text = forecast.title
+		labelText.text = forecast.fcttext
+		labelPeriod.text = WP.utility.periodToString(forecast.period)
+		imageIcon.image_load(forecast.icon_url, clear:true)
 	}
 }
