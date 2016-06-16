@@ -598,10 +598,12 @@ public class LFModel: NSObject {
 							setValue(value, forKey:key)
 						}
 					} else {
+						/*
     					LF.log("WARNING model ignored", key)
     					LF.log("\tdata", dict)
     					LF.log("\tmodel", self)
     					LF.log("WARNING model ignored end of", key)
+						*/
 					}
 					//else { LF.log("no selector", key) }
 				}
