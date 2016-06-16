@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Data Source-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,36 +18,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fAv-49-QGe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fAv-49-QGe">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="LLA-40-1TZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="285"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="360"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sydney" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vna-9u-ufG">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vna-9u-ufG">
                                             <rect key="frame" x="8" y="28" width="584" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="2ga-n5-IiQ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
                                             </userDefinedRuntimeAttributes>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icd-i4-xgD" customClass="iCarousel">
+                                            <rect key="frame" x="8" y="96" width="584" height="256"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="BYZ-38-t0r" id="ea6-w5-4P3"/>
+                                                <outlet property="delegate" destination="BYZ-38-t0r" id="CHT-s8-FXY"/>
+                                            </connections>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="Vna-9u-ufG" secondAttribute="trailing" constant="8" id="AuG-f1-eCm"/>
+                                        <constraint firstAttribute="trailing" secondItem="icd-i4-xgD" secondAttribute="trailing" constant="8" id="L3y-fg-WZ3"/>
+                                        <constraint firstItem="icd-i4-xgD" firstAttribute="leading" secondItem="LLA-40-1TZ" secondAttribute="leading" constant="8" id="UPU-Iw-4Il"/>
                                         <constraint firstItem="Vna-9u-ufG" firstAttribute="leading" secondItem="LLA-40-1TZ" secondAttribute="leading" constant="8" id="jvX-ed-TNr"/>
                                         <constraint firstItem="Vna-9u-ufG" firstAttribute="top" secondItem="LLA-40-1TZ" secondAttribute="top" constant="28" id="kIB-5L-soG"/>
+                                        <constraint firstAttribute="bottom" secondItem="icd-i4-xgD" secondAttribute="bottom" constant="8" id="sOC-Px-sM9"/>
+                                        <constraint firstItem="icd-i4-xgD" firstAttribute="top" secondItem="Vna-9u-ufG" secondAttribute="bottom" constant="8" id="xqo-rp-a2B"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="gradient_top">
+                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WPForecastCell" rowHeight="96" id="ag9-Fe-djE" customClass="WPForecastCell" customModule="WeatherPOV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="313" width="600" height="96"/>
+                                        <rect key="frame" x="0.0" y="388" width="600" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ag9-Fe-djE" id="LAF-FN-H7b">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="95.5"/>
@@ -132,6 +149,8 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="carousel" destination="icd-i4-xgD" id="zPo-4N-dH9"/>
+                        <outlet property="labelCity" destination="Vna-9u-ufG" id="BKE-xb-oNM"/>
                         <outlet property="table" destination="fAv-49-QGe" id="2vV-JL-Asa"/>
                     </connections>
                 </viewController>

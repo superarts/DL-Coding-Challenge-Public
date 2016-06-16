@@ -217,6 +217,7 @@ class WPClients {
 }
 
 class ViewController: LFTableController, CLLocationManagerDelegate {
+	@IBOutlet var labelCity: UILabel!
 	var locationManager: CLLocationManager!
 
 	override func viewDidLoad() {
@@ -266,12 +267,16 @@ class ViewController: LFTableController, CLLocationManagerDelegate {
 					//	Use the first (closest) weather station to get forecast.
 					//	TODO: do some calculation to see if it's really the closest one
 					let station = stations[0]
+					self.labelCity.text = station.city
 					if let country = station.country, let city = station.city {
 						WPClients.forecast(country, city: city) {
 							(forecast, error) -> Void in
 							//print("\(forecast), \(error)")
 							if let days = forecast?.forecast?.txt_forecast?.forecastday {
 								self.reloadTable(days)
+							}
+							if let days = forecast?.forecast?.simpleforecast?.forecastday {
+								self.reloadCarousel(days)
 							}
 						}
 					}
@@ -294,6 +299,51 @@ class ViewController: LFTableController, CLLocationManagerDelegate {
 		}
 		table.reloadData()
 	}
+
+//	MARK: carousel
+
+	@IBOutlet var carousel: iCarousel!
+	var carouselDays: [WPForecastdayModel]?
+
+	func reloadCarousel(forecastdays: [WPForecastdayModel]) {
+		carouselDays = forecastdays
+        carousel.type = .InvertedTimeMachine
+		carousel.reloadData()
+	}
+
+    func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
+		if let count = carouselDays?.count {
+			return count
+		}
+		return 0
+    }
+
+    func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
+        var label: UILabel
+        var itemView: UIView
+
+        if (view == nil) {
+            itemView = UIView(frame:CGRect(x:0, y:0, width:200, height:200))
+            itemView.contentMode = .Center
+			itemView.enable_border(width:1, color:.blueColor(), radius:5, is_circle:false)
+            
+            label = UILabel(frame:itemView.bounds)
+            label.backgroundColor = .whiteColor()
+            label.textAlignment = .Center
+            label.font = label.font.fontWithSize(50)
+            label.tag = 1
+            itemView.addSubview(label)
+        }
+        else
+        {
+            itemView = view!
+            label = itemView.viewWithTag(1) as! UILabel!
+        }
+        
+        label.text = carouselDays?[index].date?.weekday
+        
+        return itemView
+    }
 }
 
 class WPForecastCell: UITableViewCell {
