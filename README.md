@@ -1,3 +1,9 @@
+# About branch `develop/leoliu`
+
+## Modules
+
+- Added LFramework to parse HTTP requests into native objects. It's not available as a `pod` yet so sources are added.
+
 # DL-Coding-Challenge
 Welcome to the Detroit Labs coding challenge. 
 

@@ -14,6 +14,12 @@
 		B3F8C6631D12C2D000A997A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6611D12C2D000A997A5 /* LaunchScreen.storyboard */; };
 		B3F8C66E1D12C2D000A997A5 /* WeatherPOVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C66D1D12C2D000A997A5 /* WeatherPOVTests.swift */; };
 		B3F8C6791D12C2D000A997A5 /* WeatherPOVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6781D12C2D000A997A5 /* WeatherPOVUITests.swift */; };
+		B3F8C68F1D12C43000A997A5 /* LClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6881D12C43000A997A5 /* LClient.swift */; };
+		B3F8C6901D12C43000A997A5 /* LConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C68A1D12C43000A997A5 /* LConst.swift */; };
+		B3F8C6911D12C43000A997A5 /* LFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C68B1D12C43000A997A5 /* LFoundation.swift */; };
+		B3F8C6921D12C43000A997A5 /* LKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C68C1D12C43000A997A5 /* LKeychain.swift */; };
+		B3F8C6931D12C43000A997A5 /* LThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C68D1D12C43000A997A5 /* LThemeManager.swift */; };
+		B3F8C6941D12C43000A997A5 /* LTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C68E1D12C43000A997A5 /* LTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		B3F8C6741D12C2D000A997A5 /* WeatherPOVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherPOVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F8C6781D12C2D000A997A5 /* WeatherPOVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPOVUITests.swift; sourceTree = "<group>"; };
 		B3F8C67A1D12C2D000A997A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F8C6881D12C43000A997A5 /* LClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LClient.swift; sourceTree = "<group>"; };
+		B3F8C68A1D12C43000A997A5 /* LConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LConst.swift; sourceTree = "<group>"; };
+		B3F8C68B1D12C43000A997A5 /* LFoundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFoundation.swift; sourceTree = "<group>"; };
+		B3F8C68C1D12C43000A997A5 /* LKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKeychain.swift; sourceTree = "<group>"; };
+		B3F8C68D1D12C43000A997A5 /* LThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LThemeManager.swift; sourceTree = "<group>"; };
+		B3F8C68E1D12C43000A997A5 /* LTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,7 @@
 		B3F8C6571D12C2CF00A997A5 /* WeatherPOV */ = {
 			isa = PBXGroup;
 			children = (
+				B3F8C6861D12C43000A997A5 /* LFramework */,
 				B3F8C6581D12C2CF00A997A5 /* AppDelegate.swift */,
 				B3F8C65A1D12C2CF00A997A5 /* ViewController.swift */,
 				B3F8C65C1D12C2CF00A997A5 /* Main.storyboard */,
@@ -123,6 +136,35 @@
 				B3F8C67A1D12C2D000A997A5 /* Info.plist */,
 			);
 			path = WeatherPOVUITests;
+			sourceTree = "<group>";
+		};
+		B3F8C6861D12C43000A997A5 /* LFramework */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6871D12C43000A997A5 /* LClient */,
+				B3F8C6891D12C43000A997A5 /* LFoundation */,
+			);
+			path = LFramework;
+			sourceTree = "<group>";
+		};
+		B3F8C6871D12C43000A997A5 /* LClient */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6881D12C43000A997A5 /* LClient.swift */,
+			);
+			path = LClient;
+			sourceTree = "<group>";
+		};
+		B3F8C6891D12C43000A997A5 /* LFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C68A1D12C43000A997A5 /* LConst.swift */,
+				B3F8C68B1D12C43000A997A5 /* LFoundation.swift */,
+				B3F8C68C1D12C43000A997A5 /* LKeychain.swift */,
+				B3F8C68D1D12C43000A997A5 /* LThemeManager.swift */,
+				B3F8C68E1D12C43000A997A5 /* LTime.swift */,
+			);
+			path = LFoundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F8C6921D12C43000A997A5 /* LKeychain.swift in Sources */,
+				B3F8C6941D12C43000A997A5 /* LTime.swift in Sources */,
+				B3F8C68F1D12C43000A997A5 /* LClient.swift in Sources */,
 				B3F8C65B1D12C2CF00A997A5 /* ViewController.swift in Sources */,
+				B3F8C6931D12C43000A997A5 /* LThemeManager.swift in Sources */,
+				B3F8C6901D12C43000A997A5 /* LConst.swift in Sources */,
+				B3F8C6911D12C43000A997A5 /* LFoundation.swift in Sources */,
 				B3F8C6591D12C2CF00A997A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +532,7 @@
 				B3F8C67F1D12C2D000A997A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3F8C6801D12C2D000A997A5 /* Build configuration list for PBXNativeTarget "WeatherPOVTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +541,7 @@
 				B3F8C6821D12C2D000A997A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3F8C6831D12C2D000A997A5 /* Build configuration list for PBXNativeTarget "WeatherPOVUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +550,7 @@
 				B3F8C6851D12C2D000A997A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
