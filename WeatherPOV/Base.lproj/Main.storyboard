@@ -624,12 +624,15 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pa3-Ti-yex">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="96" width="600" height="395"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enable_mask_circle" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yh-4X-bax">
                                 <rect key="frame" x="8" y="28" width="584" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="SOb-6n-Arg"/>
+                                    <constraint firstAttribute="height" constant="60" id="T8H-HZ-dFH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -643,13 +646,13 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Pa3-Ti-yex" firstAttribute="top" secondItem="Ruh-uU-Ast" secondAttribute="top" id="Snu-bh-TSa"/>
-                            <constraint firstItem="2Yh-4X-bax" firstAttribute="top" secondItem="6a2-ip-Usa" secondAttribute="bottom" constant="8" id="ca3-u2-91k"/>
-                            <constraint firstAttribute="trailing" secondItem="2Yh-4X-bax" secondAttribute="trailing" constant="8" id="i0h-Ds-3Yf"/>
-                            <constraint firstItem="2Yh-4X-bax" firstAttribute="leading" secondItem="Ruh-uU-Ast" secondAttribute="leading" constant="8" id="i8E-9P-pV8"/>
-                            <constraint firstItem="zGi-Vf-bFR" firstAttribute="top" secondItem="Pa3-Ti-yex" secondAttribute="bottom" id="nva-70-5Ug"/>
-                            <constraint firstItem="Pa3-Ti-yex" firstAttribute="leading" secondItem="Ruh-uU-Ast" secondAttribute="leading" id="p9H-SF-kiC"/>
-                            <constraint firstAttribute="trailing" secondItem="Pa3-Ti-yex" secondAttribute="trailing" id="pea-aP-nXL"/>
+                            <constraint firstItem="2Yh-4X-bax" firstAttribute="top" secondItem="6a2-ip-Usa" secondAttribute="bottom" constant="8" id="5YA-ix-vy3"/>
+                            <constraint firstItem="Pa3-Ti-yex" firstAttribute="leading" secondItem="Ruh-uU-Ast" secondAttribute="leading" id="D2V-vI-2wS"/>
+                            <constraint firstItem="Pa3-Ti-yex" firstAttribute="top" secondItem="2Yh-4X-bax" secondAttribute="bottom" constant="8" id="Dg1-sS-yIg"/>
+                            <constraint firstAttribute="trailing" secondItem="2Yh-4X-bax" secondAttribute="trailing" constant="8" id="K9A-kL-eAd"/>
+                            <constraint firstItem="2Yh-4X-bax" firstAttribute="leading" secondItem="Ruh-uU-Ast" secondAttribute="leading" constant="8" id="nzn-7Z-HJL"/>
+                            <constraint firstAttribute="trailing" secondItem="Pa3-Ti-yex" secondAttribute="trailing" id="orM-QU-2ba"/>
+                            <constraint firstItem="zGi-Vf-bFR" firstAttribute="top" secondItem="Pa3-Ti-yex" secondAttribute="bottom" constant="60" id="xoY-XQ-wJF"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="gradient_top">

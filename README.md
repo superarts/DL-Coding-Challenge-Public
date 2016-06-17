@@ -7,6 +7,7 @@
 ## Features
 
 - Daily forecast
+- Radar
 - Discussion
 
 ## Issues
@@ -16,7 +17,7 @@ In [Sydney](https://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/-33.86
 ## Time log
 
 6/16 21:00-2:00
-6/17 19:40-
+6/17 19:40-1:00
 
 # DL-Coding-Challenge
 Welcome to the Detroit Labs coding challenge. 
