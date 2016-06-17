@@ -9,7 +9,11 @@
 import UIKit
 import MapKit
 
+//	WP: Project WeatherPOV
 struct WP {
+	static let storyboard_main = UIStoryboard(name: "Main", bundle: nil)
+	static let storyboard = storyboard_main
+
 	struct api {
 		static let key = "dc60d98175ba0199"
 		static let root = "https://api.wunderground.com/api/" + key + "/"
@@ -18,14 +22,18 @@ struct WP {
 	}
 	struct utility {
 		static func periodToString(period: Int) -> String {
-			if period == 0 {
+			if period == 1 {
 				return "Today"
-			} else if period == 1 {
+			} else if period == 2 {
 				return "Tomorrow"
 			}
-			return String(format: "%zi days later", period)
+			return String(format: "%zi days later", period - 1)
 		}
 	}
+}
+
+class WPView: UIView {
+    @IBOutlet var parentViewController: UIViewController?
 }
 
 //	MARK: general
@@ -148,11 +156,14 @@ class WPForecastdayModel: LFModel {
 	var period:			Int = 0
 	var icon:			String?
 	var icon_url:		String?
+	var pop:			Int = 0
+
+	//	text forecast
 	var title:			String?
 	var fcttext:		String?
 	var fcttext_metric:	String?
-	var pop:			Int = 0
 
+	//	simple forecast
 	var date:			WPDateModel?
 	var high:			WPTemperatureModel?
 	var low:			WPTemperatureModel?
@@ -179,7 +190,7 @@ class WPTxtForecastModel: LFModel {
 
 //	Although named as "simple forecast", WPForecastdayModel in
 //	WPSimpleForecastModel actually contains more information than
-//	the ones in WPTxtForecast.
+//	the ones in WPTxtForecast (text forecast).
 class WPSimpleForecastModel: LFModel {
 	var forecastday: [WPForecastdayModel]?
 }
@@ -319,43 +330,70 @@ class ViewController: LFTableController, CLLocationManagerDelegate {
     }
 
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
-        var label: UILabel
-        var itemView: UIView
-
+		var controller: WPForecastThumbnailController!
         if (view == nil) {
-            itemView = UIView(frame:CGRect(x:0, y:0, width:200, height:200))
-            itemView.contentMode = .Center
-			itemView.enable_border(width:1, color:.blueColor(), radius:5, is_circle:false)
-            
-            label = UILabel(frame:itemView.bounds)
-            label.backgroundColor = .whiteColor()
-            label.textAlignment = .Center
-            label.font = label.font.fontWithSize(50)
-            label.tag = 1
-            itemView.addSubview(label)
-        }
-        else
-        {
-            itemView = view!
-            label = itemView.viewWithTag(1) as! UILabel!
-        }
-        
-        label.text = carouselDays?[index].date?.weekday
-        
-        return itemView
+			controller = WP.storyboard.instantiateViewControllerWithIdentifier("WPForecastThumbnailController") as! WPForecastThumbnailController
+			controller.view.frame = CGRect(x:0, y:0, width:200, height:200)
+        } else if let view = view as? WPView {
+			controller = view.parentViewController as! WPForecastThumbnailController 
+		}
+		controller.forecast = carouselDays?[index]
+		controller.reload()
+        return controller.view
     }
+
+	func carousel(carousel: iCarousel, didSelectItemAtIndex index: Int) {
+		LF.log("xx", carouselDays?[index])
+	}
 }
 
 class WPForecastCell: UITableViewCell {
 	@IBOutlet var labelTitle:	UILabel!
 	@IBOutlet var labelText:	UILabel!
-	@IBOutlet var labelPeriod:	UILabel!
+	@IBOutlet var labelPop:		UILabel!
 	@IBOutlet var imageIcon:	UIImageView!
 	var forecast: WPForecastdayModel!
+
 	override func layoutSubviews() {
-		labelTitle.text = forecast.title
-		labelText.text = forecast.fcttext
-		labelPeriod.text = WP.utility.periodToString(forecast.period)
+		if let title = forecast.title {
+			labelTitle.text = title
+		} else {
+			labelTitle.text = "Unknown"
+		}
+		if let text = forecast.fcttext {
+			labelText.text = text
+		} else {
+			labelText.text = "Unknown"
+		}
+		labelPop.text = String(format: "%i%%",forecast.pop)
+		imageIcon.image_load(forecast.icon_url, clear:true)
+	}
+}
+
+class WPForecastThumbnailController: UIViewController {
+	@IBOutlet var labelWeekday:		UILabel!
+	@IBOutlet var labelTemperature:	UILabel!
+	@IBOutlet var labelCondition:	UILabel!
+	@IBOutlet var imageIcon:	UIImageView!
+	var forecast: WPForecastdayModel!
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		view.enable_border(width:2, color:UIColor(rgb: 0xaaddff), radius: 10)
+	}
+	func reload() {
+		super.viewDidLoad()
+		if let weekday = forecast.date?.weekday {
+			labelWeekday.text = weekday
+		} else {
+			labelWeekday.text = "Unknown"
+		}
+		if let low = forecast.low?.fahrenheit, let high = forecast.high?.fahrenheit {
+			labelTemperature.text = String(format: "%.0fºF - %.0fºF", low, high)
+		} else {
+			labelTemperature.text = "Unknown"
+		}
+		labelCondition.text = WP.utility.periodToString(forecast.period)
 		imageIcon.image_load(forecast.icon_url, clear:true)
 	}
 }

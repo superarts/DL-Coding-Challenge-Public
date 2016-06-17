@@ -20,7 +20,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fAv-49-QGe">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="LLA-40-1TZ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="360"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -118,6 +118,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="Gnv-I7-Nbm" firstAttribute="leading" secondItem="LAF-FN-H7b" secondAttribute="leadingMargin" id="2z5-n1-Ylk"/>
                                                 <constraint firstItem="Gnv-I7-Nbm" firstAttribute="top" secondItem="LAF-FN-H7b" secondAttribute="topMargin" id="7B5-tk-exA"/>
@@ -132,7 +133,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageIcon" destination="Gnv-I7-Nbm" id="vnr-nr-bQX"/>
-                                            <outlet property="labelPeriod" destination="dPO-VM-Y9U" id="cjO-un-ucW"/>
+                                            <outlet property="labelPop" destination="dPO-VM-Y9U" id="EqQ-UW-cgH"/>
                                             <outlet property="labelText" destination="udT-jB-lyM" id="AFY-L2-A7r"/>
                                             <outlet property="labelTitle" destination="yjn-Sj-hER" id="xxP-4B-68g"/>
                                         </connections>
@@ -157,6 +158,68 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885" y="476"/>
+        </scene>
+        <!--Parent View Controller-->
+        <scene sceneID="oOy-Fc-tuk">
+            <objects>
+                <viewController storyboardIdentifier="WPForecastThumbnailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oG6-C5-S3N" customClass="WPForecastThumbnailController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lcu-bN-Cc1"/>
+                        <viewControllerLayoutGuide type="bottom" id="TpU-qE-u60"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PWC-74-UXC" customClass="WPView" customModule="WeatherPOV" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Jvf-gJ-nok">
+                                <rect key="frame" x="56" y="20" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="55ºF - 71ºF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Veh-FB-NwQ">
+                                <rect key="frame" x="16" y="77" width="168" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chance of Rain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="WAV-mq-XC2">
+                                <rect key="frame" x="16" y="148" width="168" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tFj-Af-OVu">
+                                <rect key="frame" x="8" y="20" width="40" height="40"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="parentViewController" destination="oG6-C5-S3N" id="zSb-FC-hRR"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="200"/>
+                    <connections>
+                        <outlet property="imageIcon" destination="tFj-Af-OVu" id="60u-by-s5e"/>
+                        <outlet property="labelCondition" destination="WAV-mq-XC2" id="SQa-l7-mJU"/>
+                        <outlet property="labelTemperature" destination="Veh-FB-NwQ" id="nXC-W5-Ilk"/>
+                        <outlet property="labelWeekday" destination="Jvf-gJ-nok" id="iFp-0y-1aM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gx4-Sl-nSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="-44"/>
         </scene>
     </scenes>
 </document>
