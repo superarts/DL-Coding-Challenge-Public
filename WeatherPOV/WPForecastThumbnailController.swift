@@ -31,7 +31,7 @@ class WPForecastThumbnailController: UIViewController {
 			labelCondition.text = "Unknown"
 		}
 		labelPeriod.text = WP.periodToString(forecast.period)
-		labelPop.text = String(format: "%@%%", forecast.popPercentage)
+		labelPop.text = forecast.popPercentage
 		imageIcon.image_load(forecast.icon_url, clear:true)
 	}
 }

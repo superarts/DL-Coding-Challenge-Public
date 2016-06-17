@@ -28,6 +28,7 @@
 		B3F8C6A41D142D5300A997A5 /* WPModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69F1D142D5300A997A5 /* WPModels.swift */; };
 		B3F8C6A51D142D5300A997A5 /* WPSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */; };
 		B3F8C6A91D1433B100A997A5 /* WPForecastDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */; };
+		B3F8C6AB1D14460100A997A5 /* WPRadarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6AA1D14460100A997A5 /* WPRadarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		B3F8C69F1D142D5300A997A5 /* WPModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPModels.swift; sourceTree = "<group>"; };
 		B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPSettingController.swift; sourceTree = "<group>"; };
 		B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPForecastDetailController.swift; sourceTree = "<group>"; };
+		B3F8C6AA1D14460100A997A5 /* WPRadarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPRadarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */,
 				B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */,
 				B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */,
+				B3F8C6AA1D14460100A997A5 /* WPRadarController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				B3F8C68F1D12C43000A997A5 /* LClient.swift in Sources */,
 				B3F8C6931D12C43000A997A5 /* LThemeManager.swift in Sources */,
 				B3F8C6901D12C43000A997A5 /* LConst.swift in Sources */,
+				B3F8C6AB1D14460100A997A5 /* WPRadarController.swift in Sources */,
 				B3F8C6911D12C43000A997A5 /* LFoundation.swift in Sources */,
 				B3F8C6A11D142D5300A997A5 /* WPClients.swift in Sources */,
 				B3F8C6A51D142D5300A997A5 /* WPSettingController.swift in Sources */,

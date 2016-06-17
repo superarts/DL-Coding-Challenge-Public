@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CCY-u9-bEf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Xo-kS-fdM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nj3-q0-bdH">
+            <objects>
+                <tabBarController id="4Xo-kS-fdM" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="I6O-qo-TEi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="CCY-u9-bEf" kind="relationship" relationship="viewControllers" id="jUA-O1-Bdb"/>
+                        <segue destination="az2-hM-RXr" kind="relationship" relationship="viewControllers" id="ZBN-sU-Ksx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIF-Bq-dj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="-166"/>
+        </scene>
         <!--Data Source-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -34,7 +52,7 @@ Please enable location service and make sure you're connected to internet.</stri
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fAv-49-QGe">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="LLA-40-1TZ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="360"/>
@@ -48,6 +66,8 @@ Please enable location service and make sure you're connected to internet.</stri
                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.0" green="0.37337798729999999" blue="0.78257181190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="0.0" height="1"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
                                             </userDefinedRuntimeAttributes>
@@ -395,7 +415,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="unknown" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S8A-2V-h3F">
-                                                    <rect key="frame" x="526" y="14" width="59" height="17"/>
+                                                    <rect key="frame" x="526.5" y="14" width="58.5" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -574,10 +594,11 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
             </objects>
             <point key="canvasLocation" x="1449" y="1505"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Forecast-->
         <scene sceneID="Whg-WB-i0N">
             <objects>
                 <navigationController navigationBarHidden="YES" id="CCY-u9-bEf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Forecast" id="dOg-U2-hkY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CDZ-ew-M0n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -589,6 +610,62 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sew-UR-99g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="622" y="746"/>
+        </scene>
+        <!--Radar-->
+        <scene sceneID="KX3-p5-uYq">
+            <objects>
+                <viewController storyboardIdentifier="WPRadarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="az2-hM-RXr" customClass="WPRadarController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6a2-ip-Usa"/>
+                        <viewControllerLayoutGuide type="bottom" id="zGi-Vf-bFR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ruh-uU-Ast">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pa3-Ti-yex">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yh-4X-bax">
+                                <rect key="frame" x="8" y="28" width="584" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SOb-6n-Arg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.37337798729999999" blue="0.78257181190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pa3-Ti-yex" firstAttribute="top" secondItem="Ruh-uU-Ast" secondAttribute="top" id="Snu-bh-TSa"/>
+                            <constraint firstItem="2Yh-4X-bax" firstAttribute="top" secondItem="6a2-ip-Usa" secondAttribute="bottom" constant="8" id="ca3-u2-91k"/>
+                            <constraint firstAttribute="trailing" secondItem="2Yh-4X-bax" secondAttribute="trailing" constant="8" id="i0h-Ds-3Yf"/>
+                            <constraint firstItem="2Yh-4X-bax" firstAttribute="leading" secondItem="Ruh-uU-Ast" secondAttribute="leading" constant="8" id="i8E-9P-pV8"/>
+                            <constraint firstItem="zGi-Vf-bFR" firstAttribute="top" secondItem="Pa3-Ti-yex" secondAttribute="bottom" id="nva-70-5Ug"/>
+                            <constraint firstItem="Pa3-Ti-yex" firstAttribute="leading" secondItem="Ruh-uU-Ast" secondAttribute="leading" id="p9H-SF-kiC"/>
+                            <constraint firstAttribute="trailing" secondItem="Pa3-Ti-yex" secondAttribute="trailing" id="pea-aP-nXL"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="gradient_top">
+                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Radar" id="hcV-yu-2kk"/>
+                    <connections>
+                        <outlet property="imageRadar" destination="Pa3-Ti-yex" id="4ps-KN-bih"/>
+                        <outlet property="labelTitle" destination="2Yh-4X-bax" id="ZR5-2l-5gH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7R-EO-mOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1347" y="-206"/>
         </scene>
         <!--Parent View Controller-->
         <scene sceneID="oOy-Fc-tuk">
@@ -670,7 +747,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gx4-Sl-nSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="194"/>
+            <point key="canvasLocation" x="1248" y="250"/>
         </scene>
     </scenes>
 </document>

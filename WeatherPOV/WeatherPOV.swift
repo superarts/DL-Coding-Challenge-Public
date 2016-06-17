@@ -1,20 +1,30 @@
 //	WP: Project WeatherPOV
 struct WP {
+	//	variables
+	static var country: String?
+	static var city: String?
+
+	//	consts
 	static let storyboard_main = UIStoryboard(name: "Main", bundle: nil)
 	static let storyboard = storyboard_main
-
-	//	const
 	struct api {
 		static let key = "dc60d98175ba0199"
 		static let root = "https://api.wunderground.com/api/" + key + "/"
 		static let geolookup = "geolookup/q/"
 		static let forecast = "forecast/q/"
+		static let formatRadar = "%@animatedradar/animatedsatellite/q/%@/%@.gif?num=6&delay=50&interval=30"
+		static var radar: String? {
+			if let country = WP.country, let city = WP.city {
+				return String(format: formatRadar, root, country, city)
+			}
+			return nil
+		}
 	}
 	struct key {
 		static let temperatureUnit = "temp-unit"
 	}
 
-	//	utility
+	//	utilities
 	static func periodToString(period: Int) -> String {
 		if period == 1 {
 			return "Today"

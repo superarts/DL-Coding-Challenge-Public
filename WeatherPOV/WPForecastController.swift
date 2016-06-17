@@ -60,6 +60,8 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 					let station = stations[0]
 					self.labelCity.text = station.city
 					if let country = station.country, let city = station.city {
+						WP.country = country
+						WP.city = city
 						WPClients.forecast(country, city: city) {
 							(forecast, error) -> Void in
 							//print("\(forecast), \(error)")
@@ -164,7 +166,7 @@ class WPForecastCell: UITableViewCell {
 		} else {
 			labelText.text = "Unknown"
 		}
-		labelPop.text = String(format: "%@%%", forecast.popPercentage)
+		labelPop.text = String(format: "%@%", forecast.popPercentage)
 		imageIcon.image_load(forecast.icon_url, clear:true)
 	}
 }
