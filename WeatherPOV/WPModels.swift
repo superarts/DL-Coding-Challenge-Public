@@ -6,19 +6,19 @@ class WPErrorModel: LFModel {
 }
 
 class WPFeatureModel: LFModel {
-	var geolookup: Int = 0
-	var forecast: Int = 0
+	var geolookup:	Int = 0
+	var forecast:	Int = 0
 }
 
 class WPResponseModel: LFModel {
-	var version: String?
-	var termsofService: String?
-	var features: WPFeatureModel?
-	var error: WPErrorModel?
+	var version:		String?
+	var termsofService:	String?
+	var features:		WPFeatureModel?
+	var error:			WPErrorModel?
 }
 
 class WPResultModel: LFModel {
-	var response: WPResponseModel?
+	var response:	WPResponseModel?
 }
 
 //	MARK: geolookup
@@ -31,12 +31,12 @@ class WPGeolocationModel: LFModel {
 }
 
 class WPStationModel: WPGeolocationModel {
-	var state: String?
-	var icao: String?
-	var neighborhood: String?
+	var state:	String?
+	var icao:	String?
+	var neighborhood:	String?
 	//	in data feed distances appear as int
-	var distance_km: Float = 0		
-	var distance_mi: Float = 0
+	var distance_km:	Float = 0		
+	var distance_mi:	Float = 0
 }
 
 class WPAirportModel: LFModel {
@@ -52,18 +52,18 @@ class WPWeatherStationModel: LFModel {
 }
 
 class WPLocationModel: WPGeolocationModel {
-	var type: String?
-	var country_iso3166: String?
-	var country_name: String?
-	var state: String?
-	var tz_short: String?
-	var tz_long: String?
-	var zip: Int = 0
-	var magic: Int = 0
-	var wmo: Int = 0
-	var l: String?
-	var requesturl: String?
-	var wuiurl: String?
+	var type:				String?
+	var country_iso3166:	String?
+	var country_name:		String?
+	var state:		String?
+	var tz_short:	String?
+	var tz_long:	String?
+	var zip:		String?
+	var magic:		String?
+	var wmo:		String?
+	var l:			String?
+	var requesturl:	String?
+	var wuiurl:		String?
 	var nearby_weather_stations: WPWeatherStationModel?
 }
 
@@ -74,23 +74,23 @@ class WPGeolookupResultModel: WPResultModel {
 //	MARK: forecast
 
 class WPDateModel: LFModel {
-	var epoch: String?
-	var pretty: String?
-	var day: Int = 0
-	var month: Int = 0
-	var year: Int = 0
-	var yday: Int = 0
-	var hour: Int = 0
-	var min: Int = 0
-	var sec: Int = 0
-	var isdst: Int = 0
-	var monthname: String?
-	var monthname_short: String?
-	var weekday_short: String?
-	var weekday: String?
-	var ampm: String?
-	var tz_short: String?
-	var tz_long: String?
+	var epoch:	String?
+	var pretty:	String?
+	var day:	Int = 0
+	var month:	Int = 0
+	var year:	Int = 0
+	var yday:	Int = 0
+	var hour:	Int = 0
+	var min:	String?
+	var sec:	Int = 0
+	var isdst:	String?
+	var monthname:			String?
+	var monthname_short:	String?
+	var weekday_short:		String?
+	var weekday:	String?
+	var ampm:		String?
+	var tz_short:	String?
+	var tz_long:	String?
 }
 
 class WPTemperatureModel: LFModel {
@@ -124,7 +124,10 @@ class WPForecastdayModel: LFModel {
 	var period:			Int = 0
 	var icon:			String?
 	var icon_url:		String?
-	var pop:			Int = 0
+	var pop:			Float = 0
+	var popPercentage:	String {
+		return String(format: "%.0f%%", pop)
+	}
 
 	//	text forecast
 	var title:			String?

@@ -45,7 +45,7 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 	func loadWeather(location: CLLocation) {
 		WPClients.geolookup(location.coordinate) {
 			(geolookup, error) -> Void in
-			//	print("\(geolookup), \(error)")
+			//print("\(geolookup), \(error)")
 			if error != nil {
 				LF.alert("Failed to connect to weather service", error!.localizedDescription)
 			} else if let desc = geolookup?.response?.error?.type {
@@ -54,7 +54,7 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 				if stations.count <= 0 {
 					LF.alert("No weather station found", "There doesn't seem to be any weather stations around you. Please contact us at support@weatherpov.com")
 				} else {
-					print("WEATHER 1st station: \(stations[0])")
+					//print("WEATHER 1st station: \(stations[0])")
 					//	Use the first (closest) weather station to get forecast.
 					//	TODO: do some calculation to see if it's really the closest one
 					let station = stations[0]
@@ -79,7 +79,7 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 	}
 
 	func reloadTable(forecastdays: [WPForecastdayModel]) {
-		print("TABLE reload: \(forecastdays)")
+		//print("TABLE reload: \(forecastdays)")
 		source.counts = [forecastdays.count]
 		source.func_cell = {
 			(path) -> UITableViewCell in
@@ -164,7 +164,7 @@ class WPForecastCell: UITableViewCell {
 		} else {
 			labelText.text = "Unknown"
 		}
-		labelPop.text = String(format: "%zi%%", forecast.pop)
+		labelPop.text = String(format: "%@%%", forecast.popPercentage)
 		imageIcon.image_load(forecast.icon_url, clear:true)
 	}
 }

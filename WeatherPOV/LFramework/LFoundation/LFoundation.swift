@@ -35,6 +35,7 @@ public struct LF {
 		return log
     }
     public static func alert(message: String, _ obj: AnyObject?) -> String {
+		//	TODO: use UIAlertController instead
 		let alert = UIAlertView(title: message, message: obj?.description, delegate: nil, cancelButtonTitle: "OK")
 		alert.show()
 		return message
@@ -620,7 +621,7 @@ extension UIScrollView {
 			page.numberOfPages = Int(self.contentSize.width / self.frame.size.width)
 			page.currentPage = Int(self.contentOffset.x / self.frame.size.width)
 			page.hidesForSinglePage = false
-			page.addTarget(self, action:"page_changed:", forControlEvents:.ValueChanged)
+			page.addTarget(self, action:#selector(UIScrollView.page_changed(_:)), forControlEvents:.ValueChanged)
 		} else {
 			LF.log("WARNING: pageControl not found")
 		}
@@ -808,8 +809,8 @@ public class LFViewController: UIViewController {
 		super.viewWillAppear(animated)
 		NSNotificationCenter.defaultCenter().removeObserver(self, name:UIKeyboardWillShowNotification, object: nil);
 		NSNotificationCenter.defaultCenter().removeObserver(self, name:UIKeyboardWillHideNotification, object: nil);
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("lf_keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("lf_keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LFViewController.lf_keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LFViewController.lf_keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
 	}
 	//deinit {
 	override public func viewWillDisappear(animated:Bool) {

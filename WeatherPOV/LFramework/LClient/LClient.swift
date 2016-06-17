@@ -291,6 +291,7 @@ class LRestClient<T: LFModel>: NSObject, NSURLSessionDataDelegate, NSURLSessionT
 				let delegate = LRestConnectionDelegate()
 				delegate.credential = credential
 				delegate.func_done = func_done
+				//	XXX: NSURLConnection support will be removed when iOS 8 support is stopped
 				connection = NSURLConnection(request:request, delegate:delegate, startImmediately:true)
 			}
 
@@ -488,7 +489,7 @@ class LRestClient<T: LFModel>: NSObject, NSURLSessionDataDelegate, NSURLSessionT
 				body.append_string("Content-Type: \(mimetype)\r\n\r\n")
 				body.appendData(data)
 				body.append_string("\r\n")
-				index++
+				index += 1
 			}
 		}
 
@@ -692,7 +693,7 @@ public class LFModel: NSObject {
 			//LF.log("---- class", NSStringFromClass(c))
 			var ct: CUnsignedInt = 0
 			let prop: UnsafeMutablePointer<objc_property_t> = class_copyPropertyList(c, &ct)
-			for var i = 0; i < Int(ct); i++ {
+			for i in 0 ..< Int(ct) {
                 if let key = NSString(CString: property_getName(prop[i]), encoding: NSUTF8StringEncoding) {
     				if key == "dictionary" {
     					//LF.log("WARNING model: this condition is not ideal")
@@ -718,7 +719,7 @@ public class LFModel: NSObject {
 			c = class_getSuperclass(c)
 		}
 
-        for var i = 0; i < Int(count); i++ {
+        for i in 0 ..< Int(count) {
             if let key = NSString(CString: property_getName(properties[i]), encoding: NSUTF8StringEncoding) as? String {
 				//LF.log(key, valueForKey(key))
 				if let _ = valueForKey(key) {
@@ -739,7 +740,7 @@ public class LFModel: NSObject {
 			//	LF.log("---- class", NSStringFromClass(c))
 			var ct: CUnsignedInt = 0
 			let prop: UnsafeMutablePointer<objc_property_t> = class_copyPropertyList(c, &ct)
-			for var i = 0; i < Int(ct); i++ {
+			for i in 0 ..< Int(ct) {
                 if let key = NSString(CString: property_getName(prop[i]), encoding: NSUTF8StringEncoding) {
 					if key == "dictionary" || key == "keys" || key == "description" {
     					//LF.log("WARNING model: this condition is not ideal")
@@ -762,7 +763,7 @@ public class LFModel: NSObject {
 			c = class_getSuperclass(c)
 		}
 
-        for var i = 0; i < Int(count); i++ {
+        for i in 0 ..< Int(count) {
             if let key = NSString(CString: property_getName(properties[i]), encoding: NSUTF8StringEncoding) as? String {
 				if key == "description" || key == "keys" || key == "dictionary" {
 					continue
@@ -788,7 +789,7 @@ public class LFModel: NSObject {
     override public var description: String {
         var s = NSStringFromClass(self.dynamicType)
         s = NSString(format: "%@ (%p): [\r", s, self) as String
-		LFModel.prototype.indent++
+		LFModel.prototype.indent += 1
         for (key, value) in dictionary {
 			if key == "raw" {
 				continue
@@ -796,12 +797,12 @@ public class LFModel: NSObject {
 			s = append_indent(s)
 			if let array = value as? Array<AnyObject> {
 				s = s.stringByAppendingFormat("%@: [\r", key)
-				LFModel.prototype.indent++
+				LFModel.prototype.indent += 1
 				for obj in array {
 					s = append_indent(s)
 					s = s.stringByAppendingFormat("%@\r", obj.description)
 				}
-				LFModel.prototype.indent--
+				LFModel.prototype.indent -= 1
 				s = append_indent(s)
 				s = s.stringByAppendingString("]\r")
 			}
@@ -811,7 +812,7 @@ public class LFModel: NSObject {
 				s = s.stringByAppendingFormat("%@: '%@'\r", key, value.description)
 			}
         }
-		LFModel.prototype.indent--
+		LFModel.prototype.indent -= 1
 		s = append_indent(s)
         s = s.stringByAppendingString("]")
         return s
@@ -819,7 +820,7 @@ public class LFModel: NSObject {
 
 	func append_indent(str: String) -> String {
 		var s = str
-		for var i = 0; i < LFModel.prototype.indent; i++ {
+		for _ in 0 ..< LFModel.prototype.indent {
 			//s = s.stringByAppendingString("\t")
 			s = s.stringByAppendingString("    ")
 		}
@@ -933,14 +934,14 @@ class LArrayClient<T: LFModel>: LRestClient<T>, LTableClient {
 				if self.is_loaded == false {
 					self.is_loaded = true
 				} else {
-					for var i = 0; i < self.last_loaded; i++ {
+					for _ in 0 ..< self.last_loaded {
 						self.items.removeLast()
 					}
 					//LF.log("last items removed", self.last_loaded)
 				}
 
 				if objs.count > 0 {
-					self.pagination_index++
+					self.pagination_index += 1
 				}
 				self.last_loaded = objs.count
 				self.items += objs
@@ -1009,18 +1010,19 @@ class LFRestTableController: LFTableController {
 		if pull_down == .Reload {
 			refresh_reload = UIRefreshControl()
 			refresh_reload!.perform("triggerVerticalOffset", value:60)
-			refresh_reload!.addTarget(self, action: "client_reload", forControlEvents: .ValueChanged)
+			refresh_reload!.addTarget(self, action: #selector(LFRestTableController.client_reload), forControlEvents: .ValueChanged)
 			table.addSubview(refresh_reload!)
 		} else if pull_down == .More {
 			refresh_reload = UIRefreshControl()
 			refresh_reload!.perform("triggerVerticalOffset", value:60)
-			refresh_reload!.addTarget(self, action: "client_more", forControlEvents: .ValueChanged)
+			refresh_reload!.addTarget(self, action: #selector(LFRestTableController.client_more), forControlEvents: .ValueChanged)
 			table.addSubview(refresh_reload!)
 		}
+		//	XXX: pod integration
 		if pull_up == .More && table.respondsToSelector(Selector("bottomRefreshControl")) {
 			refresh_more = UIRefreshControl()
 			refresh_more!.perform("triggerVerticalOffset", value:60)
-			refresh_more!.addTarget(self, action:"client_more", forControlEvents:.ValueChanged)
+			refresh_more!.addTarget(self, action:#selector(LFRestTableController.client_more), forControlEvents:.ValueChanged)
 			table.perform("bottomRefreshControl", value:refresh_more!)
 		}
 		client.func_done = {

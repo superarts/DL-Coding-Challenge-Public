@@ -27,6 +27,7 @@
 		B3F8C6A31D142D5300A997A5 /* WPForecastThumbnailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */; };
 		B3F8C6A41D142D5300A997A5 /* WPModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69F1D142D5300A997A5 /* WPModels.swift */; };
 		B3F8C6A51D142D5300A997A5 /* WPSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */; };
+		B3F8C6A91D1433B100A997A5 /* WPForecastDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPForecastThumbnailController.swift; sourceTree = "<group>"; };
 		B3F8C69F1D142D5300A997A5 /* WPModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPModels.swift; sourceTree = "<group>"; };
 		B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPSettingController.swift; sourceTree = "<group>"; };
+		B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPForecastDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			children = (
 				B3F8C69D1D142D5300A997A5 /* WPForecastController.swift */,
 				B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */,
+				B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */,
 				B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */,
 			);
 			name = Controllers;
@@ -304,6 +307,7 @@
 				TargetAttributes = {
 					B3F8C6541D12C2CF00A997A5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = AKGR9TT483;
 					};
 					B3F8C6681D12C2D000A997A5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -418,6 +422,7 @@
 			files = (
 				B3F8C6A41D142D5300A997A5 /* WPModels.swift in Sources */,
 				B3F8C69B1D142D4C00A997A5 /* WeatherPOV.swift in Sources */,
+				B3F8C6A91D1433B100A997A5 /* WPForecastDetailController.swift in Sources */,
 				B3F8C6921D12C43000A997A5 /* LKeychain.swift in Sources */,
 				B3F8C6941D12C43000A997A5 /* LTime.swift in Sources */,
 				B3F8C6A21D142D5300A997A5 /* WPForecastController.swift in Sources */,
@@ -573,11 +578,16 @@
 			baseConfigurationReference = B37F3E353A6285CB261F1932 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WeatherPOV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = WeatherPOV/bridging.h;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -586,11 +596,16 @@
 			baseConfigurationReference = 55794350836EA4864EFCDD37 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WeatherPOV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = WeatherPOV/bridging.h;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
