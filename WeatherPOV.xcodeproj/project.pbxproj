@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5961B87D9BDCD0EA36AB10CD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1557B9AA6A9505A6182D5732 /* libPods.a */; };
 		B3F8C6591D12C2CF00A997A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6581D12C2CF00A997A5 /* AppDelegate.swift */; };
-		B3F8C65B1D12C2CF00A997A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C65A1D12C2CF00A997A5 /* ViewController.swift */; };
 		B3F8C65E1D12C2CF00A997A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C65C1D12C2CF00A997A5 /* Main.storyboard */; };
 		B3F8C6601D12C2D000A997A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C65F1D12C2D000A997A5 /* Assets.xcassets */; };
 		B3F8C6631D12C2D000A997A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6611D12C2D000A997A5 /* LaunchScreen.storyboard */; };
@@ -22,6 +21,12 @@
 		B3F8C6931D12C43000A997A5 /* LThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C68D1D12C43000A997A5 /* LThemeManager.swift */; };
 		B3F8C6941D12C43000A997A5 /* LTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C68E1D12C43000A997A5 /* LTime.swift */; };
 		B3F8C6991D12EF6300A997A5 /* MuseoSans_500.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6981D12EDB900A997A5 /* MuseoSans_500.otf */; };
+		B3F8C69B1D142D4C00A997A5 /* WeatherPOV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69A1D142D4C00A997A5 /* WeatherPOV.swift */; };
+		B3F8C6A11D142D5300A997A5 /* WPClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69C1D142D5300A997A5 /* WPClients.swift */; };
+		B3F8C6A21D142D5300A997A5 /* WPForecastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69D1D142D5300A997A5 /* WPForecastController.swift */; };
+		B3F8C6A31D142D5300A997A5 /* WPForecastThumbnailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */; };
+		B3F8C6A41D142D5300A997A5 /* WPModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69F1D142D5300A997A5 /* WPModels.swift */; };
+		B3F8C6A51D142D5300A997A5 /* WPSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +52,6 @@
 		B37F3E353A6285CB261F1932 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B3F8C6551D12C2CF00A997A5 /* WeatherPOV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherPOV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F8C6581D12C2CF00A997A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3F8C65A1D12C2CF00A997A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B3F8C65D1D12C2CF00A997A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3F8C65F1D12C2D000A997A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3F8C6621D12C2D000A997A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +69,12 @@
 		B3F8C68D1D12C43000A997A5 /* LThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LThemeManager.swift; sourceTree = "<group>"; };
 		B3F8C68E1D12C43000A997A5 /* LTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTime.swift; sourceTree = "<group>"; };
 		B3F8C6981D12EDB900A997A5 /* MuseoSans_500.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoSans_500.otf; sourceTree = "<group>"; };
+		B3F8C69A1D142D4C00A997A5 /* WeatherPOV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherPOV.swift; sourceTree = "<group>"; };
+		B3F8C69C1D142D5300A997A5 /* WPClients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPClients.swift; sourceTree = "<group>"; };
+		B3F8C69D1D142D5300A997A5 /* WPForecastController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPForecastController.swift; sourceTree = "<group>"; };
+		B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPForecastThumbnailController.swift; sourceTree = "<group>"; };
+		B3F8C69F1D142D5300A997A5 /* WPModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPModels.swift; sourceTree = "<group>"; };
+		B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPSettingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +136,12 @@
 		B3F8C6571D12C2CF00A997A5 /* WeatherPOV */ = {
 			isa = PBXGroup;
 			children = (
+				B3F8C69A1D142D4C00A997A5 /* WeatherPOV.swift */,
+				B3F8C6A71D142D6A00A997A5 /* Models */,
+				B3F8C6A61D142D5800A997A5 /* Controllers */,
 				B3F8C6951D12EC8C00A997A5 /* data */,
 				B3F8C6861D12C43000A997A5 /* LFramework */,
 				B3F8C6581D12C2CF00A997A5 /* AppDelegate.swift */,
-				B3F8C65A1D12C2CF00A997A5 /* ViewController.swift */,
 				B3F8C65C1D12C2CF00A997A5 /* Main.storyboard */,
 				B3F8C65F1D12C2D000A997A5 /* Assets.xcassets */,
 				B3F8C6611D12C2D000A997A5 /* LaunchScreen.storyboard */,
@@ -191,6 +203,25 @@
 				B3F8C6981D12EDB900A997A5 /* MuseoSans_500.otf */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		B3F8C6A61D142D5800A997A5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C69D1D142D5300A997A5 /* WPForecastController.swift */,
+				B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */,
+				B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B3F8C6A71D142D6A00A997A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C69F1D142D5300A997A5 /* WPModels.swift */,
+				B3F8C69C1D142D5300A997A5 /* WPClients.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		DB34DDA1D0018385257C5883 /* Pods */ = {
@@ -385,13 +416,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F8C6A41D142D5300A997A5 /* WPModels.swift in Sources */,
+				B3F8C69B1D142D4C00A997A5 /* WeatherPOV.swift in Sources */,
 				B3F8C6921D12C43000A997A5 /* LKeychain.swift in Sources */,
 				B3F8C6941D12C43000A997A5 /* LTime.swift in Sources */,
+				B3F8C6A21D142D5300A997A5 /* WPForecastController.swift in Sources */,
+				B3F8C6A31D142D5300A997A5 /* WPForecastThumbnailController.swift in Sources */,
 				B3F8C68F1D12C43000A997A5 /* LClient.swift in Sources */,
-				B3F8C65B1D12C2CF00A997A5 /* ViewController.swift in Sources */,
 				B3F8C6931D12C43000A997A5 /* LThemeManager.swift in Sources */,
 				B3F8C6901D12C43000A997A5 /* LConst.swift in Sources */,
 				B3F8C6911D12C43000A997A5 /* LFoundation.swift in Sources */,
+				B3F8C6A11D142D5300A997A5 /* WPClients.swift in Sources */,
+				B3F8C6A51D142D5300A997A5 /* WPSettingController.swift in Sources */,
 				B3F8C6591D12C2CF00A997A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
