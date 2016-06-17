@@ -260,6 +260,7 @@ class ViewController: LFTableController, CLLocationManagerDelegate {
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 		//	reload UI whenever view is loaded
+		table.alpha = 0
 		startLocationManager()
 	}
 
@@ -341,6 +342,10 @@ class ViewController: LFTableController, CLLocationManagerDelegate {
 			return cell
 		}
 		table.reloadData()
+		UIView.animateWithDuration(0.3) { 
+			() -> Void in
+			self.table.alpha = 1
+		}
 	}
 
 //	MARK: carousel
@@ -375,7 +380,9 @@ class ViewController: LFTableController, CLLocationManagerDelegate {
     }
 
 	func carousel(carousel: iCarousel, didSelectItemAtIndex index: Int) {
-		LF.log("xx", carouselDays?[index])
+		if let controller = push_identifier("WPForecastDetailController") as? WPForecastDetailController {
+			controller.forecast = carouselDays?[index]
+		}
 	}
 
 //	MARK: actions
@@ -405,7 +412,7 @@ class WPForecastCell: UITableViewCell {
 		} else {
 			labelText.text = "Unknown"
 		}
-		labelPop.text = String(format: "%i%%", forecast.pop)
+		labelPop.text = String(format: "%zi%%", forecast.pop)
 		imageIcon.image_load(forecast.icon_url, clear:true)
 	}
 }
@@ -441,7 +448,7 @@ class WPForecastThumbnailController: UIViewController {
 			labelCondition.text = "Unknown"
 		}
 		labelPeriod.text = WP.periodToString(forecast.period)
-		labelPop.text = String(format: "%i%%", forecast.pop)
+		labelPop.text = String(format: "%zi%%", forecast.pop)
 		imageIcon.image_load(forecast.icon_url, clear:true)
 	}
 }
@@ -465,6 +472,43 @@ class WPSettingController: UITableViewController {
 	}
     override func lf_actionDismiss() {
 		super.lf_actionDismiss()
+		UIApplication.sharedApplication().statusBarStyle = .LightContent
+	}
+}
+
+class WPForecastDetailController: UITableViewController {
+	@IBOutlet var cellDate: UITableViewCell!
+	@IBOutlet var cellHigh: UITableViewCell!
+	@IBOutlet var cellLow: UITableViewCell!
+	@IBOutlet var cellConditions: UITableViewCell!
+	@IBOutlet var cellPop: UITableViewCell!
+	@IBOutlet var cellHumidity: UITableViewCell!
+	var forecast: WPForecastdayModel!
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		if let date = forecast.date?.pretty {
+			cellDate.detailTextLabel?.text = date
+		}
+		if let high = forecast.high?.str {
+			cellHigh.detailTextLabel?.text = high
+		}
+		if let low = forecast.low?.str {
+			cellLow.detailTextLabel?.text = low
+		}
+		if let conditions = forecast.conditions {
+			cellConditions.detailTextLabel?.text = conditions
+		}
+		cellHumidity.detailTextLabel?.text = String(format: "%.0f%%", forecast.avehumidity)
+		cellPop.imageView?.image_load(forecast.icon_url, clear:true)
+		cellPop.textLabel?.text = String(format: "%zi%%", forecast.pop)
+	}
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		UIApplication.sharedApplication().statusBarStyle = .Default
+	}
+    override func lf_actionPop() {
+		super.lf_actionPop()
 		UIApplication.sharedApplication().statusBarStyle = .LightContent
 	}
 }
