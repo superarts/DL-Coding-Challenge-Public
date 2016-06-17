@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CCY-u9-bEf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -45,6 +45,12 @@
                                                 <outlet property="delegate" destination="BYZ-38-t0r" id="CHT-s8-FXY"/>
                                             </connections>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm7-Jy-9U7">
+                                            <rect key="frame" x="15" y="318" width="22" height="22"/>
+                                            <connections>
+                                                <action selector="actionPresentSetting" destination="BYZ-38-t0r" eventType="touchUpInside" id="MHh-nn-Tya"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
@@ -149,6 +155,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                             <constraint firstItem="fAv-49-QGe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bze-lW-heH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4rt-Cy-RvE"/>
                     <connections>
                         <outlet property="carousel" destination="icd-i4-xgD" id="zPo-4N-dH9"/>
                         <outlet property="labelCity" destination="Vna-9u-ufG" id="BKE-xb-oNM"/>
@@ -157,12 +164,110 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="476"/>
+            <point key="canvasLocation" x="1448" y="746"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="zdH-ky-Ryg">
+            <objects>
+                <tableViewController storyboardIdentifier="WPSettingController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g2t-9g-4KB" customClass="WPSettingController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="aAT-1h-xrL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Setting" id="HmM-fH-pWI">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8A7-on-b90">
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8A7-on-b90" id="IBx-0V-zfR">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ucf-nx-JwF">
+                                                    <rect key="frame" x="220" y="7" width="160" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="6FV-pg-585"/>
+                                                        <constraint firstAttribute="height" constant="28" id="koV-fd-Y3T"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="ºF"/>
+                                                        <segment title="ºC"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="actionUnitChanged:" destination="g2t-9g-4KB" eventType="valueChanged" id="BsC-Sl-vHb"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ucf-nx-JwF" firstAttribute="centerX" secondItem="IBx-0V-zfR" secondAttribute="centerX" id="1Or-VP-nqh"/>
+                                                <constraint firstItem="ucf-nx-JwF" firstAttribute="centerY" secondItem="IBx-0V-zfR" secondAttribute="centerY" id="Wi1-Wi-F73"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="suG-ju-adq">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SQ8-5x-zCd">
+                                        <rect key="frame" x="0.0" y="129.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SQ8-5x-zCd" id="t4z-ee-0Qv">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3q-hy-iLd">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <state key="normal" title="Done"/>
+                                                    <connections>
+                                                        <action selector="lf_actionDismiss" destination="g2t-9g-4KB" eventType="touchUpInside" id="6ij-s4-6XX"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="S3q-hy-iLd" secondAttribute="bottom" constant="-1.5" id="mHY-PF-8K2"/>
+                                                <constraint firstItem="S3q-hy-iLd" firstAttribute="top" secondItem="t4z-ee-0Qv" secondAttribute="topMargin" constant="-1" id="qPQ-M2-tI3"/>
+                                                <constraint firstItem="S3q-hy-iLd" firstAttribute="trailing" secondItem="t4z-ee-0Qv" secondAttribute="trailingMargin" id="sK4-BR-4vn"/>
+                                                <constraint firstItem="S3q-hy-iLd" firstAttribute="leading" secondItem="t4z-ee-0Qv" secondAttribute="leadingMargin" id="zMe-CM-fWd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="g2t-9g-4KB" id="ZmG-bw-Caa"/>
+                            <outlet property="delegate" destination="g2t-9g-4KB" id="XEg-8R-iKH"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="segmentUnit" destination="ucf-nx-JwF" id="APh-oN-Mtp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXR-4m-Ty0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1449" y="1505"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Whg-WB-i0N">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="CCY-u9-bEf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CDZ-ew-M0n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fdp-20-yrs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sew-UR-99g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="746"/>
         </scene>
         <!--Parent View Controller-->
         <scene sceneID="oOy-Fc-tuk">
             <objects>
-                <viewController storyboardIdentifier="WPForecastThumbnailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oG6-C5-S3N" customClass="WPForecastThumbnailController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WPForecastThumbnailController" title="Forecast" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oG6-C5-S3N" customClass="WPForecastThumbnailController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lcu-bN-Cc1"/>
                         <viewControllerLayoutGuide type="bottom" id="TpU-qE-u60"/>
@@ -239,7 +344,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gx4-Sl-nSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685" y="-44"/>
+            <point key="canvasLocation" x="422" y="194"/>
         </scene>
     </scenes>
 </document>

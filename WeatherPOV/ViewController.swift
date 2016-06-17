@@ -14,21 +14,37 @@ struct WP {
 	static let storyboard_main = UIStoryboard(name: "Main", bundle: nil)
 	static let storyboard = storyboard_main
 
+	//	const
 	struct api {
 		static let key = "dc60d98175ba0199"
 		static let root = "https://api.wunderground.com/api/" + key + "/"
 		static let geolookup = "geolookup/q/"
 		static let forecast = "forecast/q/"
 	}
-	struct utility {
-		static func periodToString(period: Int) -> String {
-			if period == 1 {
-				return "Today"
-			} else if period == 2 {
-				return "Tomorrow"
-			}
-			return String(format: "%zi days later", period - 1)
+	struct key {
+		static let temperatureUnit = "temp-unit"
+	}
+
+	//	utility
+	static func periodToString(period: Int) -> String {
+		if period == 1 {
+			return "Today"
+		} else if period == 2 {
+			return "Tomorrow"
 		}
+		return String(format: "%zi days later", period - 1)
+	}
+	static func isFahrenheit() -> Bool {
+		return NSUserDefaults.integer(WP.key.temperatureUnit) == 0
+	}
+	static func isCelsius() -> Bool {
+		return NSUserDefaults.integer(WP.key.temperatureUnit) == 1
+	}
+	static var isF: Bool {
+		return isFahrenheit()
+	}
+	static var isC: Bool {
+		return isCelsius()
 	}
 }
 
@@ -135,6 +151,12 @@ class WPTemperatureModel: LFModel {
 	//	appear as int
 	var fahrenheit:	Float = 0
 	var celsius:	Float = 0
+	var str: String {
+		if WP.isF {
+			return String(format: "%.0fºF", fahrenheit)
+		}
+		return String(format: "%.0fºC", celsius)
+	}
 }
 
 class WPQPFModel: LFModel {
@@ -233,6 +255,11 @@ class ViewController: LFTableController, CLLocationManagerDelegate {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+	}
+
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		//	reload UI whenever view is loaded
 		startLocationManager()
 	}
 
@@ -350,6 +377,12 @@ class ViewController: LFTableController, CLLocationManagerDelegate {
 	func carousel(carousel: iCarousel, didSelectItemAtIndex index: Int) {
 		LF.log("xx", carouselDays?[index])
 	}
+
+//	MARK: actions
+	
+	@IBAction func actionPresentSetting() {
+		present_identifier("WPSettingController")
+	}
 }
 
 class WPForecastCell: UITableViewCell {
@@ -365,7 +398,9 @@ class WPForecastCell: UITableViewCell {
 		} else {
 			labelTitle.text = "Unknown"
 		}
-		if let text = forecast.fcttext {
+		if let text = forecast.fcttext where WP.isF {
+			labelText.text = text
+		} else if let text = forecast.fcttext_metric where WP.isC {
 			labelText.text = text
 		} else {
 			labelText.text = "Unknown"
@@ -395,8 +430,8 @@ class WPForecastThumbnailController: UIViewController {
 		} else {
 			labelWeekday.text = "Unknown"
 		}
-		if let low = forecast.low?.fahrenheit, let high = forecast.high?.fahrenheit {
-			labelTemperature.text = String(format: "%.0fºF - %.0fºF", low, high)
+		if let low = forecast.low?.str, let high = forecast.high?.str {
+			labelTemperature.text = String(format: "%@ - %@", low, high)
 		} else {
 			labelTemperature.text = "Unknown"
 		}
@@ -405,8 +440,31 @@ class WPForecastThumbnailController: UIViewController {
 		} else {
 			labelCondition.text = "Unknown"
 		}
-		labelPeriod.text = WP.utility.periodToString(forecast.period)
+		labelPeriod.text = WP.periodToString(forecast.period)
 		labelPop.text = String(format: "%i%%", forecast.pop)
 		imageIcon.image_load(forecast.icon_url, clear:true)
+	}
+}
+
+class WPSettingController: UITableViewController {
+	@IBOutlet var segmentUnit: UISegmentedControl!
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		if let unit = NSUserDefaults.integer(WP.key.temperatureUnit) {
+			segmentUnit.selectedSegmentIndex = unit
+		}
+	}
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		UIApplication.sharedApplication().statusBarStyle = .Default
+	}
+
+	@IBAction func actionUnitChanged(segment: UISegmentedControl) {
+		NSUserDefaults.integer(WP.key.temperatureUnit, segment.selectedSegmentIndex)
+	}
+    override func lf_actionDismiss() {
+		super.lf_actionDismiss()
+		UIApplication.sharedApplication().statusBarStyle = .LightContent
 	}
 }
