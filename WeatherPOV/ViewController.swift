@@ -306,6 +306,11 @@ class ViewController: LFTableController, CLLocationManagerDelegate {
 			let cell = self.table.dequeueReusableCellWithIdentifier("WPForecastCell") as! WPForecastCell
 			let forecast = forecastdays[path.row]
 			cell.forecast = forecast
+			if path.row % 2 == 0 {
+				cell.contentView.backgroundColor = .whiteColor()
+			} else {
+				cell.contentView.backgroundColor = UIColor(rgb: 0xf0f8ff)
+			}
 			return cell
 		}
 		table.reloadData()
@@ -365,7 +370,7 @@ class WPForecastCell: UITableViewCell {
 		} else {
 			labelText.text = "Unknown"
 		}
-		labelPop.text = String(format: "%i%%",forecast.pop)
+		labelPop.text = String(format: "%i%%", forecast.pop)
 		imageIcon.image_load(forecast.icon_url, clear:true)
 	}
 }
@@ -374,6 +379,8 @@ class WPForecastThumbnailController: UIViewController {
 	@IBOutlet var labelWeekday:		UILabel!
 	@IBOutlet var labelTemperature:	UILabel!
 	@IBOutlet var labelCondition:	UILabel!
+	@IBOutlet var labelPeriod:		UILabel!
+	@IBOutlet var labelPop:			UILabel!
 	@IBOutlet var imageIcon:	UIImageView!
 	var forecast: WPForecastdayModel!
 
@@ -393,7 +400,13 @@ class WPForecastThumbnailController: UIViewController {
 		} else {
 			labelTemperature.text = "Unknown"
 		}
-		labelCondition.text = WP.utility.periodToString(forecast.period)
+		if let conditions = forecast.conditions {
+			labelCondition.text = conditions
+		} else {
+			labelCondition.text = "Unknown"
+		}
+		labelPeriod.text = WP.utility.periodToString(forecast.period)
+		labelPop.text = String(format: "%i%%", forecast.pop)
 		imageIcon.image_load(forecast.icon_url, clear:true)
 	}
 }
