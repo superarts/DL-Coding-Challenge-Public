@@ -11,7 +11,7 @@ struct WP {
 		static let key = "dc60d98175ba0199"
 		static let root = "https://api.wunderground.com/api/" + key + "/"
 		static let geolookup = "geolookup/q/"
-		static let forecast = "forecast/q/"
+		static let forecast = "forecast10day/q/"
 		static let formatRadar = "%@animatedradar/animatedsatellite/q/%@/%@.gif?num=6&delay=50&interval=30"
 		static var radar: String? {
 			if let country = WP.country, let city = WP.city {
