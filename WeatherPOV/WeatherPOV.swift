@@ -1,6 +1,7 @@
 //	WP: Project WeatherPOV
 struct WP {
 	//	variables
+	static var station: WPStationModel?
 	static var country: String?
 	static var city: String?
 

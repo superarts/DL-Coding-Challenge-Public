@@ -315,7 +315,7 @@ class LRestClient<T: LFModel>: NSObject, NSURLSessionDataDelegate, NSURLSessionT
 		LF.log("SESSION invalid", error)
 	}
 	func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler handler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
-		LF.log("SESSION challenge", challenge)
+		//LF.log("SESSION challenge", challenge)
 		if let crt = credential {
 			handler(.UseCredential, crt)
 		} else {

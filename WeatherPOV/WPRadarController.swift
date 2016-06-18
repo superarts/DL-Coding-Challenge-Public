@@ -9,9 +9,10 @@ class WPRadarController: UIViewController {
 	}
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
-		if let api = WP.api.radar, let city = WP.city {
-			LF.log("API", api)
+		if let city = WP.station?.city {
 			labelTitle.text = city
+		}
+		if let api = WP.api.radar {
 			//	TODO: error handling while fetching image failed
 			LF.dispatch_main() {
 				self.imageRadar.image = UIImage.animatedImageWithAnimatedGIFURL(NSURL(string: api))

@@ -58,8 +58,11 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 					//	Use the first (closest) weather station to get forecast.
 					//	TODO: do some calculation to see if it's really the closest one
 					let station = stations[0]
-					self.labelCity.text = station.city
-					if let country = station.country, let city = station.city {
+					if let city = station.city {
+						self.labelCity.text = city
+					}
+					if let country = station.country?.escape(), let city = station.city?.escape() {
+						WP.station = station
 						WP.country = country
 						WP.city = city
 						WPClients.forecast(country, city: city) {
@@ -169,4 +172,7 @@ class WPForecastCell: UITableViewCell {
 		labelPop.text = String(format: "%@%", forecast.popPercentage)
 		imageIcon.image_load(forecast.icon_url, clear:true)
 	}
+}
+
+class WPAstronomyController: UITableViewController {
 }
