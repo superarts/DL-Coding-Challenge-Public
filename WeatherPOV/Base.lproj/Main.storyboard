@@ -212,7 +212,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="1722"/>
+            <point key="canvasLocation" x="-461" y="1410"/>
         </scene>
         <!--Forecast Detail Controller-->
         <scene sceneID="6Bx-cJ-qQK">
@@ -518,7 +518,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zw-Mm-kF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="1722"/>
+            <point key="canvasLocation" x="-461" y="2204"/>
         </scene>
         <!--Settings-->
         <scene sceneID="zdH-ky-Ryg">
@@ -600,7 +600,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXR-4m-Ty0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="314" y="2481"/>
+            <point key="canvasLocation" x="313" y="1410"/>
         </scene>
         <!--Forecast-->
         <scene sceneID="Whg-WB-i0N">
@@ -617,7 +617,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sew-UR-99g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="778"/>
+            <point key="canvasLocation" x="-461" y="622"/>
         </scene>
         <!--Radar-->
         <scene sceneID="KX3-p5-uYq">
@@ -676,7 +676,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7R-EO-mOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1347" y="-206"/>
+            <point key="canvasLocation" x="313" y="630"/>
         </scene>
         <!--Parent View Controller-->
         <scene sceneID="oOy-Fc-tuk">
@@ -758,7 +758,25 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gx4-Sl-nSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="1258"/>
+            <point key="canvasLocation" x="-1032" y="1210"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Psx-si-tJW">
+            <objects>
+                <viewController id="BfI-fo-CdU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QdH-z9-gat"/>
+                        <viewControllerLayoutGuide type="bottom" id="nzH-g7-r1o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gF3-7d-Hrh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xH5-tp-bIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888" y="638"/>
         </scene>
         <!--Astronomy-->
         <scene sceneID="cFc-MX-uX5">
@@ -1135,11 +1153,12 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                         <outlet property="cellMoonset" destination="7cg-02-Tas" id="wWX-dA-yq6"/>
                         <outlet property="cellSunrise" destination="ggv-VL-asb" id="KPF-U3-9ca"/>
                         <outlet property="cellSunset" destination="m7r-L1-fdy" id="nHK-M7-nj0"/>
+                        <outlet property="labelTitle" destination="Eo5-7C-gEg" id="6tX-3b-6So"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SB7-Xw-dXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1347" y="531"/>
+            <point key="canvasLocation" x="1101" y="638"/>
         </scene>
     </scenes>
     <resources>

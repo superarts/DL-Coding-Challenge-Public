@@ -12,11 +12,16 @@ class WPAstronomyController: UITableViewController {
 	@IBOutlet var cellMoonPhase:	UITableViewCell!
 	@IBOutlet var cellHemisphere:	UITableViewCell!
 
+	@IBOutlet var labelTitle: UILabel!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	}
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
+		if let city = WP.station?.city {
+			labelTitle.text = city
+		}
 		if let country = WP.country, let city = WP.city {
 			WPClients.astronomy(country, city: city) {
 				(astronomy, error) -> Void in
