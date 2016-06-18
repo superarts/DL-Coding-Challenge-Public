@@ -606,7 +606,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
         <scene sceneID="Whg-WB-i0N">
             <objects>
                 <navigationController navigationBarHidden="YES" id="CCY-u9-bEf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Forecast" id="dOg-U2-hkY"/>
+                    <tabBarItem key="tabBarItem" title="Forecast" image="forecast.png" id="dOg-U2-hkY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CDZ-ew-M0n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -668,7 +668,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Radar" id="hcV-yu-2kk"/>
+                    <tabBarItem key="tabBarItem" title="Radar" image="radar.png" id="hcV-yu-2kk"/>
                     <connections>
                         <outlet property="imageRadar" destination="Pa3-Ti-yex" id="4ps-KN-bih"/>
                         <outlet property="labelTitle" destination="2Yh-4X-bax" id="ZR5-2l-5gH"/>
@@ -1124,7 +1124,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                             <outlet property="delegate" destination="4Zn-2d-AkH" id="6sL-ZP-xIE"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Astronomy" id="tsi-Oh-GpH"/>
+                    <tabBarItem key="tabBarItem" title="Astronomy" image="astronomy.png" id="tsi-Oh-GpH"/>
                     <connections>
                         <outlet property="cellCurrentTime" destination="kbm-hR-wRw" id="1jL-6f-iFx"/>
                         <outlet property="cellHemisphere" destination="BzL-Ly-MvN" id="c7J-fY-cYM"/>
@@ -1142,4 +1142,9 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
             <point key="canvasLocation" x="1347" y="531"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="astronomy.png" width="30" height="30"/>
+        <image name="forecast.png" width="29" height="30"/>
+        <image name="radar.png" width="29" height="30"/>
+    </resources>
 </document>
