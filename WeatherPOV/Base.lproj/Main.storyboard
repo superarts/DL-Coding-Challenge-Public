@@ -17,8 +17,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="CCY-u9-bEf" kind="relationship" relationship="viewControllers" id="jUA-O1-Bdb"/>
-                        <segue destination="az2-hM-RXr" kind="relationship" relationship="viewControllers" id="ZBN-sU-Ksx"/>
+                        <segue destination="BfI-fo-CdU" kind="relationship" relationship="viewControllers" id="OZg-KD-Nzo"/>
                         <segue destination="4Zn-2d-AkH" kind="relationship" relationship="viewControllers" id="eok-04-sG8"/>
+                        <segue destination="az2-hM-RXr" kind="relationship" relationship="viewControllers" id="ZBN-sU-Ksx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIF-Bq-dj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -212,7 +213,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-461" y="1410"/>
+            <point key="canvasLocation" x="-1225" y="1410"/>
         </scene>
         <!--Forecast Detail Controller-->
         <scene sceneID="6Bx-cJ-qQK">
@@ -518,7 +519,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zw-Mm-kF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-461" y="2204"/>
+            <point key="canvasLocation" x="-1219" y="2218"/>
         </scene>
         <!--Settings-->
         <scene sceneID="zdH-ky-Ryg">
@@ -600,7 +601,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXR-4m-Ty0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="1410"/>
+            <point key="canvasLocation" x="-451" y="1410"/>
         </scene>
         <!--Forecast-->
         <scene sceneID="Whg-WB-i0N">
@@ -617,7 +618,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sew-UR-99g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-461" y="622"/>
+            <point key="canvasLocation" x="-1225" y="638"/>
         </scene>
         <!--Radar-->
         <scene sceneID="KX3-p5-uYq">
@@ -676,7 +677,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7R-EO-mOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="630"/>
+            <point key="canvasLocation" x="1931" y="638"/>
         </scene>
         <!--Parent View Controller-->
         <scene sceneID="oOy-Fc-tuk">
@@ -758,12 +759,12 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gx4-Sl-nSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1032" y="1210"/>
+            <point key="canvasLocation" x="-1796" y="1210"/>
         </scene>
-        <!--View Controller-->
+        <!--Game-->
         <scene sceneID="Psx-si-tJW">
             <objects>
-                <viewController id="BfI-fo-CdU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WPGdayController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BfI-fo-CdU" customClass="WPGdayController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QdH-z9-gat"/>
                         <viewControllerLayoutGuide type="bottom" id="nzH-g7-r1o"/>
@@ -771,12 +772,237 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                     <view key="view" contentMode="scaleToFill" id="gF3-7d-Hrh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u5H-np-Efn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="9sb-Uc-bae">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkx-5q-lZA">
+                                            <rect key="frame" x="8" y="92" width="584" height="102"/>
+                                            <string key="text">RULES
+
+1. Tap as fast as you can to earn points
+2. You get more points on a good day! Have fun
+
+
+
+
+
+
+</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="0.0" height="1"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkW-yk-w9R">
+                                            <rect key="frame" x="8" y="202" width="584" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="rTp-GF-dWk"/>
+                                            </constraints>
+                                            <state key="normal" title="Register or login play"/>
+                                            <connections>
+                                                <action selector="actionPlay" destination="BfI-fo-CdU" eventType="touchUpInside" id="KYc-hL-yqH"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="xkx-5q-lZA" firstAttribute="leading" secondItem="9sb-Uc-bae" secondAttribute="leading" constant="8" id="Che-TT-tUj"/>
+                                        <constraint firstItem="xkx-5q-lZA" firstAttribute="top" secondItem="9sb-Uc-bae" secondAttribute="top" constant="92" id="E9g-Ba-sCS"/>
+                                        <constraint firstItem="zkW-yk-w9R" firstAttribute="leading" secondItem="9sb-Uc-bae" secondAttribute="leading" constant="8" id="O52-fr-Xdy"/>
+                                        <constraint firstAttribute="bottom" secondItem="xkx-5q-lZA" secondAttribute="bottom" constant="46" id="aij-GL-771"/>
+                                        <constraint firstAttribute="trailing" secondItem="xkx-5q-lZA" secondAttribute="trailing" constant="8" id="dbc-gU-OSu"/>
+                                        <constraint firstAttribute="trailing" secondItem="zkW-yk-w9R" secondAttribute="trailing" constant="8" id="rGB-Nc-nZY"/>
+                                        <constraint firstAttribute="bottom" secondItem="zkW-yk-w9R" secondAttribute="bottom" constant="8" id="uRc-1M-ORM"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="gradient_top">
+                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WPGdayRankCell" textLabel="Weh-kT-3G5" detailTextLabel="eGb-CC-FrH" style="IBUITableViewCellStyleValue1" id="luX-qM-3o7">
+                                        <rect key="frame" x="0.0" y="268" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="luX-qM-3o7" id="fuC-gA-5io">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Weather King" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Weh-kT-3G5">
+                                                    <rect key="frame" x="15" y="12" width="98" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1000 points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eGb-CC-FrH">
+                                                    <rect key="frame" x="499.5" y="12" width="85.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G'day!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="d08-iT-FiV">
+                                <rect key="frame" x="8" y="28" width="584" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="sp4-zh-YVC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.37337798729999999" blue="0.78257181190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nzH-g7-r1o" firstAttribute="top" secondItem="u5H-np-Efn" secondAttribute="bottom" id="2QB-4R-AY3"/>
+                            <constraint firstAttribute="trailing" secondItem="u5H-np-Efn" secondAttribute="trailing" id="MfI-NG-s6S"/>
+                            <constraint firstItem="d08-iT-FiV" firstAttribute="top" secondItem="QdH-z9-gat" secondAttribute="bottom" constant="8" id="dW4-Et-FWT"/>
+                            <constraint firstItem="u5H-np-Efn" firstAttribute="leading" secondItem="gF3-7d-Hrh" secondAttribute="leading" id="fVF-Ou-jIn"/>
+                            <constraint firstItem="d08-iT-FiV" firstAttribute="leading" secondItem="gF3-7d-Hrh" secondAttribute="leading" constant="8" id="oQl-ip-OHz"/>
+                            <constraint firstAttribute="trailing" secondItem="d08-iT-FiV" secondAttribute="trailing" constant="8" id="pXs-ye-rbp"/>
+                            <constraint firstItem="u5H-np-Efn" firstAttribute="top" secondItem="gF3-7d-Hrh" secondAttribute="top" id="whU-lt-j2R"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Game" image="game.png" badgeValue="Hot!" id="mDe-ja-W2d"/>
+                    <connections>
+                        <outlet property="buttonPlay" destination="zkW-yk-w9R" id="rSU-dH-Umy"/>
+                        <outlet property="table" destination="u5H-np-Efn" id="Be9-wf-Ibv"/>
+                        <segue destination="CzF-GN-74W" kind="presentation" identifier="Gday-Login" id="2ra-1Y-dHl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xH5-tp-bIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="638"/>
+            <point key="canvasLocation" x="313" y="638"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="Cf9-Tr-GZa">
+            <objects>
+                <viewController storyboardIdentifier="WPLoginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CzF-GN-74W" customClass="WPLoginController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V0a-tX-C0X"/>
+                        <viewControllerLayoutGuide type="bottom" id="fmQ-kH-fuA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p6S-Za-OrJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7t-1x-L45">
+                                <rect key="frame" x="8" y="28" width="584" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="pqm-tN-JpW"/>
+                                </constraints>
+                                <string key="text">Please enter your email and a password.
+If the username field is left blank while registering, the first part of your email will become your username.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCy-h8-fAU">
+                                <rect key="frame" x="8" y="154" width="584" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dSK-Ud-rg1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djg-Mi-ogF">
+                                <rect key="frame" x="8" y="192" width="584" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="htK-ev-C84"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" red="0.0" green="0.37337798729999999" blue="0.78257181190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionSubmit" destination="CzF-GN-74W" eventType="touchUpInside" id="Dxz-R6-2UR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exe-0A-eKC">
+                                <rect key="frame" x="8" y="116" width="584" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SiP-fi-6Hp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkQ-vr-qSZ">
+                                <rect key="frame" x="8" y="230" width="584" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="EE7-Ec-zmP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Cancel"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lf_actionDismiss" destination="CzF-GN-74W" eventType="touchUpInside" id="Q8l-pT-BXt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x7t-1x-L45" firstAttribute="leading" secondItem="p6S-Za-OrJ" secondAttribute="leading" constant="8" id="C6Y-4N-zHj"/>
+                            <constraint firstItem="RCy-h8-fAU" firstAttribute="leading" secondItem="p6S-Za-OrJ" secondAttribute="leading" constant="8" id="D45-b3-7ET"/>
+                            <constraint firstAttribute="trailing" secondItem="exe-0A-eKC" secondAttribute="trailing" constant="8" id="Iob-aZ-CBI"/>
+                            <constraint firstItem="x7t-1x-L45" firstAttribute="top" secondItem="V0a-tX-C0X" secondAttribute="bottom" constant="8" id="K5U-eG-yWh"/>
+                            <constraint firstItem="exe-0A-eKC" firstAttribute="top" secondItem="x7t-1x-L45" secondAttribute="bottom" constant="8" id="Kzi-nD-KJs"/>
+                            <constraint firstItem="djg-Mi-ogF" firstAttribute="top" secondItem="RCy-h8-fAU" secondAttribute="bottom" constant="8" id="PS9-yI-bDo"/>
+                            <constraint firstItem="djg-Mi-ogF" firstAttribute="leading" secondItem="p6S-Za-OrJ" secondAttribute="leading" constant="8" id="Vgm-xs-QLr"/>
+                            <constraint firstItem="xkQ-vr-qSZ" firstAttribute="top" secondItem="djg-Mi-ogF" secondAttribute="bottom" id="azc-mc-jbb"/>
+                            <constraint firstItem="exe-0A-eKC" firstAttribute="leading" secondItem="p6S-Za-OrJ" secondAttribute="leading" constant="8" id="fDt-Oj-XoR"/>
+                            <constraint firstAttribute="trailing" secondItem="RCy-h8-fAU" secondAttribute="trailing" constant="8" id="izN-G9-0S6"/>
+                            <constraint firstAttribute="trailing" secondItem="xkQ-vr-qSZ" secondAttribute="trailing" constant="8" id="jFM-WJ-3aB"/>
+                            <constraint firstAttribute="trailing" secondItem="x7t-1x-L45" secondAttribute="trailing" constant="8" id="l53-Sv-qCH"/>
+                            <constraint firstItem="RCy-h8-fAU" firstAttribute="top" secondItem="exe-0A-eKC" secondAttribute="bottom" constant="8" id="l7d-gv-pvR"/>
+                            <constraint firstAttribute="trailing" secondItem="djg-Mi-ogF" secondAttribute="trailing" constant="8" id="ndk-VK-myE"/>
+                            <constraint firstItem="xkQ-vr-qSZ" firstAttribute="leading" secondItem="p6S-Za-OrJ" secondAttribute="leading" constant="8" id="uDl-lk-z1X"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadow_down">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="gradient_top">
+                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="fieldPassword" destination="RCy-h8-fAU" id="iZs-vJ-Q6d"/>
+                        <outlet property="fieldUsername" destination="exe-0A-eKC" id="IjR-V6-fY6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYc-m6-3Re" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="1410"/>
         </scene>
         <!--Astronomy-->
         <scene sceneID="cFc-MX-uX5">
@@ -1126,11 +1352,11 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                             </tableViewSection>
                             <tableViewSection id="mrZ-ue-kbX">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FDI-DD-w2l">
-                                        <rect key="frame" x="0.0" y="644" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="49" id="FDI-DD-w2l">
+                                        <rect key="frame" x="0.0" y="644" width="600" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FDI-DD-w2l" id="qYe-Nh-uXt">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="48.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1158,12 +1384,13 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SB7-Xw-dXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101" y="638"/>
+            <point key="canvasLocation" x="1125" y="638"/>
         </scene>
     </scenes>
     <resources>
         <image name="astronomy.png" width="30" height="30"/>
         <image name="forecast.png" width="29" height="30"/>
+        <image name="game.png" width="30" height="30"/>
         <image name="radar.png" width="29" height="30"/>
     </resources>
 </document>
