@@ -65,7 +65,7 @@ Most API related errors are handled by LClient. If a property of an object is mi
 - 6/16 21:00 - 2:00	= `5 hours`
 - 6/17 19:40 - 1:00	= `5.5 hours`
 - 6/18 14:00 - 23:30 / 9.5 hours - about 1.5 hours resting = about `8 hours`
-- Total: about 18.5 hours
+- Total: about `18.5 hours`
 
 ## Potential issues
 
