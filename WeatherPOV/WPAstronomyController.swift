@@ -46,10 +46,10 @@ class WPAstronomyController: UITableViewController {
 					self.cellMoonset.detailTextLabel?.text = time
 				}
 				if let percentage = astronomy?.moon_phase?.percentIlluminated {
-					self.cellIlluminated.detailTextLabel?.text = String(format:"%zi%%", percentage)
+					self.cellIlluminated.detailTextLabel?.text = String(format:"%.0f%%", percentage)
 				}
 				if let age = astronomy?.moon_phase?.ageOfMoon {
-					self.cellMoonAge.detailTextLabel?.text = String(age)
+					self.cellMoonAge.detailTextLabel?.text = age
 				}
 				if let phase = astronomy?.moon_phase?.phaseofMoon {
 					self.cellMoonPhase.detailTextLabel?.text = phase

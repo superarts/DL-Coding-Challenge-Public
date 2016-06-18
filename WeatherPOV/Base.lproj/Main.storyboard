@@ -235,9 +235,6 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fy-c8-Qcd">
                                                     <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="584" id="6jT-J2-cVd"/>
-                                                    </constraints>
                                                     <state key="normal" title="Back"/>
                                                     <connections>
                                                         <action selector="lf_actionPop" destination="R7h-pL-KmD" eventType="touchUpInside" id="H3B-d8-9nH"/>
@@ -483,9 +480,6 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E57-2r-grG">
                                                     <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="584" id="sr0-jE-cui"/>
-                                                    </constraints>
                                                     <state key="normal" title="Done"/>
                                                     <connections>
                                                         <action selector="lf_actionPop" destination="R7h-pL-KmD" eventType="touchUpInside" id="ar1-oO-F8M"/>

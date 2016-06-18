@@ -93,7 +93,7 @@ class WPGdayController: LFTableController {
 				let y = CGFloat(arc4random_uniform(UInt32(self.view.h) - UInt32(bh) * 2)) + CGFloat(bh) - h / 2
 				let button = UIButton(frame: CGRectMake(x, y, w, h))
 				button.enable_border(width:0, color:.blueColor(), is_circle:true)
-				button.setImage(UIImage(named:"Icon"), forState:.Normal)
+				button.setImage(UIImage(named:"icon.png"), forState:.Normal)
 				button.addTarget(self, action:#selector(self.gameTapped), forControlEvents:.TouchUpInside)
 				button.alpha = 0
 				UIView.animateWithDuration(0.5) { 

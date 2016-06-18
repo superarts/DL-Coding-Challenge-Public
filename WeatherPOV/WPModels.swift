@@ -179,10 +179,10 @@ class WPForecastResultModel: WPResultModel {
 //	Astronomy
 
 class WPTimeModel: LFModel {
-	var hour:	Int = 0
-	var minute:	Int = 0
+	var hour:	Float = 0
+	var minute:	Float = 0
 	var str: String {
-		return String(format:"%02zi:%02zi", hour, minute)
+		return String(format:"%02.0f:%02.0f", hour, minute)
 	}
 }
 
@@ -196,8 +196,8 @@ class WPSunPhaseModel: LFModel {
 //	Inconsistent spellings are from original API, see:
 //	http://api.wunderground.com/api/dc60d98175ba0199/astronomy/q/AU/Sydney.json
 class WPMoonPhaseModel: WPSunPhaseModel {
-	var percentIlluminated:	Int = 0
-	var ageOfMoon: Int = 0
+	var percentIlluminated:	Float = 0
+	var ageOfMoon: String?
 	var phaseofMoon: String?
 	var hemisphere: String?
 
