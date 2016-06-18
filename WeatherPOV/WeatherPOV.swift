@@ -14,6 +14,7 @@ struct WP {
 		static let geolookup = "geolookup/q/"
 		static let forecast = "forecast10day/q/"
 		static let formatRadar = "%@animatedradar/animatedsatellite/q/%@/%@.gif?num=6&delay=50&interval=30"
+		static let astronomy = "astronomy/q/"
 		static var radar: String? {
 			if let country = WP.country, let city = WP.city {
 				return String(format: formatRadar, root, country, city)

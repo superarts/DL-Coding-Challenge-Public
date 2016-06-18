@@ -29,6 +29,7 @@
 		B3F8C6A51D142D5300A997A5 /* WPSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */; };
 		B3F8C6A91D1433B100A997A5 /* WPForecastDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */; };
 		B3F8C6AB1D14460100A997A5 /* WPRadarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6AA1D14460100A997A5 /* WPRadarController.swift */; };
+		B3F8C6AD1D150E2900A997A5 /* WPAstronomyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6AC1D150E2900A997A5 /* WPAstronomyController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPSettingController.swift; sourceTree = "<group>"; };
 		B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPForecastDetailController.swift; sourceTree = "<group>"; };
 		B3F8C6AA1D14460100A997A5 /* WPRadarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPRadarController.swift; sourceTree = "<group>"; };
+		B3F8C6AC1D150E2900A997A5 /* WPAstronomyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPAstronomyController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +144,7 @@
 			children = (
 				B3F8C69A1D142D4C00A997A5 /* WeatherPOV.swift */,
 				B3F8C6A71D142D6A00A997A5 /* Models */,
-				B3F8C6A61D142D5800A997A5 /* Controllers */,
+				B3F8C6A61D142D5800A997A5 /* ViewControllers */,
 				B3F8C6951D12EC8C00A997A5 /* data */,
 				B3F8C6861D12C43000A997A5 /* LFramework */,
 				B3F8C6581D12C2CF00A997A5 /* AppDelegate.swift */,
@@ -209,7 +211,7 @@
 			path = data;
 			sourceTree = "<group>";
 		};
-		B3F8C6A61D142D5800A997A5 /* Controllers */ = {
+		B3F8C6A61D142D5800A997A5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				B3F8C69D1D142D5300A997A5 /* WPForecastController.swift */,
@@ -217,8 +219,9 @@
 				B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */,
 				B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */,
 				B3F8C6AA1D14460100A997A5 /* WPRadarController.swift */,
+				B3F8C6AC1D150E2900A997A5 /* WPAstronomyController.swift */,
 			);
-			name = Controllers;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		B3F8C6A71D142D6A00A997A5 /* Models */ = {
@@ -436,6 +439,7 @@
 				B3F8C6AB1D14460100A997A5 /* WPRadarController.swift in Sources */,
 				B3F8C6911D12C43000A997A5 /* LFoundation.swift in Sources */,
 				B3F8C6A11D142D5300A997A5 /* WPClients.swift in Sources */,
+				B3F8C6AD1D150E2900A997A5 /* WPAstronomyController.swift in Sources */,
 				B3F8C6A51D142D5300A997A5 /* WPSettingController.swift in Sources */,
 				B3F8C6591D12C2CF00A997A5 /* AppDelegate.swift in Sources */,
 			);

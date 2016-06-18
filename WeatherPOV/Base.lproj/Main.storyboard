@@ -46,8 +46,10 @@
 
 Please enable location service and make sure you're connected to internet.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.37337798729999999" blue="0.78257181190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
                                 </userDefinedRuntimeAttributes>
@@ -193,6 +195,11 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                             <constraint firstItem="fAv-49-QGe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bze-lW-heH"/>
                             <constraint firstItem="fje-el-Ubz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qyK-Bl-91y"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="gradient_top">
+                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="4rt-Cy-RvE"/>
                     <connections>
@@ -211,7 +218,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
         <scene sceneID="6Bx-cJ-qQK">
             <objects>
                 <tableViewController storyboardIdentifier="WPForecastDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R7h-pL-KmD" customClass="WPForecastDetailController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="AS5-I1-aZT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="AS5-I1-aZT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -757,75 +764,198 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
         <scene sceneID="cFc-MX-uX5">
             <objects>
                 <tableViewController storyboardIdentifier="WPAstronomyController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Zn-2d-AkH" customClass="WPAstronomyController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="kab-v2-Mj0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kab-v2-Mj0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="YK8-Tm-nJO">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Astronomy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Eo5-7C-gEg">
+                                    <rect key="frame" x="8" y="28" width="584" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="hdH-wC-nD6"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                    <color key="shadowColor" red="0.0" green="0.37337798729999999" blue="0.78257181190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <size key="shadowOffset" width="0.0" height="1"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Eo5-7C-gEg" firstAttribute="top" secondItem="YK8-Tm-nJO" secondAttribute="top" constant="28" id="Wox-3s-hWr"/>
+                                <constraint firstItem="Eo5-7C-gEg" firstAttribute="leading" secondItem="YK8-Tm-nJO" secondAttribute="leading" constant="8" id="YF5-s6-N1I"/>
+                                <constraint firstAttribute="trailing" secondItem="Eo5-7C-gEg" secondAttribute="trailing" constant="8" id="nrR-C5-Hni"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="gradient_top">
+                                    <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                         <sections>
                             <tableViewSection id="qIA-bE-Db5">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Time" id="fXG-Im-KL2">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fRY-iu-Na9">
-                                        <rect key="frame" x="0.0" y="35" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="9fC-yT-1YE" detailTextLabel="h3m-dL-zEN" style="IBUITableViewCellStyleValue1" id="kbm-hR-wRw">
+                                        <rect key="frame" x="0.0" y="148" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fRY-iu-Na9" id="pkG-gn-QTh">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kbm-hR-wRw" id="JYv-H6-Da2">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXn-5u-9WB">
-                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="584" id="ZKh-41-Mc3"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Back"/>
-                                                    <connections>
-                                                        <action selector="lf_actionPop" destination="4Zn-2d-AkH" eventType="touchUpInside" id="vFc-vM-Pot"/>
-                                                    </connections>
-                                                </button>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Current time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9fC-yT-1YE">
+                                                    <rect key="frame" x="15" y="12" width="91" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="unknown" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h3m-dL-zEN">
+                                                    <rect key="frame" x="526.5" y="14" width="58.5" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="QXn-5u-9WB" firstAttribute="trailing" secondItem="pkG-gn-QTh" secondAttribute="trailingMargin" id="7gS-PL-dmt"/>
-                                                <constraint firstItem="QXn-5u-9WB" firstAttribute="top" secondItem="pkG-gn-QTh" secondAttribute="topMargin" constant="-1" id="MyL-sd-2DF"/>
-                                                <constraint firstItem="QXn-5u-9WB" firstAttribute="leading" secondItem="pkG-gn-QTh" secondAttribute="leadingMargin" id="jEK-zz-UFd"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="QXn-5u-9WB" secondAttribute="bottom" constant="-1.5" id="wgf-rD-sy2"/>
-                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="38H-tl-HH1" detailTextLabel="H1O-wZ-FtD" style="IBUITableViewCellStyleValue1" id="ggv-VL-asb">
+                                        <rect key="frame" x="0.0" y="192" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ggv-VL-asb" id="oHG-5f-Rdi">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sunrise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="38H-tl-HH1">
+                                                    <rect key="frame" x="15" y="12" width="54.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="unknown" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H1O-wZ-FtD">
+                                                    <rect key="frame" x="526.5" y="14" width="58.5" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="8xK-ac-mdv" detailTextLabel="s2X-if-WfY" style="IBUITableViewCellStyleValue1" id="m7r-L1-fdy">
+                                        <rect key="frame" x="0.0" y="236" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m7r-L1-fdy" id="Aab-LU-P0x">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sunset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8xK-ac-mdv">
+                                                    <rect key="frame" x="15" y="12" width="50.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="unknown" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s2X-if-WfY">
+                                                    <rect key="frame" x="526.5" y="14" width="58.5" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="udH-za-2ne" detailTextLabel="elT-oy-d13" style="IBUITableViewCellStyleValue1" id="bxT-Ws-mvG">
+                                        <rect key="frame" x="0.0" y="280" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bxT-Ws-mvG" id="2kd-iv-lcw">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Moonrise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="udH-za-2ne">
+                                                    <rect key="frame" x="15" y="12" width="67.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="unknown" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="elT-oy-d13">
+                                                    <rect key="frame" x="526.5" y="14" width="58.5" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="JLK-V8-TzW" detailTextLabel="cKJ-ns-xwC" style="IBUITableViewCellStyleValue1" id="7cg-02-Tas">
+                                        <rect key="frame" x="0.0" y="324" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7cg-02-Tas" id="qJe-t8-dOd">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Moonset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JLK-V8-TzW">
+                                                    <rect key="frame" x="15" y="12" width="63.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="unknown" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cKJ-ns-xwC">
+                                                    <rect key="frame" x="526.5" y="14" width="58.5" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Weather" id="8RN-P8-5iK">
+                            <tableViewSection headerTitle="Moon phase" id="8RN-P8-5iK">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="e1E-fV-AG1" detailTextLabel="RKv-j8-ze0" rowHeight="64" style="IBUITableViewCellStyleValue1" id="XoT-7x-u8b">
-                                        <rect key="frame" x="0.0" y="129" width="600" height="64"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XoT-7x-u8b" id="Ws9-YW-1CV">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="63.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="80%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e1E-fV-AG1">
-                                                    <rect key="frame" x="15" y="22" width="32" height="19.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="chance of precipitation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RKv-j8-ze0">
-                                                    <rect key="frame" x="436.5" y="24" width="148.5" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="mF4-JT-dan" detailTextLabel="xDO-sh-npa" style="IBUITableViewCellStyleValue1" id="WSW-UH-Woo">
-                                        <rect key="frame" x="0.0" y="193" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="396" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WSW-UH-Woo" id="q2o-Lg-XrW">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -854,7 +984,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="UVD-ZQ-Uh6" detailTextLabel="KcB-Q3-cyf" style="IBUITableViewCellStyleValue1" id="fx6-eC-zdZ">
-                                        <rect key="frame" x="0.0" y="237" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="440" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fx6-eC-zdZ" id="Wgd-4f-dGw">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -883,7 +1013,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="XMr-id-JVg" detailTextLabel="qCn-Ap-0Ia" style="IBUITableViewCellStyleValue1" id="VZX-DM-zm9">
-                                        <rect key="frame" x="0.0" y="281" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="484" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VZX-DM-zm9" id="pJI-4R-JJM">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -912,7 +1042,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="RxV-pt-cWu" detailTextLabel="0gi-bi-jSL" style="IBUITableViewCellStyleValue1" id="BzL-Ly-MvN">
-                                        <rect key="frame" x="0.0" y="325" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="528" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BzL-Ly-MvN" id="y13-aq-Xvi">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -942,51 +1072,17 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Info" id="fXG-Im-KL2">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="9fC-yT-1YE" detailTextLabel="h3m-dL-zEN" style="IBUITableViewCellStyleValue1" id="kbm-hR-wRw">
-                                        <rect key="frame" x="0.0" y="419" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kbm-hR-wRw" id="JYv-H6-Da2">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Current time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9fC-yT-1YE">
-                                                    <rect key="frame" x="15" y="12" width="91" height="19.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="unknown" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h3m-dL-zEN">
-                                                    <rect key="frame" x="526.5" y="14" width="58.5" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="TODO" id="hK1-fH-MvD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="mpQ-nV-M8z" detailTextLabel="4sD-tf-r3K" style="IBUITableViewCellStyleValue1" id="vPT-g5-MZ7">
-                                        <rect key="frame" x="0.0" y="513" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="600" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vPT-g5-MZ7" id="pB3-Uz-jHB">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="QPF and wind info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mpQ-nV-M8z">
-                                                    <rect key="frame" x="15" y="12" width="132" height="19.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Moon phase image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mpQ-nV-M8z">
+                                                    <rect key="frame" x="15" y="12" width="137.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -995,8 +1091,8 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                                         <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="available in data feed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4sD-tf-r3K">
-                                                    <rect key="frame" x="449" y="14" width="136" height="17"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="tycho.usno.navy.mil/vphase.html" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4sD-tf-r3K">
+                                                    <rect key="frame" x="374" y="14" width="211" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -1013,29 +1109,11 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                             <tableViewSection id="mrZ-ue-kbX">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FDI-DD-w2l">
-                                        <rect key="frame" x="0.0" y="593" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="644" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FDI-DD-w2l" id="qYe-Nh-uXt">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EF-kh-UY1">
-                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="584" id="pKx-ez-t3P"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Done"/>
-                                                    <connections>
-                                                        <action selector="lf_actionPop" destination="4Zn-2d-AkH" eventType="touchUpInside" id="Dc2-X5-NQN"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="1EF-kh-UY1" secondAttribute="bottom" constant="-1.5" id="6Mt-VE-wdk"/>
-                                                <constraint firstItem="1EF-kh-UY1" firstAttribute="top" secondItem="qYe-Nh-uXt" secondAttribute="topMargin" constant="-1" id="FnL-AT-3ZT"/>
-                                                <constraint firstItem="1EF-kh-UY1" firstAttribute="leading" secondItem="qYe-Nh-uXt" secondAttribute="leadingMargin" id="KaG-hK-gip"/>
-                                                <constraint firstItem="1EF-kh-UY1" firstAttribute="trailing" secondItem="qYe-Nh-uXt" secondAttribute="trailingMargin" id="ou0-eX-cwU"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -1047,6 +1125,17 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Astronomy" id="tsi-Oh-GpH"/>
+                    <connections>
+                        <outlet property="cellCurrentTime" destination="kbm-hR-wRw" id="1jL-6f-iFx"/>
+                        <outlet property="cellHemisphere" destination="BzL-Ly-MvN" id="c7J-fY-cYM"/>
+                        <outlet property="cellIlluminated" destination="WSW-UH-Woo" id="mWu-i8-lq2"/>
+                        <outlet property="cellMoonAge" destination="fx6-eC-zdZ" id="yF1-xA-mg2"/>
+                        <outlet property="cellMoonPhase" destination="VZX-DM-zm9" id="KZh-ll-2Hj"/>
+                        <outlet property="cellMoonrise" destination="bxT-Ws-mvG" id="gA0-hg-3Lr"/>
+                        <outlet property="cellMoonset" destination="7cg-02-Tas" id="wWX-dA-yq6"/>
+                        <outlet property="cellSunrise" destination="ggv-VL-asb" id="KPF-U3-9ca"/>
+                        <outlet property="cellSunset" destination="m7r-L1-fdy" id="nHK-M7-nj0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SB7-Xw-dXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

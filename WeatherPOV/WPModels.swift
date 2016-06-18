@@ -8,6 +8,7 @@ class WPErrorModel: LFModel {
 class WPFeatureModel: LFModel {
 	var geolookup:	Int = 0
 	var forecast:	Int = 0
+	var astronomy:	Int = 0
 }
 
 class WPResponseModel: LFModel {
@@ -173,4 +174,39 @@ class WPForecastModel: LFModel {
 
 class WPForecastResultModel: WPResultModel {
 	var forecast: WPForecastModel?
+}
+
+//	Astronomy
+
+class WPTimeModel: LFModel {
+	var hour:	Int = 0
+	var minute:	Int = 0
+	var str: String {
+		return String(format:"%02zi:%02zi", hour, minute)
+	}
+}
+
+class WPSunPhaseModel: LFModel {
+	var sunrise:	WPTimeModel?
+	var sunset:		WPTimeModel?
+}
+
+//	WPMoonPhaseModel contains sunrise and sunset sometimes, but they shouldn't be
+//	used. For sunrise and sunset we should always use WPSunPhaseModel.
+//	Inconsistent spellings are from original API, see:
+//	http://api.wunderground.com/api/dc60d98175ba0199/astronomy/q/AU/Sydney.json
+class WPMoonPhaseModel: WPSunPhaseModel {
+	var percentIlluminated:	Int = 0
+	var ageOfMoon: Int = 0
+	var phaseofMoon: String?
+	var hemisphere: String?
+
+	var current_time:	WPTimeModel?
+	var moonrise:	WPTimeModel?
+	var moonset:	WPTimeModel?
+}
+
+class WPAstronomyResultModel: WPResultModel {
+	var sun_phase: WPSunPhaseModel?
+	var moon_phase: WPMoonPhaseModel?
 }

@@ -173,6 +173,3 @@ class WPForecastCell: UITableViewCell {
 		imageIcon.image_load(forecast.icon_url, clear:true)
 	}
 }
-
-class WPAstronomyController: UITableViewController {
-}

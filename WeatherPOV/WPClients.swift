@@ -21,4 +21,10 @@ class WPClients {
 		client.func_model = block
 		client.execute()
 	}
+	class func astronomy(country: String, city: String, block: ((WPAstronomyResultModel?, NSError?) -> Void)? = nil) {
+		let api = String(format:"%@%@/%@.json", WP.api.astronomy, country, city)
+		let client = WPRestClient<WPAstronomyResultModel>(api: api)
+		client.func_model = block
+		client.execute()
+	}
 }
