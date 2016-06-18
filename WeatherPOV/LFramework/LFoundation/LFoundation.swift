@@ -43,7 +43,7 @@ public struct LF {
 	public static func dispatch(block: dispatch_block_t) {
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
 	}
-	public static func dispatch_delay(delay: NSTimeInterval, _ block: dispatch_block_t) {
+	public static func dispatch_delay(delay: Double, _ block: dispatch_block_t) {
 		let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
 		dispatch_after(time, dispatch_get_main_queue(), block)
 	}

@@ -218,7 +218,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
         <!--Forecast Detail Controller-->
         <scene sceneID="6Bx-cJ-qQK">
             <objects>
-                <tableViewController storyboardIdentifier="WPForecastDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R7h-pL-KmD" customClass="WPForecastDetailController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WPForecastDetailController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R7h-pL-KmD" customClass="WPForecastDetailController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="AS5-I1-aZT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -773,7 +773,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u5H-np-Efn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u5H-np-Efn">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="9sb-Uc-bae">
@@ -812,6 +812,20 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                                 <action selector="actionPlay" destination="BfI-fo-CdU" eventType="touchUpInside" id="KYc-hL-yqH"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G'day!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="d08-iT-FiV">
+                                            <rect key="frame" x="8" y="28" width="584" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="bqY-94-KP8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.0" green="0.37337798729999999" blue="0.78257181190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="0.0" height="1"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
@@ -820,8 +834,11 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                         <constraint firstItem="zkW-yk-w9R" firstAttribute="leading" secondItem="9sb-Uc-bae" secondAttribute="leading" constant="8" id="O52-fr-Xdy"/>
                                         <constraint firstAttribute="bottom" secondItem="xkx-5q-lZA" secondAttribute="bottom" constant="46" id="aij-GL-771"/>
                                         <constraint firstAttribute="trailing" secondItem="xkx-5q-lZA" secondAttribute="trailing" constant="8" id="dbc-gU-OSu"/>
+                                        <constraint firstItem="d08-iT-FiV" firstAttribute="leading" secondItem="9sb-Uc-bae" secondAttribute="leading" constant="8" id="dhY-FW-PB3"/>
+                                        <constraint firstAttribute="trailing" secondItem="d08-iT-FiV" secondAttribute="trailing" constant="8" id="j9P-It-J4B"/>
                                         <constraint firstAttribute="trailing" secondItem="zkW-yk-w9R" secondAttribute="trailing" constant="8" id="rGB-Nc-nZY"/>
                                         <constraint firstAttribute="bottom" secondItem="zkW-yk-w9R" secondAttribute="bottom" constant="8" id="uRc-1M-ORM"/>
+                                        <constraint firstItem="d08-iT-FiV" firstAttribute="top" secondItem="9sb-Uc-bae" secondAttribute="top" constant="28" id="xzP-xm-ACw"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="gradient_top">
@@ -856,29 +873,12 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G'day!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="d08-iT-FiV">
-                                <rect key="frame" x="8" y="28" width="584" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="sp4-zh-YVC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.37337798729999999" blue="0.78257181190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="1"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nzH-g7-r1o" firstAttribute="top" secondItem="u5H-np-Efn" secondAttribute="bottom" id="2QB-4R-AY3"/>
                             <constraint firstAttribute="trailing" secondItem="u5H-np-Efn" secondAttribute="trailing" id="MfI-NG-s6S"/>
-                            <constraint firstItem="d08-iT-FiV" firstAttribute="top" secondItem="QdH-z9-gat" secondAttribute="bottom" constant="8" id="dW4-Et-FWT"/>
                             <constraint firstItem="u5H-np-Efn" firstAttribute="leading" secondItem="gF3-7d-Hrh" secondAttribute="leading" id="fVF-Ou-jIn"/>
-                            <constraint firstItem="d08-iT-FiV" firstAttribute="leading" secondItem="gF3-7d-Hrh" secondAttribute="leading" constant="8" id="oQl-ip-OHz"/>
-                            <constraint firstAttribute="trailing" secondItem="d08-iT-FiV" secondAttribute="trailing" constant="8" id="pXs-ye-rbp"/>
                             <constraint firstItem="u5H-np-Efn" firstAttribute="top" secondItem="gF3-7d-Hrh" secondAttribute="top" id="whU-lt-j2R"/>
                         </constraints>
                     </view>
@@ -910,8 +910,8 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="pqm-tN-JpW"/>
                                 </constraints>
-                                <string key="text">Please enter your email and a password.
-If the username field is left blank while registering, the first part of your email will become your username.</string>
+                                <string key="text">Please enter your username and password.
+If you haven't registered yet, a new account will be created.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -945,7 +945,7 @@ If the username field is left blank while registering, the first part of your em
                                     <action selector="actionSubmit" destination="CzF-GN-74W" eventType="touchUpInside" id="Dxz-R6-2UR"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exe-0A-eKC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exe-0A-eKC">
                                 <rect key="frame" x="8" y="116" width="584" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="SiP-fi-6Hp"/>

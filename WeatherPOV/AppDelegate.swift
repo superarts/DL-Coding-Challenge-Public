@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	func initParse(launchOptions: [NSObject: AnyObject]?) {
+		//	parse keys for project "playground"
 		let applicationId	= "C4MCodjI5pFuctdLMDKSjgGSybVm9XWLFc7cmDQF"
 		let clientKey		= "ik5E1yuhvPwUqiUBc6QyhSN3NSz3KyQmLWtOWHWw"
 		Parse.setApplicationId(applicationId, clientKey:clientKey)
@@ -40,8 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let user = PFUser.currentUser() {
             WP.user = user
         } else {
-			PFUser.enableAutomaticUser()
+			//PFUser.enableAutomaticUser()
 		}
+		//	test: disable auto login
+		//WP.user = nil
 		LF.log("user", WP.user)
 		PFQuery.clearAllCachedResults()
 	}

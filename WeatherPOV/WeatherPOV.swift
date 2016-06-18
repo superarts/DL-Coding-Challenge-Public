@@ -1,10 +1,11 @@
 //	WP: Project WeatherPOV
 struct WP {
 	//	variables
-	static var station: WPStationModel?
-	static var country: String?
-	static var city: String?
-	static var user: PFUser?
+	static var station:		WPStationModel?
+	static var forecast:	WPForecastdayModel?
+	static var country:	String?
+	static var city:	String?
+	static var user:	PFUser?
 
 	//	consts
 	static let storyboard_main = UIStoryboard(name: "Main", bundle: nil)
@@ -31,6 +32,7 @@ struct WP {
 		static let cancel = "Cancel"
 		static let loading = "Loading"
 		static let submitting = "Submitting"
+		static let submit_failed = "Submission failed: "
 		static let reloading = "Reloading"
 		static let signing_in = "Logging in"
 		static let signing_up = "Registering"
