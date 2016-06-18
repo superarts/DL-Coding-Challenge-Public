@@ -76,6 +76,23 @@ The following issue of Weather Underground API is logged because some source cod
 - 6/18: The issue mentioned above is not there anymore.
   - [Screenshot 2](https://www.dropbox.com/s/0d32wz3h6v12wv8/Screenshot%202016-06-18%2023.34.08.png?dl=0)
 
+## Environment
+
+### Development
+
+- `Xcode 7.3.1`
+- `Swift 2.2`
+- Deployment target: `8.0`
+- Device: `iPhone` with `Portrait` orientation
+
+For a POV normally we only target iPhone portrait to reduce potential issue that makes our app look bad, unless the idea is targeted to iPad mainly, etc.
+
+### Test devices
+
+- Simulator
+- iPhone 5
+- iPhone 6 plus
+
 <hr>
 
 # DL-Coding-Challenge
