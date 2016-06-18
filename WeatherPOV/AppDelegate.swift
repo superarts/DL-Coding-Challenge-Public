@@ -8,6 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		//UIFont.print_all()
 		initParse(launchOptions)
+		initFlurry()
 		return true
 	}
 
@@ -47,5 +48,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		//WP.user = nil
 		LF.log("user", WP.user)
 		PFQuery.clearAllCachedResults()
+	}
+
+	func initFlurry() {
+		Flurry.setDebugLogEnabled(false)
+		Flurry.startSession("FM9FG6CP4BYXT5XCYD7D")
 	}
 }

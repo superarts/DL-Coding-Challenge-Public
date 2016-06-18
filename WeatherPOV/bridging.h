@@ -2,3 +2,4 @@
 #import "iCarousel.h"
 #import "UIImage+animatedGIF.h"
 #import "MBProgressHUD.h"
+#import "Flurry.h"

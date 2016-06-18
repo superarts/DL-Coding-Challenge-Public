@@ -42,8 +42,10 @@
 - Settings
   - `NSUserDefaults`
 - Misc
+  - `Swift 2.2` syntax
   - TestFlight
   - [Cocoapods](cocoapods.org)
+  - [Flurry](flurry.com)
 
 ## About error handling
 

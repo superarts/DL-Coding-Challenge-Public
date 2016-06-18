@@ -62,7 +62,7 @@
 		1557B9AA6A9505A6182D5732 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		55794350836EA4864EFCDD37 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B37F3E353A6285CB261F1932 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		B3F8C6551D12C2CF00A997A5 /* WeatherPOV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherPOV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F8C6551D12C2CF00A997A5 /* WeatherMasterDeluxe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMasterDeluxe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F8C6581D12C2CF00A997A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3F8C65D1D12C2CF00A997A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3F8C65F1D12C2D000A997A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		B3F8C6561D12C2CF00A997A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B3F8C6551D12C2CF00A997A5 /* WeatherPOV.app */,
+				B3F8C6551D12C2CF00A997A5 /* WeatherMasterDeluxe.app */,
 				B3F8C6691D12C2D000A997A5 /* WeatherPOVTests.xctest */,
 				B3F8C6741D12C2D000A997A5 /* WeatherPOVUITests.xctest */,
 			);
@@ -337,7 +337,7 @@
 			);
 			name = WeatherPOV;
 			productName = WeatherPOV;
-			productReference = B3F8C6551D12C2CF00A997A5 /* WeatherPOV.app */;
+			productReference = B3F8C6551D12C2CF00A997A5 /* WeatherMasterDeluxe.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B3F8C6681D12C2D000A997A5 /* WeatherPOVTests */ = {
@@ -676,7 +676,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOV;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WeatherMasterDeluxe;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = WeatherPOV/bridging.h;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -694,7 +694,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOV;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WeatherMasterDeluxe;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = WeatherPOV/bridging.h;
 				TARGETED_DEVICE_FAMILY = 1;
