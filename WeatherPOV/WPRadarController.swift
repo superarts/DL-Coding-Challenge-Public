@@ -18,7 +18,7 @@ class WPRadarController: UIViewController {
 				self.imageRadar.image = UIImage.animatedImageWithAnimatedGIFURL(NSURL(string: api))
 			}
 		} else {
-			labelTitle.text = "Unknown"
+			labelTitle.text = WP.s.unknown
 			imageRadar.image = nil
 		}
 	}

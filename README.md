@@ -8,8 +8,9 @@
 - `pod install`
 - `open WeatherPOV.xcworkspace`
   - This launches Xcode, then press `Command+R`
+- Also available on `TestFlight`. [Send me an Email](mailto:leo@superarts.org) to get beta access.
 
-## About LFra
+## Dependencies
 
 - `LFramework`: REST client, helper classes, etc. Add as source as it's not available as a `pod` yet.
 - `pod 'iCarousel'`: Timemachine style carousel.
@@ -23,10 +24,11 @@
   - Storyboard
   - Autolayout
   - UIKit
-    - `UINavigationController`
+    - `UINavigationController` without `UINavigationBar`
 	- `UITabBarController`
 	- Customized font with [Interface Builder integration](http://www.superarts.org/LSwift/lswift/lthememanager/gossip/ibinspectable/ui/2015/05/07/introducing-lthememanager-about-ibinspectable.html)
   - Dynamic prototype `UITableViewController`: `LFTableViewController`
+  - Static cells `UITableViewController`: `LFTableViewController`
   - Reflection based API client: [LFClient](http://www.superarts.org/LSwift/lswift/lrestclient/gossip/modelling/restful/2015/05/02/about-lrestclient.html)
   - Cloud backend: [Parse](http://parse.com/)
 - Daily forecast
@@ -46,6 +48,13 @@
   - TestFlight
   - [Cocoapods](cocoapods.org)
   - [Flurry](flurry.com)
+  - [Weather Underground API](https://www.wunderground.com/weather/api/d/docs?d=data/forecast&MR=1)
+
+## Features planned
+
+A map-based social networking system was planned initially. The good thing is that it can have radar overlay, camera, and user generated data (e.g. messages like "It's so sunny! I'm going to the beach!") on the map all together. However, without actual users, it's less cool to have only yourself on the map. So it's replaced by a mini-game `G'day`, in which the leaderboard always shows some users so that the app looks alive.
+
+A more detailed home screen was also planned. The idea was taking advantage of `conditions` and `hourly` APIs and display more data. However, I feel like the technology used t parse and display similar data was already demostrated in `Forecast` and `Astronomy`, so it was not implemented eventually.
 
 ## About error handling
 
@@ -53,13 +62,19 @@ Most API related errors are handled by LClient. If a property of an object is mi
 
 ## Time log
 
-6/16 21:00 - 2:00
-6/17 19:40 - 1:00
-6/18 14:00
+6/16 21:00 - 2:00	5 hours
+6/17 19:40 - 1:00	5.5 hours
+6/18 14:00 - 23:30	9.5 hours - about 1.5 hours resting = 8 hours
+Total: about 18.5 hours
 
 ## Potential issues
 
-In [Sydney](https://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/-33.863400,151.211000.json), location info shows Chapin US instead of Sydney AU. [San Francisco](http://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/37.776289,-122.395234.json) shows the correct info. Unfortunately I'll have to use weather station instead of location.
+The following issue of Weather Underground API is logged because some source code of mine may not make sense. Here's the reason.
+
+- 6/16: In [Sydney](https://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/-33.863400,151.211000.json), location info shows Chapin US instead of Sydney AU. [San Francisco](http://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/37.776289,-122.395234.json) shows the correct info. Unfortunately I'll have to use weather station instead of location.
+  - [Screenshot 1](https://www.dropbox.com/s/07wfqj2zty6fr4d/Screenshot%202016-06-18%2023.33.39.png?dl=0)
+- 6/18: The issue mentioned above is not there anymore.
+  - [Screenshot 2](https://www.dropbox.com/s/0d32wz3h6v12wv8/Screenshot%202016-06-18%2023.34.08.png?dl=0)
 
 <hr>
 

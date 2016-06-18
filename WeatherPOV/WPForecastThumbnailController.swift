@@ -11,24 +11,24 @@ class WPForecastThumbnailController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		view.enable_border(width:2, color:UIColor(rgb: 0xaaddff), radius: 10)
+		view.enable_border(width:2, color:WP.color.thumbnailBorder, radius: 10)
 	}
 	func reload() {
 		super.viewDidLoad()
 		if let weekday = forecast.date?.weekday {
 			labelWeekday.text = weekday
 		} else {
-			labelWeekday.text = "Unknown"
+			labelWeekday.text = WP.s.unknown
 		}
 		if let low = forecast.low?.str, let high = forecast.high?.str {
 			labelTemperature.text = String(format: "%@ - %@", low, high)
 		} else {
-			labelTemperature.text = "Unknown"
+			labelTemperature.text = WP.s.unknown
 		}
 		if let conditions = forecast.conditions {
 			labelCondition.text = conditions
 		} else {
-			labelCondition.text = "Unknown"
+			labelCondition.text = WP.s.unknown
 		}
 		labelPeriod.text = WP.periodToString(forecast.period)
 		labelPop.text = forecast.popPercentage

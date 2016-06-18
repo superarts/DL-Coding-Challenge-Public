@@ -55,7 +55,7 @@ class WPGdayController: LFTableController {
 						if path.row % 2 == 0 {
 							cell.contentView.backgroundColor = .whiteColor()
 						} else {
-							cell.contentView.backgroundColor = UIColor(rgb: 0xf0f8ff)
+							cell.contentView.backgroundColor = WP.color.tableInterlace
 						}
 						return cell
 					}

@@ -30,7 +30,7 @@
         <!--Data Source-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="WPForecastController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="WPForecastController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WPForecastController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="WPForecastController" customModule="WeatherMasterDeluxe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -109,7 +109,7 @@ Please enable location service and make sure you're connected to internet.</stri
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WPForecastCell" rowHeight="96" id="ag9-Fe-djE" customClass="WPForecastCell" customModule="WeatherPOV" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WPForecastCell" rowHeight="96" id="ag9-Fe-djE" customClass="WPForecastCell" customModule="WeatherMasterDeluxe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="388" width="600" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ag9-Fe-djE" id="LAF-FN-H7b">
@@ -218,7 +218,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
         <!--Forecast Detail Controller-->
         <scene sceneID="6Bx-cJ-qQK">
             <objects>
-                <tableViewController storyboardIdentifier="WPForecastDetailController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R7h-pL-KmD" customClass="WPForecastDetailController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WPForecastDetailController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R7h-pL-KmD" customClass="WPForecastDetailController" customModule="WeatherMasterDeluxe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="AS5-I1-aZT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -518,7 +518,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
         <!--Settings-->
         <scene sceneID="zdH-ky-Ryg">
             <objects>
-                <tableViewController storyboardIdentifier="WPSettingController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g2t-9g-4KB" customClass="WPSettingController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WPSettingController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g2t-9g-4KB" customClass="WPSettingController" customModule="WeatherMasterDeluxe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="aAT-1h-xrL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -555,7 +555,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                             </userDefinedRuntimeAttributes>
                         </view>
                         <sections>
-                            <tableViewSection headerTitle="Units" footerTitle="Powered by www.superarts.org" id="HmM-fH-pWI">
+                            <tableViewSection headerTitle="Units" footerTitle="Weather data powered by Weather Underground" id="HmM-fH-pWI">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8A7-on-b90">
                                         <rect key="frame" x="0.0" y="169.5" width="600" height="44"/>
@@ -622,7 +622,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
         <!--Radar-->
         <scene sceneID="KX3-p5-uYq">
             <objects>
-                <viewController storyboardIdentifier="WPRadarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="az2-hM-RXr" customClass="WPRadarController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WPRadarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="az2-hM-RXr" customClass="WPRadarController" customModule="WeatherMasterDeluxe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6a2-ip-Usa"/>
                         <viewControllerLayoutGuide type="bottom" id="zGi-Vf-bFR"/>
@@ -681,12 +681,12 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
         <!--Parent View Controller-->
         <scene sceneID="oOy-Fc-tuk">
             <objects>
-                <viewController storyboardIdentifier="WPForecastThumbnailController" title="Forecast" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oG6-C5-S3N" customClass="WPForecastThumbnailController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WPForecastThumbnailController" title="Forecast" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oG6-C5-S3N" customClass="WPForecastThumbnailController" customModule="WeatherMasterDeluxe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lcu-bN-Cc1"/>
                         <viewControllerLayoutGuide type="bottom" id="TpU-qE-u60"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PWC-74-UXC" customClass="WPView" customModule="WeatherPOV" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="PWC-74-UXC" customClass="WPView" customModule="WeatherMasterDeluxe" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -763,7 +763,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
         <!--Game-->
         <scene sceneID="Psx-si-tJW">
             <objects>
-                <viewController storyboardIdentifier="WPGdayController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BfI-fo-CdU" customClass="WPGdayController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WPGdayController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BfI-fo-CdU" customClass="WPGdayController" customModule="WeatherMasterDeluxe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QdH-z9-gat"/>
                         <viewControllerLayoutGuide type="bottom" id="nzH-g7-r1o"/>
@@ -782,10 +782,9 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkx-5q-lZA">
                                             <rect key="frame" x="8" y="92" width="584" height="102"/>
                                             <string key="text">RULES
-
 1. Tap as fast as you can to earn points
-2. You get more points on a good day! Have fun
-
+2. You get more points on a good day!
+Keep playing to get higher score accumulated
 
 
 
@@ -895,7 +894,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
         <!--Login Controller-->
         <scene sceneID="Cf9-Tr-GZa">
             <objects>
-                <viewController storyboardIdentifier="WPLoginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CzF-GN-74W" customClass="WPLoginController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WPLoginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CzF-GN-74W" customClass="WPLoginController" customModule="WeatherMasterDeluxe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V0a-tX-C0X"/>
                         <viewControllerLayoutGuide type="bottom" id="fmQ-kH-fuA"/>
@@ -1006,7 +1005,7 @@ If you haven't registered yet, a new account will be created.</string>
         <!--Astronomy-->
         <scene sceneID="cFc-MX-uX5">
             <objects>
-                <tableViewController storyboardIdentifier="WPAstronomyController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Zn-2d-AkH" customClass="WPAstronomyController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WPAstronomyController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Zn-2d-AkH" customClass="WPAstronomyController" customModule="WeatherMasterDeluxe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kab-v2-Mj0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -95,7 +95,7 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 			if path.row % 2 == 0 {
 				cell.contentView.backgroundColor = .whiteColor()
 			} else {
-				cell.contentView.backgroundColor = UIColor(rgb: 0xf0f8ff)
+				cell.contentView.backgroundColor = WP.color.tableInterlace
 			}
 
 			//	save today's forecast
@@ -168,14 +168,14 @@ class WPForecastCell: UITableViewCell {
 		if let title = forecast.title {
 			labelTitle.text = title
 		} else {
-			labelTitle.text = "Unknown"
+			labelTitle.text = WP.s.unknown
 		}
 		if let text = forecast.fcttext where WP.isF {
 			labelText.text = text
 		} else if let text = forecast.fcttext_metric where WP.isC {
 			labelText.text = text
 		} else {
-			labelText.text = "Unknown"
+			labelText.text = WP.s.unknown
 		}
 		labelPop.text = String(format: "%@%", forecast.popPercentage)
 		imageIcon.image_load(forecast.icon_url, clear:true)

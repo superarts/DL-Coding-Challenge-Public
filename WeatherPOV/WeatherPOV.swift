@@ -44,6 +44,11 @@ struct WP {
 		static let password_too_short = "Password is too short"
 		static let username_too_short = "Username is too short"
 		static let username_too_long = "Username is too long"
+		static let unknown = "Unknown"
+	}
+	struct color {
+		static let tableInterlace	= UIColor(rgb: 0xf0f8ff)
+		static let thumbnailBorder	= UIColor(rgb: 0xaaddff)
 	}
 
 	//	utilities
