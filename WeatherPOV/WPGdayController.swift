@@ -49,6 +49,7 @@ class WPGdayController: LFTableController {
 						if let userScore = user["gday_score"] as? Int {
 							cell.detailTextLabel?.text = String(userScore)
 						} else {
+							cell.textLabel?.text = "Invalid User"
 							cell.detailTextLabel?.text = "-"
 						}
 						if path.row % 2 == 0 {

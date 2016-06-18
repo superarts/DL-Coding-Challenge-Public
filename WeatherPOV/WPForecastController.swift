@@ -8,12 +8,12 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		tabBarController?.tabBar.hidden = true
+		table.alpha = 0
 	}
 
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
-		//	reload UI whenever view is loaded
-		table.alpha = 0
+		//	reload UI while switching tab, etc.
 		startLocationManager()
 	}
 
