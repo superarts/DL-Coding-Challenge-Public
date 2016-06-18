@@ -20,6 +20,7 @@
                         <segue destination="BfI-fo-CdU" kind="relationship" relationship="viewControllers" id="OZg-KD-Nzo"/>
                         <segue destination="4Zn-2d-AkH" kind="relationship" relationship="viewControllers" id="eok-04-sG8"/>
                         <segue destination="az2-hM-RXr" kind="relationship" relationship="viewControllers" id="ZBN-sU-Ksx"/>
+                        <segue destination="g2t-9g-4KB" kind="relationship" relationship="viewControllers" id="G7x-IP-R66"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIF-Bq-dj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -84,7 +85,7 @@ Please enable location service and make sure you're connected to internet.</stri
                                                 <outlet property="delegate" destination="BYZ-38-t0r" id="CHT-s8-FXY"/>
                                             </connections>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm7-Jy-9U7">
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm7-Jy-9U7">
                                             <rect key="frame" x="15" y="318" width="22" height="22"/>
                                             <connections>
                                                 <action selector="actionPresentSetting" destination="BYZ-38-t0r" eventType="touchUpInside" id="MHh-nn-Tya"/>
@@ -207,13 +208,12 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                         <outlet property="carousel" destination="icd-i4-xgD" id="zPo-4N-dH9"/>
                         <outlet property="labelCity" destination="Vna-9u-ufG" id="BKE-xb-oNM"/>
                         <outlet property="table" destination="fAv-49-QGe" id="2vV-JL-Asa"/>
-                        <segue destination="g2t-9g-4KB" kind="presentation" identifier="Forecast-Settings" id="s7F-Yo-UOT"/>
                         <segue destination="R7h-pL-KmD" kind="show" identifier="Forecast-Detail" id="dzt-03-65P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1225" y="1410"/>
+            <point key="canvasLocation" x="-1345" y="1442"/>
         </scene>
         <!--Forecast Detail Controller-->
         <scene sceneID="6Bx-cJ-qQK">
@@ -513,21 +513,52 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zw-Mm-kF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1219" y="2218"/>
+            <point key="canvasLocation" x="-1339" y="2250"/>
         </scene>
         <!--Settings-->
         <scene sceneID="zdH-ky-Ryg">
             <objects>
                 <tableViewController storyboardIdentifier="WPSettingController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g2t-9g-4KB" customClass="WPSettingController" customModule="WeatherPOV" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="aAT-1h-xrL">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="aAT-1h-xrL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="emI-Z5-yjj">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="ypi-Vk-uzV">
+                                    <rect key="frame" x="8" y="28" width="584" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="MzC-OQ-zOA"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                    <color key="shadowColor" red="0.0" green="0.37337798729999999" blue="0.78257181190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <size key="shadowOffset" width="0.0" height="1"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="font_name" value="MuseoSans-500"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ypi-Vk-uzV" firstAttribute="top" secondItem="emI-Z5-yjj" secondAttribute="top" constant="28" id="MOx-DX-flM"/>
+                                <constraint firstItem="ypi-Vk-uzV" firstAttribute="leading" secondItem="emI-Z5-yjj" secondAttribute="leading" constant="8" id="dHq-LN-3fz"/>
+                                <constraint firstAttribute="trailing" secondItem="ypi-Vk-uzV" secondAttribute="trailing" constant="8" id="sND-7O-qgP"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="gradient_top">
+                                    <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                         <sections>
-                            <tableViewSection headerTitle="Setting" id="HmM-fH-pWI">
+                            <tableViewSection headerTitle="Units" footerTitle="Powered by www.superarts.org" id="HmM-fH-pWI">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8A7-on-b90">
-                                        <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="169.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8A7-on-b90" id="IBx-0V-zfR">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -556,46 +587,20 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="" id="suG-ju-adq">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SQ8-5x-zCd">
-                                        <rect key="frame" x="0.0" y="129.5" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SQ8-5x-zCd" id="t4z-ee-0Qv">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3q-hy-iLd">
-                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <state key="normal" title="Done"/>
-                                                    <connections>
-                                                        <action selector="lf_actionDismiss" destination="g2t-9g-4KB" eventType="touchUpInside" id="6ij-s4-6XX"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="S3q-hy-iLd" secondAttribute="bottom" constant="-1.5" id="mHY-PF-8K2"/>
-                                                <constraint firstItem="S3q-hy-iLd" firstAttribute="top" secondItem="t4z-ee-0Qv" secondAttribute="topMargin" constant="-1" id="qPQ-M2-tI3"/>
-                                                <constraint firstItem="S3q-hy-iLd" firstAttribute="trailing" secondItem="t4z-ee-0Qv" secondAttribute="trailingMargin" id="sK4-BR-4vn"/>
-                                                <constraint firstItem="S3q-hy-iLd" firstAttribute="leading" secondItem="t4z-ee-0Qv" secondAttribute="leadingMargin" id="zMe-CM-fWd"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="g2t-9g-4KB" id="ZmG-bw-Caa"/>
                             <outlet property="delegate" destination="g2t-9g-4KB" id="XEg-8R-iKH"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings.png" id="aU3-Bw-TYc"/>
                     <connections>
                         <outlet property="segmentUnit" destination="ucf-nx-JwF" id="APh-oN-Mtp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXR-4m-Ty0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-451" y="1410"/>
+            <point key="canvasLocation" x="1894" y="670"/>
         </scene>
         <!--Forecast-->
         <scene sceneID="Whg-WB-i0N">
@@ -612,7 +617,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sew-UR-99g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1225" y="638"/>
+            <point key="canvasLocation" x="-1345" y="670"/>
         </scene>
         <!--Radar-->
         <scene sceneID="KX3-p5-uYq">
@@ -671,7 +676,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7R-EO-mOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931" y="638"/>
+            <point key="canvasLocation" x="1115" y="670"/>
         </scene>
         <!--Parent View Controller-->
         <scene sceneID="oOy-Fc-tuk">
@@ -753,7 +758,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gx4-Sl-nSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1796" y="1210"/>
+            <point key="canvasLocation" x="-1916" y="1242"/>
         </scene>
         <!--Game-->
         <scene sceneID="Psx-si-tJW">
@@ -885,7 +890,7 @@ Winds NW at 5 to 10 mph. Chance of rain 100%. Rainfall near a quarter of an inch
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xH5-tp-bIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="638"/>
+            <point key="canvasLocation" x="-503" y="670"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="Cf9-Tr-GZa">
@@ -996,7 +1001,7 @@ If you haven't registered yet, a new account will be created.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYc-m6-3Re" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="1410"/>
+            <point key="canvasLocation" x="-503" y="1442"/>
         </scene>
         <!--Astronomy-->
         <scene sceneID="cFc-MX-uX5">
@@ -1378,7 +1383,7 @@ If you haven't registered yet, a new account will be created.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SB7-Xw-dXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="638"/>
+            <point key="canvasLocation" x="313" y="670"/>
         </scene>
     </scenes>
     <resources>
@@ -1386,5 +1391,6 @@ If you haven't registered yet, a new account will be created.</string>
         <image name="forecast.png" width="29" height="30"/>
         <image name="game.png" width="30" height="30"/>
         <image name="radar.png" width="29" height="30"/>
+        <image name="settings.png" width="30" height="30"/>
     </resources>
 </document>

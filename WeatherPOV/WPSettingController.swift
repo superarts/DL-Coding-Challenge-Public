@@ -11,7 +11,7 @@ class WPSettingController: UITableViewController {
 	}
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
-		UIApplication.sharedApplication().statusBarStyle = .Default
+		//UIApplication.sharedApplication().statusBarStyle = .Default
 	}
 
 	@IBAction func actionUnitChanged(segment: UISegmentedControl) {

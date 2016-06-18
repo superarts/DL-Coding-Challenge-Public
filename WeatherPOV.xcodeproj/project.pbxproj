@@ -37,6 +37,8 @@
 		B3F8C6BC1D151FFF00A997A5 /* game.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6BB1D151FFF00A997A5 /* game.png */; };
 		B3F8C6BE1D1546A000A997A5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6BD1D1546A000A997A5 /* icon.png */; };
 		B3F8C6C01D155CE300A997A5 /* WPGdayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6BF1D155CE300A997A5 /* WPGdayController.swift */; };
+		B3F8C6C21D1577A100A997A5 /* WPLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6C11D1577A100A997A5 /* WPLoginController.swift */; };
+		B3F8C6C81D15789700A997A5 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6C71D15789700A997A5 /* settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		B3F8C6BB1D151FFF00A997A5 /* game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game.png; sourceTree = "<group>"; };
 		B3F8C6BD1D1546A000A997A5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		B3F8C6BF1D155CE300A997A5 /* WPGdayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPGdayController.swift; sourceTree = "<group>"; };
+		B3F8C6C11D1577A100A997A5 /* WPLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPLoginController.swift; sourceTree = "<group>"; };
+		B3F8C6C71D15789700A997A5 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,13 +224,10 @@
 		B3F8C6A61D142D5800A997A5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B3F8C6BF1D155CE300A997A5 /* WPGdayController.swift */,
-				B3F8C69D1D142D5300A997A5 /* WPForecastController.swift */,
-				B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */,
-				B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */,
-				B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */,
-				B3F8C6AA1D14460100A997A5 /* WPRadarController.swift */,
-				B3F8C6AC1D150E2900A997A5 /* WPAstronomyController.swift */,
+				B3F8C6C31D1577A500A997A5 /* Forecast */,
+				B3F8C6C41D1577B300A997A5 /* Gday */,
+				B3F8C6C51D1577B900A997A5 /* Astronomy */,
+				B3F8C6C61D1577C100A997A5 /* Radar */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -266,8 +267,45 @@
 				B3F8C6B31D150F4A00A997A5 /* forecast.png */,
 				B3F8C6B41D150F4A00A997A5 /* radar.png */,
 				B3F8C6BB1D151FFF00A997A5 /* game.png */,
+				B3F8C6C71D15789700A997A5 /* settings.png */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		B3F8C6C31D1577A500A997A5 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */,
+				B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */,
+				B3F8C69D1D142D5300A997A5 /* WPForecastController.swift */,
+				B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */,
+			);
+			name = Forecast;
+			sourceTree = "<group>";
+		};
+		B3F8C6C41D1577B300A997A5 /* Gday */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6BF1D155CE300A997A5 /* WPGdayController.swift */,
+				B3F8C6C11D1577A100A997A5 /* WPLoginController.swift */,
+			);
+			name = Gday;
+			sourceTree = "<group>";
+		};
+		B3F8C6C51D1577B900A997A5 /* Astronomy */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6AC1D150E2900A997A5 /* WPAstronomyController.swift */,
+			);
+			name = Astronomy;
+			sourceTree = "<group>";
+		};
+		B3F8C6C61D1577C100A997A5 /* Radar */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6AA1D14460100A997A5 /* WPRadarController.swift */,
+			);
+			name = Radar;
 			sourceTree = "<group>";
 		};
 		DB34DDA1D0018385257C5883 /* Pods */ = {
@@ -390,6 +428,7 @@
 				B3F8C6BA1D15182200A997A5 /* splash.png in Resources */,
 				B3F8C6B71D150F4A00A997A5 /* forecast.png in Resources */,
 				B3F8C6BC1D151FFF00A997A5 /* game.png in Resources */,
+				B3F8C6C81D15789700A997A5 /* settings.png in Resources */,
 				B3F8C6631D12C2D000A997A5 /* LaunchScreen.storyboard in Resources */,
 				B3F8C6B81D150F4A00A997A5 /* radar.png in Resources */,
 				B3F8C6601D12C2D000A997A5 /* Assets.xcassets in Resources */,
@@ -483,6 +522,7 @@
 				B3F8C6AB1D14460100A997A5 /* WPRadarController.swift in Sources */,
 				B3F8C6911D12C43000A997A5 /* LFoundation.swift in Sources */,
 				B3F8C6A11D142D5300A997A5 /* WPClients.swift in Sources */,
+				B3F8C6C21D1577A100A997A5 /* WPLoginController.swift in Sources */,
 				B3F8C6AD1D150E2900A997A5 /* WPAstronomyController.swift in Sources */,
 				B3F8C6A51D142D5300A997A5 /* WPSettingController.swift in Sources */,
 				B3F8C6591D12C2CF00A997A5 /* AppDelegate.swift in Sources */,

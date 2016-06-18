@@ -9,19 +9,45 @@
 - `open WeatherPOV.xcworkspace`
   - This launches Xcode, then press `Command+R`
 
-## Modules
+## About LFra
 
-- Added LFramework to parse HTTP requests into native objects. It's not available as a `pod` yet so sources are added.
+- `LFramework`: REST client, helper classes, etc. Add as source as it's not available as a `pod` yet.
+- `pod 'iCarousel'`: Timemachine style carousel.
+- `pod 'UIImage+animatedGif'`: Animated GIF.
+- `pod 'Parse'`: Cloud-based backend server.
+- `pod 'MBProgressHUD'`: Progress HUD for loading screens.
 
 ## Features
 
+- General
+  - Storyboard
+  - Autolayout
+  - UIKit
+    - `UINavigationController`
+	- `UITabBarController`
+	- Customized font with [Interface Builder integration](http://www.superarts.org/LSwift/lswift/lthememanager/gossip/ibinspectable/ui/2015/05/07/introducing-lthememanager-about-ibinspectable.html)
+  - Dynamic prototype `UITableViewController`: `LFTableViewController`
+  - Reflection based API client: [LFClient](http://www.superarts.org/LSwift/lswift/lrestclient/gossip/modelling/restful/2015/05/02/about-lrestclient.html)
+  - Cloud backend: [Parse](http://parse.com/)
 - Daily forecast
+  - `CLLocationManager`
+  - Carousel: `pod 'iCarousel'`
+- Game: G'day
+  - Parse login / query
+  - `NSTimer`
+  - Delayed async dispatch
+- Astronomy
 - Radar
-- Discussion
+  - Animated GIF: `pod 'UIImage+animatedGif'`
+- Settings
+  - `NSUserDefaults`
+- Misc
+  - TestFlight
+  - [Cocoapods](cocoapods.org)
 
-## Issues
+## About error handling
 
-In [Sydney](https://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/-33.863400,151.211000.json), location info shows Chapin US instead of Sydney AU. [San Francisco](http://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/37.776289,-122.395234.json) shows the correct info. Unfortunately I'll have to use weather station instead of location.
+Most API related errors are handled by LClient. If a property of an object is missing, it remains as `nil`, and it's safe to call `varMayBeNil?.propertyMayBeNil = anotherVarMayBeNil`, since it's technically `[varMayBeNil setPropertyMayBeNil:anotherVarMayBeNil]`: sending a message to a `nil` object simply does nothing in `objc_msgSend`, and [is not considered as an error](http://stackoverflow.com/questions/156395/sending-a-message-to-nil).
 
 ## Time log
 
@@ -29,9 +55,9 @@ In [Sydney](https://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/-33.86
 6/17 19:40 - 1:00
 6/18 14:00
 
-## About error handling
+## Potential issues
 
-Most API related errors are handled by LClient. If a property of an object is missing, it remains as `nil`, and it's safe to call `varMayBeNil?.propertyMayBeNil = anotherVarMayBeNil`, since it's technically `[varMayBeNil setPropertyMayBeNil:anotherVarMayBeNil]`: sending a message to a `nil` object simply does nothing in `objc_msgSend`, and [is not considered as an error](http://stackoverflow.com/questions/156395/sending-a-message-to-nil).
+In [Sydney](https://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/-33.863400,151.211000.json), location info shows Chapin US instead of Sydney AU. [San Francisco](http://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/37.776289,-122.395234.json) shows the correct info. Unfortunately I'll have to use weather station instead of location.
 
 <hr>
 
