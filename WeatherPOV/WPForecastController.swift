@@ -7,6 +7,7 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		tabBarController?.tabBar.hidden = true
 	}
 
 	override func viewWillAppear(animated: Bool) {
@@ -75,6 +76,8 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 								self.reloadCarousel(days)
 							}
 						}
+						//	only show tab bar when station info is acquired
+						self.tabBarController?.tabBar.hidden = false
 					}
 				}
 			} else {

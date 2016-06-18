@@ -1,5 +1,14 @@
 # About branch `develop/leoliu`
 
+## Build and install
+
+- `git clone git@github.com:superarts/DL-Coding-Challenge-Public.git WeatherPOV`
+- `cd WeatherPov`
+- `git checkout develop/leoliu`
+- `pod install`
+- `open WeatherPOV.xcworkspace`
+  - This launches Xcode, then press `Command+R`
+
 ## Modules
 
 - Added LFramework to parse HTTP requests into native objects. It's not available as a `pod` yet so sources are added.
@@ -19,6 +28,12 @@ In [Sydney](https://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/-33.86
 6/16 21:00 - 2:00
 6/17 19:40 - 1:00
 6/18 14:00
+
+## About error handling
+
+Most API related errors are handled by LClient. If a property of an object is missing, it remains as `nil`, and it's safe to call `varMayBeNil?.propertyMayBeNil = anotherVarMayBeNil`, since it's technically `[varMayBeNil setPropertyMayBeNil:anotherVarMayBeNil]`: sending a message to a `nil` object simply does nothing in `objc_msgSend`, and [is not considered as an error](http://stackoverflow.com/questions/156395/sending-a-message-to-nil).
+
+<hr>
 
 # DL-Coding-Challenge
 Welcome to the Detroit Labs coding challenge. 
