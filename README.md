@@ -61,6 +61,68 @@ A map-based social networking system was planned initially. The good thing is th
 
 A more detailed home screen was also planned. The idea was taking advantage of `conditions` and `hourly` APIs and display more data. However, I feel like the technology used t parse and display similar data was already demostrated in `Forecast` and `Astronomy`, so it was not implemented eventually.
 
+## Classes
+
+### General
+
+- WP: `WeatherPOV` general struct
+  - Variables
+  - Consts
+    - APIs
+    - Text copies
+  - Utilities
+- WPView: used in `iCarousel` handling
+
+### View Controllers
+
+Please check `Main.storyboard` for the relationships of all view controllers.
+
+- WPAstronomyController
+- WPForecastController
+  - WPForecastCell
+- WPForecastDetailController
+- WPForecastThumbnailController
+- WPGdayController
+- WPLoginController
+- WPRadarController
+- WPSettingController
+
+### API Handling
+
+- WPRestClient: RESTful API client
+- WPClients: client wrapper class
+
+### Models
+
+- General
+  - WPErrorModel
+  - WPFeatureModel
+  - WPResponseModel
+  - WPResultModel
+- Geolookup
+  - WPGeolocationModel
+  - WPStationModel
+  - WPAirportModel
+  - WPPwsModel
+  - WPWeatherStationModel
+  - WPLocationModel
+  - WPGeolookupResultModel
+- Forecast
+  - WPDateModel
+  - WPTemperatureModel
+  - WPQPFModel
+  - WPWindModel
+  - WPForecastdayModel
+  - WPTxtForecastModel
+  - WPSimpleForecastModel
+  - WPForecastModel
+  - WPForecastResultModel
+- Astronomy
+  - WPTimeModel
+  - WPSunPhaseModel
+  - WPMoonPhaseModel
+  - WPAstronomyResultModel
+
 ## About error handling
 
 Most API related errors are handled by LClient. If a property of an object is missing, it remains as `nil`, and it's safe to call `varMayBeNil?.propertyMayBeNil = anotherVarMayBeNil`, since it's technically `[varMayBeNil setPropertyMayBeNil:anotherVarMayBeNil]`: sending a message to a `nil` object simply does nothing in `objc_msgSend`, and [is not considered as an error](http://stackoverflow.com/questions/156395/sending-a-message-to-nil).
@@ -88,6 +150,8 @@ The following issue of Weather Underground API is logged because some source cod
 - 6/18: The issue mentioned above is not there anymore.
   - [Screenshot in 6/18](https://www.dropbox.com/s/0d32wz3h6v12wv8/Screenshot%202016-06-18%2023.34.08.png?dl=0)
 
+However, this does introduce a new problem: for cities like [Taipei](https://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/23.6978,120.9605.json), `station` information is not available. Going back to `location` instead of `station` might be a better approach, but I need time to evaluate it.
+
 ### [Forecast](http://api.wunderground.com/api/dc60d98175ba0199/forecast/q/AU/Sydney%20Regional%20Office.json)
 
 The following issue prevents some information to be displayed correctly. It can be address from the app side by trying to get the value from `qpf_night`, `qpf_allday`, and `avewind`, but as a POV the app just shows what it has, since in real life scenario the bug is likely to be reported and get fixed by the backend team.
@@ -110,6 +174,10 @@ For a POV normally we only target iPhone portrait to reduce potential issue that
 - Simulator
 - iPhone 5
 - iPhone 6 plus
+
+### And more...
+
+Of course: proper `Tests` and `UITests`! Everyone loves tests if there's more time! [Like this one...](https://bitbucket.org/superarts/hcmessageparser/src/4434fcb7863b24b302d1261dc8eabd7180c4a9a0/Example/Tests/Tests.swift?at=master&fileviewer=file-view-default)
 
 <hr>
 

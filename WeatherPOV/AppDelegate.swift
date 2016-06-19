@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	func initParse(launchOptions: [NSObject: AnyObject]?) {
-		//	parse keys for project "playground"
+		//	Parse keys for project "playground": production keys should be
+		//	obfuscated and shouldn't be pushed to a public repo.
 		let applicationId	= "C4MCodjI5pFuctdLMDKSjgGSybVm9XWLFc7cmDQF"
 		let clientKey		= "ik5E1yuhvPwUqiUBc6QyhSN3NSz3KyQmLWtOWHWw"
 		Parse.setApplicationId(applicationId, clientKey:clientKey)
@@ -51,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	func initFlurry() {
+		//	Flurry key should be obfuscated and shouldn't be pushed to a public repo.
 		Flurry.setDebugLogEnabled(false)
 		Flurry.startSession("FM9FG6CP4BYXT5XCYD7D")
 	}

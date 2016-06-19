@@ -1,5 +1,9 @@
 import UIKit
 
+/**
+	A simple rader + satellite view that contains only an animated GIF.
+	TODO: use as a transparent overlay on top of a `MapView`.
+*/
 class WPRadarController: UIViewController {
 	@IBOutlet var imageRadar: UIImageView!
 	@IBOutlet var labelTitle: UILabel!

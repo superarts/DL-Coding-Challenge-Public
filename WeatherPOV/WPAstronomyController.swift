@@ -1,5 +1,9 @@
 import UIKit
 
+/**
+	Astronomy info. It contains a static table view so most works are done in `Main.storyboard`.
+	TODO: add moon phase images. (Sweet memory: my first iOS app in App Store was about moon phase.)
+*/
 class WPAstronomyController: UITableViewController {
 	@IBOutlet var cellCurrentTime:	UITableViewCell!
 	@IBOutlet var cellSunrise:	UITableViewCell!

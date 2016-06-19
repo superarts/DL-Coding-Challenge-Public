@@ -1,5 +1,9 @@
 import UIKit
 
+/**
+	A simple game about tapping icons randomly appears on the screen.
+	Leaderboard is powered by `Parse`.
+*/
 class WPGdayController: LFTableController {
 	@IBOutlet var buttonPlay: UIButton!
 	var buttons = [UIButton]()

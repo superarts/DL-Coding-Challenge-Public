@@ -1,5 +1,8 @@
 import MapKit
 
+/**
+    RESTful API client
+*/
 //	TODO: add generic error handling in RESTClient
 class WPRestClient<T: WPResultModel>: LRestClient<T> {
 	override init(api url: String, parameters param: LTDictStrObj? = nil) {
@@ -8,6 +11,9 @@ class WPRestClient<T: WPResultModel>: LRestClient<T> {
 	}
 }
 
+/**
+	RESTful API client wrapper class with helper function(s)
+*/
 class WPClients {
 	class func geolookup(coordinate: CLLocationCoordinate2D, block: ((WPGeolookupResultModel?, NSError?) -> Void)? = nil) {
 		let api = String(format:"%@%f,%f.json", WP.api.geolookup, coordinate.latitude, coordinate.longitude)
@@ -39,7 +45,8 @@ class WPClients {
 			state = "/" + s
 		}
 		if let s = station.city?.escape() {
-			city = "/" + s
+			//	e.g. France/Paris-Montsouris doesn't work
+			city = "/" + s.stringByReplacingOccurrencesOfString("-", withString:"%20")
 		}
 		return country + state + city
 	}

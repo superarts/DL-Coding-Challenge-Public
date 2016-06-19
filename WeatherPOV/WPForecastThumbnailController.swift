@@ -1,5 +1,8 @@
 import UIKit
 
+/**
+    Daily forecast thumbnail used in carousel.
+*/
 class WPForecastThumbnailController: UIViewController {
 	@IBOutlet var labelWeekday:		UILabel!
 	@IBOutlet var labelTemperature:	UILabel!

@@ -1,4 +1,7 @@
-//	WP: Project WeatherPOV
+/**
+	WP: Project WeatherPOV
+	TODO: more consts should be moved here, e.g. percentage based string formatters.
+*/
 struct WP {
 	//	variables
 	static var station:		WPStationModel?

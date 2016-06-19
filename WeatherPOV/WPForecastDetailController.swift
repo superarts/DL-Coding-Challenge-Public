@@ -1,5 +1,8 @@
 import UIKit
 
+/**
+	Forecast detail. It contains a static table view so most works are done in `Main.storyboard`.
+*/
 class WPForecastDetailController: UITableViewController {
 	@IBOutlet var cellDate:	UITableViewCell!
 

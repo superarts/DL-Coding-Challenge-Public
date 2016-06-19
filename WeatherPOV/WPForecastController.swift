@@ -1,6 +1,10 @@
 import UIKit
 import MapKit
 
+/**
+    First screen of the app: 10 days forecast. Tab bar is hidden until locatio is updated.
+	`LFTableController` is a helper class in `LFoundation.swift` to handle 1 or more table views within.
+*/
 class WPForecastController: LFTableController, CLLocationManagerDelegate {
 	@IBOutlet var labelCity: UILabel!
 	var locationManager: CLLocationManager!
@@ -39,7 +43,11 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 			//	LF.log("LOCATION updated", location)
 			//	Stop updating as soon as a recent location is obtained.
 			self.locationManager.stopUpdatingLocation()
-			//loadWeather(CLLocation(latitude: 42.3314, longitude: -83.0458))
+			//	simple tests
+			//loadWeather(CLLocation(latitude: 42.3314, longitude: -83.0458))		//	detroit
+			//loadWeather(CLLocation(latitude: 40.7128, longitude: -74.0059))		//	new york
+			//loadWeather(CLLocation(latitude: 48.8566, longitude: 2.3522))			//	paris
+			//loadWeather(CLLocation(latitude: 23.6978, longitude: 120.9605))		//	taipei
 			loadWeather(location)
 			break
 		}
@@ -169,6 +177,9 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 	}
 }
 
+/**
+    Daily forecast table view cell.
+*/
 class WPForecastCell: UITableViewCell {
 	@IBOutlet var labelTitle:	UILabel!
 	@IBOutlet var labelText:	UILabel!

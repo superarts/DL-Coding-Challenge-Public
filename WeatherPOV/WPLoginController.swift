@@ -1,7 +1,10 @@
 import UIKit
 
-//	TODO: This is a simplified login/register view controller. There should be 3 view
-//	controllers: login, register, and reset password.
+/**
+	Simple `Parse` register / login view.
+	TODO: This is a simplified login/register view controller. There should be 3 view:
+	controllers: login, register, and reset password.
+*/
 class WPLoginController: LFViewController {
 	@IBOutlet var fieldPassword:	UITextField!
 	@IBOutlet var fieldUsername:	UITextField!

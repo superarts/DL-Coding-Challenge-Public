@@ -1,5 +1,9 @@
 import UIKit
 
+/**
+    Mainly about unit settings. Stored in user defaults.
+	Version string is automatically updated in a build phase script.
+*/
 class WPSettingController: UITableViewController {
 	@IBOutlet var segmentUnit:			UISegmentedControl!
 	@IBOutlet var segmentTemperature:	UISegmentedControl!
