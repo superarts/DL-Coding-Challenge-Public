@@ -25,8 +25,8 @@
   - Autolayout
   - UIKit
     - `UINavigationController` without `UINavigationBar`
-	- `UITabBarController`
-	- Customized font with [Interface Builder integration](http://www.superarts.org/LSwift/lswift/lthememanager/gossip/ibinspectable/ui/2015/05/07/introducing-lthememanager-about-ibinspectable.html)
+    - `UITabBarController`
+    - Customized font with [Interface Builder integration](http://www.superarts.org/LSwift/lswift/lthememanager/gossip/ibinspectable/ui/2015/05/07/introducing-lthememanager-about-ibinspectable.html)
   - Dynamic prototype `UITableViewController`: `LFTableViewController`
   - Static cells `UITableViewController`: `LFTableViewController`
   - Reflection based API client: [LFClient](http://www.superarts.org/LSwift/lswift/lrestclient/gossip/modelling/restful/2015/05/02/about-lrestclient.html)
@@ -51,8 +51,8 @@
   - [Weather Underground API](https://www.wunderground.com/weather/api/d/docs?d=data/forecast&MR=1)
     - Geolookup
     - Forecast / Forecast 10 days
-	- Astronomy
-	- Animated Radar + Satellite
+    - Astronomy
+    - Animated Radar + Satellite
   - [Automated build version update](http://www.superarts.org/blog/2014/06/25/automate-ios-version-number)
 
 ## Features planned
