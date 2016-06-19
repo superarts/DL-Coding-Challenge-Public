@@ -49,6 +49,10 @@
   - [Cocoapods](cocoapods.org)
   - [Flurry](flurry.com)
   - [Weather Underground API](https://www.wunderground.com/weather/api/d/docs?d=data/forecast&MR=1)
+    - Geolookup
+    - Forecast / Forecast 10 days
+	- Astronomy
+	- Animated Radar + Satellite
   - [Automated build version update](http://www.superarts.org/blog/2014/06/25/automate-ios-version-number)
 
 ## Features planned
