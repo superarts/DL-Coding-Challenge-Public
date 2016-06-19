@@ -22,8 +22,8 @@ class WPAstronomyController: UITableViewController {
 		if let city = WP.station?.city {
 			labelTitle.text = city
 		}
-		if let country = WP.country, let city = WP.city {
-			WPClients.astronomy(country, city: city) {
+		if let station = WP.station {
+			WPClients.astronomy(station) {
 				(astronomy, error) -> Void in
 				//print(astronomy)
 				if error != nil {

@@ -12,7 +12,7 @@ class WPRadarController: UIViewController {
 		if let city = WP.station?.city {
 			labelTitle.text = city
 		}
-		if let api = WP.api.radar {
+		if let api = WP.api.radar() {
 			//	TODO: error handling while fetching image failed
 			LF.dispatch_main() {
 				self.imageRadar.image = UIImage.animatedImageWithAnimatedGIFURL(NSURL(string: api))

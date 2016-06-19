@@ -69,6 +69,10 @@ Most API related errors are handled by LClient. If a property of an object is mi
 - 6/19 14:30 - 17:00 = `2.5 hours`
 - Total: about `21 hours`
 
+Misc
+
+- 6/19: spend about 20 minutes to address an issue that prevents the app to work properly in cities like Detroit
+
 ## Potential issues
 
 ### Geolookup

@@ -3,8 +3,6 @@ struct WP {
 	//	variables
 	static var station:		WPStationModel?
 	static var forecast:	WPForecastdayModel?
-	static var country:	String?
-	static var city:	String?
 	static var user:	PFUser?
 
 	//	consts
@@ -15,11 +13,11 @@ struct WP {
 		static let root = "https://api.wunderground.com/api/" + key + "/"
 		static let geolookup = "geolookup/q/"
 		static let forecast = "forecast10day/q/"
-		static let formatRadar = "%@animatedradar/animatedsatellite/q/%@/%@.gif?num=6&delay=50&interval=30"
+		static let formatRadar = "%@animatedradar/animatedsatellite/q/%@.gif?num=6&delay=50&interval=30"
 		static let astronomy = "astronomy/q/"
-		static var radar: String? {
-			if let country = WP.country, let city = WP.city {
-				return String(format: formatRadar, root, country, city)
+		static func radar() -> String? {
+			if let station = WP.station {
+				return String(format: formatRadar, root, WPClients.getLocationQuery(station))
 			}
 			return nil
 		}

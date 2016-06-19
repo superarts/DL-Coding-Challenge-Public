@@ -15,16 +15,32 @@ class WPClients {
 		client.func_model = block
 		client.execute()
 	}
-	class func forecast(country: String, city: String, block: ((WPForecastResultModel?, NSError?) -> Void)? = nil) {
-		let api = String(format:"%@%@/%@.json", WP.api.forecast, country, city)
+	class func forecast(station: WPStationModel, block: ((WPForecastResultModel?, NSError?) -> Void)? = nil) {
+		let api = String(format:"%@%@.json", WP.api.forecast, getLocationQuery(station))
 		let client = WPRestClient<WPForecastResultModel>(api: api)
 		client.func_model = block
 		client.execute()
 	}
-	class func astronomy(country: String, city: String, block: ((WPAstronomyResultModel?, NSError?) -> Void)? = nil) {
-		let api = String(format:"%@%@/%@.json", WP.api.astronomy, country, city)
+	class func astronomy(station: WPStationModel, block: ((WPAstronomyResultModel?, NSError?) -> Void)? = nil) {
+		let api = String(format:"%@%@.json", WP.api.astronomy, getLocationQuery(station))
 		let client = WPRestClient<WPAstronomyResultModel>(api: api)
 		client.func_model = block
 		client.execute()
+	}
+	class func getLocationQuery(station: WPStationModel) -> String {
+		//	In city like Sydney AU, state can be empty.
+		var country = ""
+		var state = ""
+		var city = ""
+		if let s = station.country?.escape() {
+			country = "/" + s
+		}
+		if let s = station.state?.escape() {
+			state = "/" + s
+		}
+		if let s = station.city?.escape() {
+			city = "/" + s
+		}
+		return country + state + city
 	}
 }

@@ -39,6 +39,7 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 			//	LF.log("LOCATION updated", location)
 			//	Stop updating as soon as a recent location is obtained.
 			self.locationManager.stopUpdatingLocation()
+			//loadWeather(CLLocation(latitude: 42.3314, longitude: -83.0458))
 			loadWeather(location)
 			break
 		}
@@ -67,31 +68,27 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 				if stations.count <= 0 {
 					LF.alert("No weather station found", "There doesn't seem to be any weather stations around you. Please contact us at support@weatherpov.com")
 				} else {
-					//print("WEATHER 1st station: \(stations[0])")
+					print("WEATHER 1st station: \(stations[0])")
 					//	Use the first (closest) weather station to get forecast.
 					//	TODO: do some calculation to see if it's really the closest one
 					let station = stations[0]
 					if let city = station.city {
 						self.labelCity.text = city
 					}
-					if let country = station.country?.escape(), let city = station.city?.escape() {
-						WP.station = station
-						WP.country = country
-						WP.city = city
-						WPClients.forecast(country, city: city) {
-							(forecast, error) -> Void in
-							//print("\(forecast), \(error)")
-							if let days = forecast?.forecast?.txt_forecast?.forecastday {
-								self.reloadTable(days)
-								if self.isTarBarHidden {
-									self.isTarBarHidden = false
-									self.tabBarController?.tabBar.hidden = false
-								}
+					WP.station = station
+					WPClients.forecast(station) {
+						(forecast, error) -> Void in
+						//print("\(forecast), \(error)")
+						if let days = forecast?.forecast?.txt_forecast?.forecastday {
+							self.reloadTable(days)
+							if self.isTarBarHidden {
+								self.isTarBarHidden = false
+								self.tabBarController?.tabBar.hidden = false
 							}
-							if let days = forecast?.forecast?.simpleforecast?.forecastday {
-								self.reloadCarousel(days)
-								//	only show tab bar when station and forecast info is acquired
-							}
+						}
+						if let days = forecast?.forecast?.simpleforecast?.forecastday {
+							self.reloadCarousel(days)
+							//	only show tab bar when station and forecast info is acquired
 						}
 					}
 				}
