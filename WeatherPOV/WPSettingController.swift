@@ -2,11 +2,16 @@ import UIKit
 
 class WPSettingController: UITableViewController {
 	@IBOutlet var segmentUnit: UISegmentedControl!
+	@IBOutlet var cellVersion: UITableViewCell!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		if let unit = NSUserDefaults.integer(WP.key.temperatureUnit) {
 			segmentUnit.selectedSegmentIndex = unit
+		}
+		if let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String,
+			let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String {
+			cellVersion.detailTextLabel?.text = version + "." + build
 		}
 	}
 	override func viewDidAppear(animated: Bool) {

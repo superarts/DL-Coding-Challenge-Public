@@ -327,6 +327,7 @@
 				7EBE0F2B9FA6BD04A153CC66 /* Check Pods Manifest.lock */,
 				B3F8C6511D12C2CF00A997A5 /* Sources */,
 				B3F8C6521D12C2CF00A997A5 /* Frameworks */,
+				B3F8C6C91D1659C700A997A5 /* ShellScript */,
 				B3F8C6531D12C2CF00A997A5 /* Resources */,
 				51A0A3ABEB6019C796E784F0 /* Embed Pods Frameworks */,
 				95E9DF486D1BD264262DACC3 /* Copy Pods Resources */,
@@ -500,6 +501,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B3F8C6C91D1659C700A997A5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Update build number\nbuildNumber=$(git rev-list HEAD | wc -l | tr -d ' ')\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
