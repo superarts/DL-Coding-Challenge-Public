@@ -4,6 +4,8 @@ import MapKit
 class WPForecastController: LFTableController, CLLocationManagerDelegate {
 	@IBOutlet var labelCity: UILabel!
 	var locationManager: CLLocationManager!
+	var isTarBarHidden = true
+	var isLoadingWeather = false
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -13,7 +15,9 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
-		//	reload UI while switching tab, etc.
+		//	Update location and reload UI while switching tabs, etc.
+		//	TODO: pull to reload
+		isLoadingWeather = false
 		startLocationManager()
 	}
 
@@ -32,18 +36,26 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 
 	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
 		for location in locations {
-			LF.log("LOCATION", location)
-			loadWeather(location)
+			//	LF.log("LOCATION updated", location)
+			//	Stop updating as soon as a recent location is obtained.
 			self.locationManager.stopUpdatingLocation()
+			loadWeather(location)
 			break
 		}
 	}
 
 	func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
 		print("LOCATION error: \(error)")
+		//	TODO: check authorization status and prompt user to change this in settings. 
+		//	For a POV we always grant permission so minimal effect was spent here.
+		WP.showError(error, text: WP.s.location_failed)
 	}
 
 	func loadWeather(location: CLLocation) {
+		if isLoadingWeather {
+			return
+		}
+		isLoadingWeather = true
 		WPClients.geolookup(location.coordinate) {
 			(geolookup, error) -> Void in
 			//print("\(geolookup), \(error)")
@@ -71,11 +83,14 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 							//print("\(forecast), \(error)")
 							if let days = forecast?.forecast?.txt_forecast?.forecastday {
 								self.reloadTable(days)
+								if self.isTarBarHidden {
+									self.isTarBarHidden = false
+									self.tabBarController?.tabBar.hidden = false
+								}
 							}
 							if let days = forecast?.forecast?.simpleforecast?.forecastday {
 								self.reloadCarousel(days)
 								//	only show tab bar when station and forecast info is acquired
-								self.tabBarController?.tabBar.hidden = false
 							}
 						}
 					}

@@ -66,17 +66,25 @@ Most API related errors are handled by LClient. If a property of an object is mi
 - 6/16 21:00 - 2:00	= `5 hours`
 - 6/17 19:40 - 1:00	= `5.5 hours`
 - 6/18 14:00 - 23:30 / 9.5 hours - about 1.5 hours resting = about `8 hours`
-- 6/19 14:30 
-- Total: about `18.5 hours`
+- 6/19 14:30 - 17:00 = `2.5 hours`
+- Total: about `21 hours`
 
 ## Potential issues
+
+### Geolookup
 
 The following issue of Weather Underground API is logged because some source code of mine may not make sense. Here's the reason.
 
 - 6/16: In [Sydney](https://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/-33.863400,151.211000.json), location info shows Chapin US instead of Sydney AU. [San Francisco](http://api.wunderground.com/api/dc60d98175ba0199/geolookup/q/37.776289,-122.395234.json) shows correct info in the same time. Unfortunately I'll have to use weather station instead of location.
-  - [Screenshot 1](https://www.dropbox.com/s/07wfqj2zty6fr4d/Screenshot%202016-06-18%2023.33.39.png?dl=0)
+  - [Screenshot in 6/16](https://www.dropbox.com/s/07wfqj2zty6fr4d/Screenshot%202016-06-18%2023.33.39.png?dl=0)
 - 6/18: The issue mentioned above is not there anymore.
-  - [Screenshot 2](https://www.dropbox.com/s/0d32wz3h6v12wv8/Screenshot%202016-06-18%2023.34.08.png?dl=0)
+  - [Screenshot in 6/18](https://www.dropbox.com/s/0d32wz3h6v12wv8/Screenshot%202016-06-18%2023.34.08.png?dl=0)
+
+### [Forecast](http://api.wunderground.com/api/dc60d98175ba0199/forecast/q/AU/Sydney%20Regional%20Office.json)
+
+The following issue prevents some information to be displayed correctly. It can be address from the app side by trying to get the value from `qpf_night`, `qpf_allday`, and `avewind`, but as a POV the app just shows what it has, since in real life scenario the bug is likely to be reported and get fixed by the backend team.
+
+- 6/19: `in` and `mm` in `qpf_day` are `null`, and `dir` in `maxwind` is empty. [Screenshot](https://www.dropbox.com/s/plc6rhb8mz9cdhn/Screenshot%202016-06-19%2016.10.48.png?dl=0)
 
 ## Environment
 

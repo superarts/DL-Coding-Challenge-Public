@@ -25,8 +25,11 @@ struct WP {
 		}
 	}
 	struct key {
-		static let temperatureUnit = "temp-unit"
+		static let unitTemperature		= "unit-temperature"
+		static let unitShortDistance	= "unit-short-distance"
+		static let unitLongDistance		= "unit-long-distance"
 	}
+	//	text copies
 	struct s {
 		static let confirm = "Confirm"
 		static let cancel = "Cancel"
@@ -45,6 +48,8 @@ struct WP {
 		static let username_too_short = "Username is too short"
 		static let username_too_long = "Username is too long"
 		static let unknown = "Unknown"
+		static let degree = "º"
+		static let location_failed = "Failed to update your current location: "
 	}
 	struct color {
 		static let tableInterlace	= UIColor(rgb: 0xf0f8ff)
@@ -60,11 +65,12 @@ struct WP {
 		}
 		return String(format: "%zi days later", period - 1)
 	}
+	//	temperature
 	static func isFahrenheit() -> Bool {
-		return NSUserDefaults.integer(WP.key.temperatureUnit) == 0
+		return NSUserDefaults.integer(WP.key.unitTemperature) == 0
 	}
 	static func isCelsius() -> Bool {
-		return NSUserDefaults.integer(WP.key.temperatureUnit) == 1
+		return NSUserDefaults.integer(WP.key.unitTemperature) == 1
 	}
 	static var isF: Bool {
 		return isFahrenheit()
@@ -72,7 +78,33 @@ struct WP {
 	static var isC: Bool {
 		return isCelsius()
 	}
-	//	loading text
+	//	short distance
+	static func isShortDistanceInch() -> Bool {
+		return NSUserDefaults.integer(WP.key.unitShortDistance) == 0
+	}
+	static func isShortDistanceCM() -> Bool {
+		return NSUserDefaults.integer(WP.key.unitShortDistance) == 1
+	}
+	static var isInch: Bool {
+		return isShortDistanceInch()
+	}
+	static var isCM: Bool {
+		return isShortDistanceCM()
+	}
+	//	long distance
+	static func isLongDistanceMile() -> Bool {
+		return NSUserDefaults.integer(WP.key.unitLongDistance) == 0
+	}
+	static func isLongDistanceKM() -> Bool {
+		return NSUserDefaults.integer(WP.key.unitLongDistance) == 1
+	}
+	static var isMile: Bool {
+		return isLongDistanceMile()
+	}
+	static var isKM: Bool {
+		return isLongDistanceKM()
+	}
+	//	display and hide a text message
     static func show(text:String) {
         if let app = UIApplication.sharedApplication().delegate as? AppDelegate, let window = app.window {
             MBProgressHUD.show(text, view:window)

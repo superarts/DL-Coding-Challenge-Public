@@ -109,8 +109,28 @@ class WPTemperatureModel: LFModel {
 class WPQPFModel: LFModel {
 	//	appear as int
 	//var in: Float = 0
+	var inch: Float {
+		//	FIXME: currently swift keywords cannot be property name.
+		//	Property "raw" provides a work-around by access raw data.
+		if let f = raw?["in"] as? Float {
+			return f
+		}
+		return 0
+	}
 	var mm: Float = 0
 	var cm: Float = 0
+	var str: String {
+		if WP.isInch {
+			return String(format: "%.02f inch", inch)
+		}
+		if cm != 0 {
+			return String(format: "%.02f cm", cm)
+		}
+		if mm != 0 {
+			return String(format: "%.0f mm", mm)
+		}
+		return "0 cm"
+	}
 }
 
 class WPWindModel: LFModel {
@@ -119,6 +139,12 @@ class WPWindModel: LFModel {
 	var kph:		Float = 0
 	var dir:		String?
 	var degrees:	Float = 0
+	var speed: String {
+		if WP.isMile {
+			return String(format: "%.0f mph", mph)
+		}
+		return String(format: "%.0f kph", kph)
+	}
 }
 
 class WPForecastdayModel: LFModel {
@@ -141,12 +167,12 @@ class WPForecastdayModel: LFModel {
 	var low:			WPTemperatureModel?
 	var conditions:		String?
 	var skyicon:		String?
-	var qpf_allday:		WPTemperatureModel?
-	var qpf_day:		WPTemperatureModel?
-	var qpf_night:		WPTemperatureModel?
-	var snow_allday:	WPTemperatureModel?
-	var snow_day:		WPTemperatureModel?
-	var snow_night:		WPTemperatureModel?
+	var qpf_allday:		WPQPFModel?
+	var qpf_day:		WPQPFModel?
+	var qpf_night:		WPQPFModel?
+	var snow_allday:	WPQPFModel?
+	var snow_day:		WPQPFModel?
+	var snow_night:		WPQPFModel?
 	var maxwind:		WPWindModel?
 	var avewind:		WPWindModel?
 	//	appear as int
