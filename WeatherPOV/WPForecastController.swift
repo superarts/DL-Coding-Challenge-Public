@@ -74,6 +74,8 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 							}
 							if let days = forecast?.forecast?.simpleforecast?.forecastday {
 								self.reloadCarousel(days)
+								//	only show tab bar when station and forecast info is acquired
+								self.tabBarController?.tabBar.hidden = false
 							}
 						}
 					}
@@ -104,8 +106,6 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 			}
 			return cell
 		}
-		//	only show tab bar when station and forecast info is acquired
-		tabBarController?.tabBar.hidden = false
 		table.reloadData()
 		UIView.animateWithDuration(0.3) { 
 			() -> Void in
