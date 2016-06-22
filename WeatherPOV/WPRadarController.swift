@@ -1,4 +1,6 @@
 import UIKit
+import LFramework
+import UIImage_animatedGif
 
 /**
 	A simple rader + satellite view that contains only an animated GIF.

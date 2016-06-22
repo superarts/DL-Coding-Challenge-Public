@@ -1,4 +1,6 @@
 import UIKit
+import Parse
+import LFramework
 
 /**
 	A simple game about tapping icons randomly appears on the screen.

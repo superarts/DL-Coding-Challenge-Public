@@ -13,7 +13,7 @@ This is a proof of concept weather app. It's based on [Weather Underground API](
 
 ## Dependencies
 
-- `LFramework`: REST client, helper classes, etc. Add as source as it's not available as a `pod` yet.
+- `LFramework`: REST client, helper classes, etc. This pod is still under development.
 - `pod 'iCarousel'`: Timemachine style carousel.
 - `pod 'UIImage+animatedGif'`: Animated GIF.
 - `pod 'Parse'`: Cloud-based backend server.
@@ -296,3 +296,5 @@ Of course, other people would like to think it's about declaring a variable `vie
 Anyway, whitespace should be treated as splitter of sense-groups, but what does the 2nd whitespace do in `- (void)addSubview:(UIView *)view`? Just to say that `view` is a pointer? In my mind `- (void)addSubview:(UIView*)view` means perfect sense. But the problem here is, there are more people hate to type underscore, so Apple chose CamelCase. There are more people chose to use the style that compiler is happy with, although in real life they would split `UIView *view1, *view2` into 2 lines, too. But Apple still chose to use it. As I said again and again, I have no problem with that and I can write code in this way if that's how the team works, but don't address my code as "inconsistent and unclear naming conventions". I wrote my library in the way I'm happy with (using underscore), and used it to build a project that you asked and wrote the project in a way try to make you happy by not using underscore, and that doesn't mean I suck at programming and know nothing about consistency and naming convention.
 
 But of course as I mentioned in the beginning: I should have made `LFramework` as a `pod`, or at least try not to use it to keep coding style consistent. Maybe using `CoreData` makes some people happy, who knows.
+
+Update 20160623: I removed `LFramework` as source and created a pod in dev branch: `:git => 'https://github.com/superarts/LSwift.git', :branch => 'refactor/framework'`. Should have done it earlier.

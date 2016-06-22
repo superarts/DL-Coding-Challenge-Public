@@ -1,4 +1,5 @@
 import UIKit
+import LFramework
 
 /**
     Daily forecast thumbnail used in carousel.

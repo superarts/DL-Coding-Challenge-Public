@@ -1,4 +1,7 @@
 import UIKit
+import Parse
+import LFramework
+import Flurry_iOS_SDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -1,3 +1,5 @@
+import LFramework
+
 //	MARK: general
 
 class WPErrorModel: LFModel {
