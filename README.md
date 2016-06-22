@@ -1,10 +1,11 @@
-# About branch `develop/leoliu`
+# About WeatherPOV
+
+This is a proof of concept weather app. It's based on [Weather Underground API](https://www.wunderground.com/weather/api/d/docs?d=data/forecast&MR=1).
 
 ## Build and install
 
 - `git clone git@github.com:superarts/DL-Coding-Challenge-Public.git WeatherPOV`
 - `cd WeatherPov`
-- `git checkout develop/leoliu`
 - `pod install`
 - `open WeatherPOV.xcworkspace`
   - This launches Xcode, then press `Command+R`
@@ -181,7 +182,8 @@ Of course: proper `Tests` and `UITests`! Everyone loves tests if there's more ti
 
 <hr>
 
-# DL-Coding-Challenge
+# Original README: DL-Coding-Challenge
+
 Welcome to the Detroit Labs coding challenge. 
 
 Please fork this repo and create a branch that includes your name in the branch name (We like to read commits!). Choose from Android, iOS or web to complete this challenge. Comment on what libraries or frameworks you choose to use so we know exactly what code is yours and what is coming from a third-party.
@@ -278,3 +280,19 @@ Thank you for applying to Detroit Labs!
 
 <!-- External Links...Reference by Number -->
 [1]:http://www.wunderground.com/weather/api/d/docs
+
+# Gossip
+
+This project was built in about 20 hours. One thing that I'm not happy about is the fact that I haven't finished making `LFramework` as a `pod` yet, so it's copied into this project directly. This is never a good approach, and besides this, `LFramework` is still in `underscore_convention`. I'll eventually change it into `CamelCase` due to the fact that there are so many haters of underscore in iOS scene, but I still want to say:
+
+1. `CamelCase` [sucks](http://yosefk.com/blog/ihatecamelcase.html). If you can't blind-type underscore, it doesn't mean that you suck at typing. But don't treat us underscore lovers as freaks. We're equal.
+2. In projects I've worked in, I always comply with the existing coding standard and conventions. If you think I'm so shit that I can't even type things right, you're wrong.
+3. There are also some conventions I don't like about Apple's standard ones. Again, I can work in a way that is requested and I always respect that. I just want myself to be respected as well.
+
+For example: the old `UIView *view` vs `UIView* view` talk. Of course when you declare 2 or more variables you'll have to use the former, but why would you do that in the first place? The reason why you have to write `UIView *view1, *view2` is to let `gcc/clang etc.` know that both `view1` and `view2` are pointers, and that's why C compiler was implemented in the very beginning. But that doesn't mean it's the best practice. Logically, "defining a variable `view` with type `pointer of type UIView`" have 2 parts: `UIView*`, and `view`.
+
+Of course, other people would like to think it's about declaring a variable `view which is a pointer` of type `UIView`, but mostly you're not really using `*view`, you are using `view`, which is a `UIView*`. Besides, by making `*` not part of `UIView`, there has to be somthing like `- (void)addSubview:(UIView *)view`. I like most whitespace in `C/ObjC` although it doesn't do anything, but in my mind they all have different meanings. For example, `-(void)`looks ugly since `-` doesn't belong to `(void)`, so it's better to leave a whitespace there. And about `if (a > b)` vs `if(a > b)`, the first one is better because it clearly indicates that `if` is a language feature but not a function. And `a > b` is definitely easier to read than `a>b`, at least I wouldn't write something like `i<3`.
+
+Anyway, whitespace should be treated as splitter of sense-groups, but what does the 2nd whitespace do in `- (void)addSubview:(UIView *)view`? Just to say that `view` is a pointer? In my mind `- (void)addSubview:(UIView*)view` means perfect sense. But the problem here is, there are more people hate to type underscore, so Apple chose CamelCase. There are more people chose to use the style that compiler is happy with, although in real life they would split `UIView *view1, *view2` into 2 lines, too. But Apple still chose to use it. As I said again and again, I have no problem with that and I can write code in this way if that's how the team works, but don't address my code as "inconsistent and unclear naming conventions". I wrote my library in the way I'm happy with (using underscore), and used it to build a project that you asked and wrote the project in a way try to make you happy by not using underscore, and that doesn't mean I suck at programming and know nothing about consistency and naming convention.
+
+But of course as I mentioned in the beginning: I should have made `LFramework` as a `pod`, or at least try not to use it to keep coding style consistent. Maybe using `CoreData` makes some people happy, who knows.
