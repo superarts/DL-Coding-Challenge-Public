@@ -1,12 +1,12 @@
 import MapKit
-import LFramework
+import SAKit
 
 /**
     RESTful API client
 */
 //	TODO: add generic error handling in RESTClient
-class WPRestClient<T: WPResultModel>: LRestClient<T> {
-	override init(api url: String, parameters param: LTDictStrObj? = nil) {
+class WPRestClient<T: WPResultModel>: SARESTClient<T> {
+	override init(api url: String, parameters param: SADictStrObj? = nil) {
 		super.init(api: url, parameters: param)
 		root = WP.api.root
 	}

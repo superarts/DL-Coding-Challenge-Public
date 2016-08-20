@@ -1,13 +1,13 @@
 import UIKit
 import MapKit
 import iCarousel
-import LFramework
+import SAKit
 
 /**
     First screen of the app: 10 days forecast. Tab bar is hidden until locatio is updated.
 	`LFTableController` is a helper class in `LFoundation.swift` to handle 1 or more table views within.
 */
-class WPForecastController: LFTableController, CLLocationManagerDelegate {
+class WPForecastController: SATableController, CLLocationManagerDelegate {
 	@IBOutlet var labelCity: UILabel!
 	var locationManager: CLLocationManager!
 	var isTarBarHidden = true
@@ -42,7 +42,7 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 
 	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
 		for location in locations {
-			//	LF.log("LOCATION updated", location)
+			//	SA.log("LOCATION updated", location)
 			//	Stop updating as soon as a recent location is obtained.
 			self.locationManager.stopUpdatingLocation()
 			//	simple tests
@@ -71,12 +71,12 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 			(geolookup, error) -> Void in
 			//print("\(geolookup), \(error)")
 			if error != nil {
-				LF.alert("Failed to connect to weather service", error!.localizedDescription)
+				SA.alert("Failed to connect to weather service", error!.localizedDescription)
 			} else if let desc = geolookup?.response?.error?.type {
-				LF.alert("Failed to get location info", "Error type: " + desc)
+				SA.alert("Failed to get location info", "Error type: " + desc)
 			} else if let stations = geolookup?.location?.nearby_weather_stations?.airport?.station {
 				if stations.count <= 0 {
-					LF.alert("No weather station found", "There doesn't seem to be any weather stations around you. Please contact us at support@weatherpov.com")
+					SA.alert("No weather station found", "There doesn't seem to be any weather stations around you. Please contact us at support@weatherpov.com")
 				} else {
 					print("WEATHER 1st station: \(stations[0])")
 					//	Use the first (closest) weather station to get forecast.
@@ -103,7 +103,7 @@ class WPForecastController: LFTableController, CLLocationManagerDelegate {
 					}
 				}
 			} else {
-				LF.alert("Unknown data format from weather service", "Please make sure your app is up to date.")
+				SA.alert("Unknown data format from weather service", "Please make sure your app is up to date.")
 			}
 		}
 	}

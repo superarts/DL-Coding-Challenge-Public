@@ -1,12 +1,12 @@
 import UIKit
 import Parse
-import LFramework
+import SAKit
 
 /**
 	A simple game about tapping icons randomly appears on the screen.
 	Leaderboard is powered by `Parse`.
 */
-class WPGdayController: LFTableController {
+class WPGdayController: SATableController {
 	@IBOutlet var buttonPlay: UIButton!
 	var buttons = [UIButton]()
 	// tap 100 buttons in 10 seconds
@@ -20,7 +20,7 @@ class WPGdayController: LFTableController {
 		super.viewWillAppear(animated)
 		//	update leaderboard silently
 		reloadTable()
-		//LF.log("GDAY user", WP.user)
+		//SA.log("GDAY user", WP.user)
 		if WP.user != nil {
 			buttonPlay.setTitle("PLAY GAME", forState:.Normal)
 		}
@@ -88,7 +88,7 @@ class WPGdayController: LFTableController {
 			if time < 0.5 {
 				time = 0.5
 			}
-			LF.dispatch_delay(time) {
+			SA.dispatch_delay(time) {
 				//	border
 				let bw = 50
 				let bh = 60
@@ -159,7 +159,7 @@ class WPGdayController: LFTableController {
 					WP.showError(error, text:WP.s.submit_failed)
 					return
 				}
-				LF.alert("Congratulations!", 
+				SA.alert("Congratulations!", 
 					String(format: "Your score has been posted!\n\nPrevious: %zi\n\nTapped: %zi\nWeather: x%zi\nThis score: %zi\n\nYOUR TOTAL SCORE: %zi", 
 						scorePrev, self.score, factor, self.score * factor, user["gday_score"] as! Int
 					)
@@ -173,7 +173,7 @@ class WPGdayController: LFTableController {
 			scoreObject["factor"] = factor
 			scoreObject.saveInBackgroundWithBlock() {
 				(success, error) in
-				LF.log("SCORE submission result", error)
+				SA.log("SCORE submission result", error)
 			}
 		}
 	}

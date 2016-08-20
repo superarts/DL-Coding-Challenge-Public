@@ -1,5 +1,5 @@
 import UIKit
-import LFramework
+import SAKit
 
 /**
 	Forecast detail. It contains a static table view so most works are done in `Main.storyboard`.

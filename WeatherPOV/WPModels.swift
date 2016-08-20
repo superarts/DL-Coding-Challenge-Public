@@ -1,32 +1,32 @@
-import LFramework
+import SAKit
 
 //	MARK: general
 
-class WPErrorModel: LFModel {
+class WPErrorModel: SAModel {
 	var type: String?
 	//var description: String?
 }
 
-class WPFeatureModel: LFModel {
+class WPFeatureModel: SAModel {
 	var geolookup:	Int = 0
 	var forecast:	Int = 0
 	var astronomy:	Int = 0
 }
 
-class WPResponseModel: LFModel {
+class WPResponseModel: SAModel {
 	var version:		String?
 	var termsofService:	String?
 	var features:		WPFeatureModel?
 	var error:			WPErrorModel?
 }
 
-class WPResultModel: LFModel {
+class WPResultModel: SAModel {
 	var response:	WPResponseModel?
 }
 
 //	MARK: geolookup
 
-class WPGeolocationModel: LFModel {
+class WPGeolocationModel: SAModel {
 	var city: String?
 	var country: String?
 	var lat: Float = 0
@@ -42,14 +42,14 @@ class WPStationModel: WPGeolocationModel {
 	var distance_mi:	Float = 0
 }
 
-class WPAirportModel: LFModel {
+class WPAirportModel: SAModel {
 	var station: [WPStationModel]?
 }
 
 class WPPwsModel: WPAirportModel {
 }
 
-class WPWeatherStationModel: LFModel {
+class WPWeatherStationModel: SAModel {
 	var airport: WPAirportModel?
 	var pws: WPAirportModel?
 }
@@ -76,7 +76,7 @@ class WPGeolookupResultModel: WPResultModel {
 
 //	MARK: forecast
 
-class WPDateModel: LFModel {
+class WPDateModel: SAModel {
 	var epoch:	String?
 	var pretty:	String?
 	var day:	Int = 0
@@ -96,7 +96,7 @@ class WPDateModel: LFModel {
 	var tz_long:	String?
 }
 
-class WPTemperatureModel: LFModel {
+class WPTemperatureModel: SAModel {
 	//	appear as int
 	var fahrenheit:	Float = 0
 	var celsius:	Float = 0
@@ -108,7 +108,7 @@ class WPTemperatureModel: LFModel {
 	}
 }
 
-class WPQPFModel: LFModel {
+class WPQPFModel: SAModel {
 	//	appear as int
 	//var in: Float = 0
 	var inch: Float {
@@ -135,7 +135,7 @@ class WPQPFModel: LFModel {
 	}
 }
 
-class WPWindModel: LFModel {
+class WPWindModel: SAModel {
 	//	appear as int
 	var mph:		Float = 0
 	var kph:		Float = 0
@@ -149,7 +149,7 @@ class WPWindModel: LFModel {
 	}
 }
 
-class WPForecastdayModel: LFModel {
+class WPForecastdayModel: SAModel {
 	var period:			Int = 0
 	var icon:			String?
 	var icon_url:		String?
@@ -183,7 +183,7 @@ class WPForecastdayModel: LFModel {
 	var minhumidity:	Float = 0
 }
 
-class WPTxtForecastModel: LFModel {
+class WPTxtForecastModel: SAModel {
 	var date: String?
 	var forecastday: [WPForecastdayModel]?
 }
@@ -191,11 +191,11 @@ class WPTxtForecastModel: LFModel {
 //	Although named as "simple forecast", WPForecastdayModel in
 //	WPSimpleForecastModel actually contains more information than
 //	the ones in WPTxtForecast (text forecast).
-class WPSimpleForecastModel: LFModel {
+class WPSimpleForecastModel: SAModel {
 	var forecastday: [WPForecastdayModel]?
 }
 
-class WPForecastModel: LFModel {
+class WPForecastModel: SAModel {
 	var txt_forecast:	WPTxtForecastModel?
 	var simpleforecast:	WPSimpleForecastModel?
 }
@@ -206,7 +206,7 @@ class WPForecastResultModel: WPResultModel {
 
 //	Astronomy
 
-class WPTimeModel: LFModel {
+class WPTimeModel: SAModel {
 	var hour:	Float = 0
 	var minute:	Float = 0
 	var str: String {
@@ -214,7 +214,7 @@ class WPTimeModel: LFModel {
 	}
 }
 
-class WPSunPhaseModel: LFModel {
+class WPSunPhaseModel: SAModel {
 	var sunrise:	WPTimeModel?
 	var sunset:		WPTimeModel?
 }

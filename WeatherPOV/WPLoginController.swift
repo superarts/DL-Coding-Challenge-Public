@@ -1,13 +1,13 @@
 import UIKit
 import Parse
-import LFramework
+import SAKit
 
 /**
 	Simple `Parse` register / login view.
 	TODO: This is a simplified login/register view controller. There should be 3 view:
 	controllers: login, register, and reset password.
 */
-class WPLoginController: LFViewController {
+class WPLoginController: SAViewController {
 	@IBOutlet var fieldPassword:	UITextField!
 	@IBOutlet var fieldUsername:	UITextField!
 	var isRegistering = false
@@ -25,8 +25,8 @@ class WPLoginController: LFViewController {
 		}
 		//	try to login first
         WP.show(WP.s.signing_in)
-		LF.log("username", fieldUsername.text)
-		LF.log("password", fieldPassword.text)
+		SA.log("username", fieldUsername.text)
+		SA.log("password", fieldPassword.text)
 		PFUser.logInWithUsernameInBackground(fieldUsername.text!, password:fieldPassword.text!) {
             (user, error) -> Void in
             WP.hide()
@@ -58,7 +58,7 @@ class WPLoginController: LFViewController {
 		user.username = fieldUsername.text
         user.password = fieldPassword.text
         user["gday_score"] = 0
-		LF.log("user", user)
+		SA.log("user", user)
         WP.show(WP.s.signing_up)
         user.signUpInBackgroundWithBlock() {
             (success, error) -> Void in

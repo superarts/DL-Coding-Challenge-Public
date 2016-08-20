@@ -1,5 +1,5 @@
 import UIKit
-import LFramework
+import SAKit
 
 /**
 	Astronomy info. It contains a static table view so most works are done in `Main.storyboard`.
@@ -32,7 +32,7 @@ class WPAstronomyController: UITableViewController {
 				(astronomy, error) -> Void in
 				//print(astronomy)
 				if error != nil {
-					LF.alert("Failed to connect to weather service", error!.localizedDescription)
+					SA.alert("Failed to connect to weather service", error!.localizedDescription)
 					return
 				}
 				if let time = astronomy?.moon_phase?.current_time?.str {

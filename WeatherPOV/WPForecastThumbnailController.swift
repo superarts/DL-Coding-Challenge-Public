@@ -1,5 +1,5 @@
 import UIKit
-import LFramework
+import SAKit
 
 /**
     Daily forecast thumbnail used in carousel.
