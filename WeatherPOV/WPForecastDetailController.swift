@@ -93,8 +93,8 @@ class WPForecastDetailController: UITableViewController {
 		super.viewDidAppear(animated)
 		UIApplication.sharedApplication().statusBarStyle = .Default
 	}
-    override func lf_actionPop() {
-		super.lf_actionPop()
+    @IBAction func lf_actionPop() {
+		super.sakitActionPop()
 		UIApplication.sharedApplication().statusBarStyle = .LightContent
 	}
 }

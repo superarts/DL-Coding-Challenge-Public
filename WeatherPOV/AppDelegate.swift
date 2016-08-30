@@ -55,7 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return true
 	}
 
-func sum(array: [Int], head: Int, var tail: Int) -> Int {
+func sum(array: [Int], head: Int, tail a_tail: Int) -> Int {
+	var tail = a_tail
     var ret = 0
 	if tail >= array.count {
 		tail = array.count - 1
