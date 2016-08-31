@@ -32,7 +32,7 @@ class WPLoginController: SAViewController {
             WP.hide()
             if error == nil {
                 WP.showText(WP.s.signin_successful)
-                self.lf_actionDismiss()
+                self.sakitActionDismiss()
                 WP.user = user
             } else {
 				if let code = error?.code where code == 101 {

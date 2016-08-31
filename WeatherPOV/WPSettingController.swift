@@ -65,8 +65,8 @@ class WPSettingController: UITableViewController {
 		}
 		reloadUnitSystem()
 	}
-    override func lf_actionDismiss() {
-		super.lf_actionDismiss()
+    @IBAction func lf_actionDismiss() {
+		super.sakitActionDismiss()
 		UIApplication.sharedApplication().statusBarStyle = .LightContent
 	}
 }
