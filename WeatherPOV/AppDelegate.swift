@@ -50,10 +50,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		//UIFont.print_all()
 		initParse(launchOptions)
 		initFlurry()
-		//test1()
-		test2()
+		//test1()	//	la
+		//test2()	//	thailand lazada
+		var s = "1A 2F 2H"
+		test3(2, &s)
 		return true
 	}
+
+func test3(N : Int, inout _ S : String) -> Int {
+    // write your code in Swift 2.2 (Linux)
+    var count = 0
+	let array = S.characters.split{$0 == " "}.map(String.init)
+    for i in 1 ... N {
+		//	ABC: all seats need to be available
+		if !array.contains(String(i) + "A") && 
+			!array.contains(String(i) + "B") && 
+			!array.contains(String(i) + "C") {
+			count += 1
+		}
+		//	DEFG: either DEF or EFG need to be available
+		if (!array.contains(String(i) + "D") && 
+			!array.contains(String(i) + "E") && 
+			!array.contains(String(i) + "F")) || 
+			(!array.contains(String(i) + "E") && 
+			!array.contains(String(i) + "F") && 
+			!array.contains(String(i) + "G")){
+			count += 1
+		}
+		//	HJK: all seats need to be available
+		if !array.contains(String(i) + "H") && 
+			!array.contains(String(i) + "J") && 
+			!array.contains(String(i) + "K") {
+			count += 1
+		}
+    }
+	print("----")
+	print(count)
+    return count
+}
 
 func sum(array: [Int], head: Int, tail a_tail: Int) -> Int {
 	var tail = a_tail
