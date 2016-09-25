@@ -15,3 +15,11 @@ target 'WeatherPOV' do
 	pod 'MBProgressHUD', '~> 0.9.2'
 	pod 'Flurry-iOS-SDK', '~> 7.6.4'
 end
+
+post_install do |installer|
+	installer.pods_project.targets.each do |target|
+		target.build_configurations.each do |config|
+			config.build_settings['SWIFT_VERSION'] = '3.0'
+		end
+	end
+end

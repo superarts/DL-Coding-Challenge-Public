@@ -1,1729 +1,768 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>2D5B7B04BF789C8C8524610C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-WeatherPOV/Pods-WeatherPOV-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>3A448CDEF6EA4027A3BF0FFD</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E316EEA44563B983F72C13AF</string>
-				<string>87F96F96C5528EC85E56F48E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3E604BD36ABF1548AF1E9ACC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B834F987B8F5FA8FAE116B5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F50452C2D7061D8C3642841</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-WeatherPOV/Pods-WeatherPOV-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>5B834F987B8F5FA8FAE116B5</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_WeatherPOV.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>6FB58A0FB8D9C7AE63D1B2CF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>87F96F96C5528EC85E56F48E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-WeatherPOV.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-WeatherPOV/Pods-WeatherPOV.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AA4B373047472A2B1CC30DB3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3B5E3781D1ADAC60038CC3B</string>
-				<string>5B834F987B8F5FA8FAE116B5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3B5E3781D1ADAC60038CC3B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Parse.framework</string>
-			<key>path</key>
-			<string>/Users/leo/Library/Developer/Xcode/DerivedData/WeatherPOV-dtfacxqyfcpozadiygomatkrdibs/Build/Products/Debug-iphonesimulator/Parse/Parse.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;absolute&gt;</string>
-		</dict>
-		<key>B3F8C64C1D12C2CF00A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6571D12C2CF00A997A5</string>
-				<string>B3F8C66C1D12C2D000A997A5</string>
-				<string>B3F8C6771D12C2D000A997A5</string>
-				<string>B3F8C6561D12C2CF00A997A5</string>
-				<string>3A448CDEF6EA4027A3BF0FFD</string>
-				<string>AA4B373047472A2B1CC30DB3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C64D1D12C2CF00A997A5</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Super Art Software</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>B3F8C6541D12C2CF00A997A5</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-						<key>DevelopmentTeam</key>
-						<string>AKGR9TT483</string>
-					</dict>
-					<key>B3F8C6681D12C2D000A997A5</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-						<key>TestTargetID</key>
-						<string>B3F8C6541D12C2CF00A997A5</string>
-					</dict>
-					<key>B3F8C6731D12C2D000A997A5</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-						<key>TestTargetID</key>
-						<string>B3F8C6541D12C2CF00A997A5</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>B3F8C6501D12C2CF00A997A5</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>B3F8C64C1D12C2CF00A997A5</string>
-			<key>productRefGroup</key>
-			<string>B3F8C6561D12C2CF00A997A5</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>B3F8C6541D12C2CF00A997A5</string>
-				<string>B3F8C6681D12C2D000A997A5</string>
-				<string>B3F8C6731D12C2D000A997A5</string>
-			</array>
-		</dict>
-		<key>B3F8C6501D12C2CF00A997A5</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B3F8C67B1D12C2D000A997A5</string>
-				<string>B3F8C67C1D12C2D000A997A5</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B3F8C6511D12C2CF00A997A5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B3F8C6A41D142D5300A997A5</string>
-				<string>B3F8C69B1D142D4C00A997A5</string>
-				<string>B3F8C6A91D1433B100A997A5</string>
-				<string>B3F8C6C01D155CE300A997A5</string>
-				<string>B3F8C6A21D142D5300A997A5</string>
-				<string>B3F8C6A31D142D5300A997A5</string>
-				<string>B3F8C6AB1D14460100A997A5</string>
-				<string>B3F8C6A11D142D5300A997A5</string>
-				<string>B3F8C6C21D1577A100A997A5</string>
-				<string>B3F8C6AD1D150E2900A997A5</string>
-				<string>B3F8C6A51D142D5300A997A5</string>
-				<string>B3F8C6591D12C2CF00A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B3F8C6521D12C2CF00A997A5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3E604BD36ABF1548AF1E9ACC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B3F8C6531D12C2CF00A997A5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B3F8C6BA1D15182200A997A5</string>
-				<string>B3F8C6B71D150F4A00A997A5</string>
-				<string>B3F8C6BC1D151FFF00A997A5</string>
-				<string>B3F8C6C81D15789700A997A5</string>
-				<string>B3F8C6631D12C2D000A997A5</string>
-				<string>B3F8C6B81D150F4A00A997A5</string>
-				<string>B3F8C6601D12C2D000A997A5</string>
-				<string>B3F8C6BE1D1546A000A997A5</string>
-				<string>B3F8C6B51D150F4A00A997A5</string>
-				<string>B3F8C6B61D150F4A00A997A5</string>
-				<string>B3F8C65E1D12C2CF00A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B3F8C6541D12C2CF00A997A5</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>B3F8C67D1D12C2D000A997A5</string>
-			<key>buildPhases</key>
-			<array>
-				<string>6FB58A0FB8D9C7AE63D1B2CF</string>
-				<string>B3F8C6511D12C2CF00A997A5</string>
-				<string>B3F8C6521D12C2CF00A997A5</string>
-				<string>B3F8C6C91D1659C700A997A5</string>
-				<string>B3F8C6531D12C2CF00A997A5</string>
-				<string>F3C9D7D0FA108543BEDD4B5A</string>
-				<string>2D5B7B04BF789C8C8524610C</string>
-				<string>4F50452C2D7061D8C3642841</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>WeatherPOV</string>
-			<key>productName</key>
-			<string>WeatherPOV</string>
-			<key>productReference</key>
-			<string>B3F8C6551D12C2CF00A997A5</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>B3F8C6551D12C2CF00A997A5</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>WeatherMasterDeluxe.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B3F8C6561D12C2CF00A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6551D12C2CF00A997A5</string>
-				<string>B3F8C6691D12C2D000A997A5</string>
-				<string>B3F8C6741D12C2D000A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6571D12C2CF00A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6AE1D150F4A00A997A5</string>
-				<string>B3F8C69A1D142D4C00A997A5</string>
-				<string>B3F8C6A71D142D6A00A997A5</string>
-				<string>B3F8C6A61D142D5800A997A5</string>
-				<string>B3F8C6581D12C2CF00A997A5</string>
-				<string>B3F8C65C1D12C2CF00A997A5</string>
-				<string>B3F8C65F1D12C2D000A997A5</string>
-				<string>B3F8C6611D12C2D000A997A5</string>
-				<string>B3F8C6641D12C2D000A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>WeatherPOV</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6581D12C2CF00A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6591D12C2CF00A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6581D12C2CF00A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C65C1D12C2CF00A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C65D1D12C2CF00A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C65D1D12C2CF00A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C65E1D12C2CF00A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C65C1D12C2CF00A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C65F1D12C2D000A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6601D12C2D000A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C65F1D12C2D000A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6611D12C2D000A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6621D12C2D000A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6621D12C2D000A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6631D12C2D000A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6611D12C2D000A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6641D12C2D000A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6651D12C2D000A997A5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B3F8C66E1D12C2D000A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B3F8C6661D12C2D000A997A5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B3F8C6671D12C2D000A997A5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B3F8C6681D12C2D000A997A5</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>B3F8C6801D12C2D000A997A5</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B3F8C6651D12C2D000A997A5</string>
-				<string>B3F8C6661D12C2D000A997A5</string>
-				<string>B3F8C6671D12C2D000A997A5</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>B3F8C66B1D12C2D000A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>WeatherPOVTests</string>
-			<key>productName</key>
-			<string>WeatherPOVTests</string>
-			<key>productReference</key>
-			<string>B3F8C6691D12C2D000A997A5</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>B3F8C6691D12C2D000A997A5</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>WeatherPOVTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B3F8C66A1D12C2D000A997A5</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>B3F8C64D1D12C2CF00A997A5</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>B3F8C6541D12C2CF00A997A5</string>
-			<key>remoteInfo</key>
-			<string>WeatherPOV</string>
-		</dict>
-		<key>B3F8C66B1D12C2D000A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>B3F8C6541D12C2CF00A997A5</string>
-			<key>targetProxy</key>
-			<string>B3F8C66A1D12C2D000A997A5</string>
-		</dict>
-		<key>B3F8C66C1D12C2D000A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C66D1D12C2D000A997A5</string>
-				<string>B3F8C66F1D12C2D000A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>WeatherPOVTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C66D1D12C2D000A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WeatherPOVTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C66E1D12C2D000A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C66D1D12C2D000A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C66F1D12C2D000A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6701D12C2D000A997A5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B3F8C6791D12C2D000A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B3F8C6711D12C2D000A997A5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B3F8C6721D12C2D000A997A5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B3F8C6731D12C2D000A997A5</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>B3F8C6831D12C2D000A997A5</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B3F8C6701D12C2D000A997A5</string>
-				<string>B3F8C6711D12C2D000A997A5</string>
-				<string>B3F8C6721D12C2D000A997A5</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>B3F8C6761D12C2D000A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>WeatherPOVUITests</string>
-			<key>productName</key>
-			<string>WeatherPOVUITests</string>
-			<key>productReference</key>
-			<string>B3F8C6741D12C2D000A997A5</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>B3F8C6741D12C2D000A997A5</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>WeatherPOVUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B3F8C6751D12C2D000A997A5</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>B3F8C64D1D12C2CF00A997A5</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>B3F8C6541D12C2CF00A997A5</string>
-			<key>remoteInfo</key>
-			<string>WeatherPOV</string>
-		</dict>
-		<key>B3F8C6761D12C2D000A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>B3F8C6541D12C2CF00A997A5</string>
-			<key>targetProxy</key>
-			<string>B3F8C6751D12C2D000A997A5</string>
-		</dict>
-		<key>B3F8C6771D12C2D000A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6781D12C2D000A997A5</string>
-				<string>B3F8C67A1D12C2D000A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>WeatherPOVUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6781D12C2D000A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WeatherPOVUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6791D12C2D000A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6781D12C2D000A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C67A1D12C2D000A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C67B1D12C2D000A997A5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string></string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B3F8C67C1D12C2D000A997A5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string></string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B3F8C67D1D12C2D000A997A5</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B3F8C67E1D12C2D000A997A5</string>
-				<string>B3F8C67F1D12C2D000A997A5</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B3F8C67E1D12C2D000A997A5</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>E316EEA44563B983F72C13AF</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>INFOPLIST_FILE</key>
-				<string>WeatherPOV/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.superarts.WeatherPOV</string>
-				<key>PRODUCT_NAME</key>
-				<string>WeatherMasterDeluxe</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>WeatherPOV/bridging.h</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1</string>
-				<key>USER_HEADER_SEARCH_PATHS</key>
-				<string>${PROJECT_DIR}/Pods/*</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B3F8C67F1D12C2D000A997A5</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>87F96F96C5528EC85E56F48E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Distribution</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Distribution</string>
-				<key>INFOPLIST_FILE</key>
-				<string>WeatherPOV/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.superarts.WeatherPOV</string>
-				<key>PRODUCT_NAME</key>
-				<string>WeatherMasterDeluxe</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>WeatherPOV/bridging.h</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1</string>
-				<key>USER_HEADER_SEARCH_PATHS</key>
-				<string>${PROJECT_DIR}/Pods/*</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B3F8C6801D12C2D000A997A5</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B3F8C6811D12C2D000A997A5</string>
-				<string>B3F8C6821D12C2D000A997A5</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B3F8C6811D12C2D000A997A5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>WeatherPOVTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.superarts.WeatherPOVTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string></string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/WeatherPOV.app/WeatherPOV</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B3F8C6821D12C2D000A997A5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>WeatherPOVTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.superarts.WeatherPOVTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string></string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/WeatherPOV.app/WeatherPOV</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B3F8C6831D12C2D000A997A5</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B3F8C6841D12C2D000A997A5</string>
-				<string>B3F8C6851D12C2D000A997A5</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B3F8C6841D12C2D000A997A5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>WeatherPOVUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.superarts.WeatherPOVUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string></string>
-				<key>TEST_TARGET_NAME</key>
-				<string>WeatherPOV</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B3F8C6851D12C2D000A997A5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>WeatherPOVUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.superarts.WeatherPOVUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string></string>
-				<key>TEST_TARGET_NAME</key>
-				<string>WeatherPOV</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B3F8C69A1D142D4C00A997A5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WeatherPOV.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C69B1D142D4C00A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C69A1D142D4C00A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C69C1D142D5300A997A5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WPClients.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C69D1D142D5300A997A5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WPForecastController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C69E1D142D5300A997A5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WPForecastThumbnailController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C69F1D142D5300A997A5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WPModels.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6A01D142D5300A997A5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WPSettingController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6A11D142D5300A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C69C1D142D5300A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6A21D142D5300A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C69D1D142D5300A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6A31D142D5300A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C69E1D142D5300A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6A41D142D5300A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C69F1D142D5300A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6A51D142D5300A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6A01D142D5300A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6A61D142D5800A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6C31D1577A500A997A5</string>
-				<string>B3F8C6C41D1577B300A997A5</string>
-				<string>B3F8C6C51D1577B900A997A5</string>
-				<string>B3F8C6C61D1577C100A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ViewControllers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6A71D142D6A00A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C69F1D142D5300A997A5</string>
-				<string>B3F8C69C1D142D5300A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Models</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6A81D1433B100A997A5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WPForecastDetailController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6A91D1433B100A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6A81D1433B100A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6AA1D14460100A997A5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WPRadarController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6AB1D14460100A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6AA1D14460100A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6AC1D150E2900A997A5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WPAstronomyController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6AD1D150E2900A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6AC1D150E2900A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6AE1D150F4A00A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6AF1D150F4A00A997A5</string>
-				<string>B3F8C6B11D150F4A00A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>data</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6AF1D150F4A00A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6B01D150F4A00A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>font</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6B01D150F4A00A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>path</key>
-			<string>MuseoSans_500.otf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6B11D150F4A00A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6BD1D1546A000A997A5</string>
-				<string>B3F8C6B91D15182200A997A5</string>
-				<string>B3F8C6B21D150F4A00A997A5</string>
-				<string>B3F8C6B31D150F4A00A997A5</string>
-				<string>B3F8C6B41D150F4A00A997A5</string>
-				<string>B3F8C6BB1D151FFF00A997A5</string>
-				<string>B3F8C6C71D15789700A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>image</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6B21D150F4A00A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>astronomy.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6B31D150F4A00A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>forecast.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6B41D150F4A00A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>radar.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6B51D150F4A00A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6B01D150F4A00A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6B61D150F4A00A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6B21D150F4A00A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6B71D150F4A00A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6B31D150F4A00A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6B81D150F4A00A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6B41D150F4A00A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6B91D15182200A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>splash.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6BA1D15182200A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6B91D15182200A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6BB1D151FFF00A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>game.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6BC1D151FFF00A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6BB1D151FFF00A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6BD1D1546A000A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>icon.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6BE1D1546A000A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6BD1D1546A000A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6BF1D155CE300A997A5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WPGdayController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6C01D155CE300A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6BF1D155CE300A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6C11D1577A100A997A5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>WPLoginController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6C21D1577A100A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6C11D1577A100A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6C31D1577A500A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C69E1D142D5300A997A5</string>
-				<string>B3F8C6A81D1433B100A997A5</string>
-				<string>B3F8C69D1D142D5300A997A5</string>
-				<string>B3F8C6A01D142D5300A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Forecast</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6C41D1577B300A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6BF1D155CE300A997A5</string>
-				<string>B3F8C6C11D1577A100A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Gday</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6C51D1577B900A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6AC1D150E2900A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Astronomy</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6C61D1577C100A997A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3F8C6AA1D14460100A997A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Radar</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6C71D15789700A997A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>settings.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3F8C6C81D15789700A997A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B3F8C6C71D15789700A997A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F8C6C91D1659C700A997A5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string># Update build number
-buildNumber=$(git rev-list HEAD | wc -l | tr -d ' ')
-/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $buildNumber" "${PROJECT_DIR}/${INFOPLIST_FILE}"</string>
-		</dict>
-		<key>E316EEA44563B983F72C13AF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-WeatherPOV.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-WeatherPOV/Pods-WeatherPOV.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F3C9D7D0FA108543BEDD4B5A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-WeatherPOV/Pods-WeatherPOV-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>B3F8C64D1D12C2CF00A997A5</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B3F8C6591D12C2CF00A997A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6581D12C2CF00A997A5 /* AppDelegate.swift */; };
+		B3F8C65E1D12C2CF00A997A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C65C1D12C2CF00A997A5 /* Main.storyboard */; };
+		B3F8C6601D12C2D000A997A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C65F1D12C2D000A997A5 /* Assets.xcassets */; };
+		B3F8C6631D12C2D000A997A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6611D12C2D000A997A5 /* LaunchScreen.storyboard */; };
+		B3F8C66E1D12C2D000A997A5 /* WeatherPOVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C66D1D12C2D000A997A5 /* WeatherPOVTests.swift */; };
+		B3F8C6791D12C2D000A997A5 /* WeatherPOVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6781D12C2D000A997A5 /* WeatherPOVUITests.swift */; };
+		B3F8C69B1D142D4C00A997A5 /* WeatherPOV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69A1D142D4C00A997A5 /* WeatherPOV.swift */; };
+		B3F8C6A11D142D5300A997A5 /* WPClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69C1D142D5300A997A5 /* WPClients.swift */; };
+		B3F8C6A21D142D5300A997A5 /* WPForecastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69D1D142D5300A997A5 /* WPForecastController.swift */; };
+		B3F8C6A31D142D5300A997A5 /* WPForecastThumbnailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */; };
+		B3F8C6A41D142D5300A997A5 /* WPModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C69F1D142D5300A997A5 /* WPModels.swift */; };
+		B3F8C6A51D142D5300A997A5 /* WPSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */; };
+		B3F8C6A91D1433B100A997A5 /* WPForecastDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */; };
+		B3F8C6AB1D14460100A997A5 /* WPRadarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6AA1D14460100A997A5 /* WPRadarController.swift */; };
+		B3F8C6AD1D150E2900A997A5 /* WPAstronomyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6AC1D150E2900A997A5 /* WPAstronomyController.swift */; };
+		B3F8C6B51D150F4A00A997A5 /* MuseoSans_500.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6B01D150F4A00A997A5 /* MuseoSans_500.otf */; };
+		B3F8C6B61D150F4A00A997A5 /* astronomy.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6B21D150F4A00A997A5 /* astronomy.png */; };
+		B3F8C6B71D150F4A00A997A5 /* forecast.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6B31D150F4A00A997A5 /* forecast.png */; };
+		B3F8C6B81D150F4A00A997A5 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6B41D150F4A00A997A5 /* radar.png */; };
+		B3F8C6BA1D15182200A997A5 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6B91D15182200A997A5 /* splash.png */; };
+		B3F8C6BC1D151FFF00A997A5 /* game.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6BB1D151FFF00A997A5 /* game.png */; };
+		B3F8C6BE1D1546A000A997A5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6BD1D1546A000A997A5 /* icon.png */; };
+		B3F8C6C01D155CE300A997A5 /* WPGdayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6BF1D155CE300A997A5 /* WPGdayController.swift */; };
+		B3F8C6C21D1577A100A997A5 /* WPLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8C6C11D1577A100A997A5 /* WPLoginController.swift */; };
+		B3F8C6C81D15789700A997A5 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F8C6C71D15789700A997A5 /* settings.png */; };
+		BE50A35913F66AABD80C41BE /* Pods_WeatherPOV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9A690C8075A94AC850DDD2 /* Pods_WeatherPOV.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3F8C66A1D12C2D000A997A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3F8C64D1D12C2CF00A997A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F8C6541D12C2CF00A997A5;
+			remoteInfo = WeatherPOV;
+		};
+		B3F8C6751D12C2D000A997A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3F8C64D1D12C2CF00A997A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F8C6541D12C2CF00A997A5;
+			remoteInfo = WeatherPOV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F9A690C8075A94AC850DDD2 /* Pods_WeatherPOV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherPOV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96D5F1584A71FD11A5909387 /* Pods-WeatherPOV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherPOV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherPOV/Pods-WeatherPOV.debug.xcconfig"; sourceTree = "<group>"; };
+		B3B5E3781D1ADAC60038CC3B /* Parse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Parse.framework; path = "/Users/leo/Library/Developer/Xcode/DerivedData/WeatherPOV-dtfacxqyfcpozadiygomatkrdibs/Build/Products/Debug-iphonesimulator/Parse/Parse.framework"; sourceTree = "<absolute>"; };
+		B3F8C6551D12C2CF00A997A5 /* WeatherMasterDeluxe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMasterDeluxe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F8C6581D12C2CF00A997A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B3F8C65D1D12C2CF00A997A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3F8C65F1D12C2D000A997A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3F8C6621D12C2D000A997A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3F8C6641D12C2D000A997A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F8C6691D12C2D000A997A5 /* WeatherPOVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherPOVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F8C66D1D12C2D000A997A5 /* WeatherPOVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPOVTests.swift; sourceTree = "<group>"; };
+		B3F8C66F1D12C2D000A997A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F8C6741D12C2D000A997A5 /* WeatherPOVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherPOVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F8C6781D12C2D000A997A5 /* WeatherPOVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPOVUITests.swift; sourceTree = "<group>"; };
+		B3F8C67A1D12C2D000A997A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F8C69A1D142D4C00A997A5 /* WeatherPOV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherPOV.swift; sourceTree = "<group>"; };
+		B3F8C69C1D142D5300A997A5 /* WPClients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPClients.swift; sourceTree = "<group>"; };
+		B3F8C69D1D142D5300A997A5 /* WPForecastController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPForecastController.swift; sourceTree = "<group>"; };
+		B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPForecastThumbnailController.swift; sourceTree = "<group>"; };
+		B3F8C69F1D142D5300A997A5 /* WPModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPModels.swift; sourceTree = "<group>"; };
+		B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPSettingController.swift; sourceTree = "<group>"; };
+		B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPForecastDetailController.swift; sourceTree = "<group>"; };
+		B3F8C6AA1D14460100A997A5 /* WPRadarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPRadarController.swift; sourceTree = "<group>"; };
+		B3F8C6AC1D150E2900A997A5 /* WPAstronomyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPAstronomyController.swift; sourceTree = "<group>"; };
+		B3F8C6B01D150F4A00A997A5 /* MuseoSans_500.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuseoSans_500.otf; sourceTree = "<group>"; };
+		B3F8C6B21D150F4A00A997A5 /* astronomy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = astronomy.png; sourceTree = "<group>"; };
+		B3F8C6B31D150F4A00A997A5 /* forecast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forecast.png; sourceTree = "<group>"; };
+		B3F8C6B41D150F4A00A997A5 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar.png; sourceTree = "<group>"; };
+		B3F8C6B91D15182200A997A5 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		B3F8C6BB1D151FFF00A997A5 /* game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game.png; sourceTree = "<group>"; };
+		B3F8C6BD1D1546A000A997A5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B3F8C6BF1D155CE300A997A5 /* WPGdayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPGdayController.swift; sourceTree = "<group>"; };
+		B3F8C6C11D1577A100A997A5 /* WPLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPLoginController.swift; sourceTree = "<group>"; };
+		B3F8C6C71D15789700A997A5 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		EE1CA8B67341FE76AEF6AAC1 /* Pods-WeatherPOV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherPOV.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherPOV/Pods-WeatherPOV.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3F8C6521D12C2CF00A997A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE50A35913F66AABD80C41BE /* Pods_WeatherPOV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F8C6661D12C2D000A997A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F8C6711D12C2D000A997A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA4B373047472A2B1CC30DB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3B5E3781D1ADAC60038CC3B /* Parse.framework */,
+				2F9A690C8075A94AC850DDD2 /* Pods_WeatherPOV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3F8C64C1D12C2CF00A997A5 = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6571D12C2CF00A997A5 /* WeatherPOV */,
+				B3F8C66C1D12C2D000A997A5 /* WeatherPOVTests */,
+				B3F8C6771D12C2D000A997A5 /* WeatherPOVUITests */,
+				B3F8C6561D12C2CF00A997A5 /* Products */,
+				AA4B373047472A2B1CC30DB3 /* Frameworks */,
+				E3498ADA5DA8F404DF2329FF /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B3F8C6561D12C2CF00A997A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6551D12C2CF00A997A5 /* WeatherMasterDeluxe.app */,
+				B3F8C6691D12C2D000A997A5 /* WeatherPOVTests.xctest */,
+				B3F8C6741D12C2D000A997A5 /* WeatherPOVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3F8C6571D12C2CF00A997A5 /* WeatherPOV */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6AE1D150F4A00A997A5 /* data */,
+				B3F8C69A1D142D4C00A997A5 /* WeatherPOV.swift */,
+				B3F8C6A71D142D6A00A997A5 /* Models */,
+				B3F8C6A61D142D5800A997A5 /* ViewControllers */,
+				B3F8C6581D12C2CF00A997A5 /* AppDelegate.swift */,
+				B3F8C65C1D12C2CF00A997A5 /* Main.storyboard */,
+				B3F8C65F1D12C2D000A997A5 /* Assets.xcassets */,
+				B3F8C6611D12C2D000A997A5 /* LaunchScreen.storyboard */,
+				B3F8C6641D12C2D000A997A5 /* Info.plist */,
+			);
+			path = WeatherPOV;
+			sourceTree = "<group>";
+		};
+		B3F8C66C1D12C2D000A997A5 /* WeatherPOVTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C66D1D12C2D000A997A5 /* WeatherPOVTests.swift */,
+				B3F8C66F1D12C2D000A997A5 /* Info.plist */,
+			);
+			path = WeatherPOVTests;
+			sourceTree = "<group>";
+		};
+		B3F8C6771D12C2D000A997A5 /* WeatherPOVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6781D12C2D000A997A5 /* WeatherPOVUITests.swift */,
+				B3F8C67A1D12C2D000A997A5 /* Info.plist */,
+			);
+			path = WeatherPOVUITests;
+			sourceTree = "<group>";
+		};
+		B3F8C6A61D142D5800A997A5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6C31D1577A500A997A5 /* Forecast */,
+				B3F8C6C41D1577B300A997A5 /* Gday */,
+				B3F8C6C51D1577B900A997A5 /* Astronomy */,
+				B3F8C6C61D1577C100A997A5 /* Radar */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B3F8C6A71D142D6A00A997A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C69F1D142D5300A997A5 /* WPModels.swift */,
+				B3F8C69C1D142D5300A997A5 /* WPClients.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B3F8C6AE1D150F4A00A997A5 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6AF1D150F4A00A997A5 /* font */,
+				B3F8C6B11D150F4A00A997A5 /* image */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		B3F8C6AF1D150F4A00A997A5 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6B01D150F4A00A997A5 /* MuseoSans_500.otf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		B3F8C6B11D150F4A00A997A5 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6BD1D1546A000A997A5 /* icon.png */,
+				B3F8C6B91D15182200A997A5 /* splash.png */,
+				B3F8C6B21D150F4A00A997A5 /* astronomy.png */,
+				B3F8C6B31D150F4A00A997A5 /* forecast.png */,
+				B3F8C6B41D150F4A00A997A5 /* radar.png */,
+				B3F8C6BB1D151FFF00A997A5 /* game.png */,
+				B3F8C6C71D15789700A997A5 /* settings.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		B3F8C6C31D1577A500A997A5 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C69E1D142D5300A997A5 /* WPForecastThumbnailController.swift */,
+				B3F8C6A81D1433B100A997A5 /* WPForecastDetailController.swift */,
+				B3F8C69D1D142D5300A997A5 /* WPForecastController.swift */,
+				B3F8C6A01D142D5300A997A5 /* WPSettingController.swift */,
+			);
+			name = Forecast;
+			sourceTree = "<group>";
+		};
+		B3F8C6C41D1577B300A997A5 /* Gday */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6BF1D155CE300A997A5 /* WPGdayController.swift */,
+				B3F8C6C11D1577A100A997A5 /* WPLoginController.swift */,
+			);
+			name = Gday;
+			sourceTree = "<group>";
+		};
+		B3F8C6C51D1577B900A997A5 /* Astronomy */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6AC1D150E2900A997A5 /* WPAstronomyController.swift */,
+			);
+			name = Astronomy;
+			sourceTree = "<group>";
+		};
+		B3F8C6C61D1577C100A997A5 /* Radar */ = {
+			isa = PBXGroup;
+			children = (
+				B3F8C6AA1D14460100A997A5 /* WPRadarController.swift */,
+			);
+			name = Radar;
+			sourceTree = "<group>";
+		};
+		E3498ADA5DA8F404DF2329FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96D5F1584A71FD11A5909387 /* Pods-WeatherPOV.debug.xcconfig */,
+				EE1CA8B67341FE76AEF6AAC1 /* Pods-WeatherPOV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3F8C6541D12C2CF00A997A5 /* WeatherPOV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3F8C67D1D12C2D000A997A5 /* Build configuration list for PBXNativeTarget "WeatherPOV" */;
+			buildPhases = (
+				F5E34860B5D8D334F56D64A0 /* [CP] Check Pods Manifest.lock */,
+				B3F8C6511D12C2CF00A997A5 /* Sources */,
+				B3F8C6521D12C2CF00A997A5 /* Frameworks */,
+				B3F8C6C91D1659C700A997A5 /* ShellScript */,
+				B3F8C6531D12C2CF00A997A5 /* Resources */,
+				C5039EEFCB0C478A7866DC62 /* [CP] Embed Pods Frameworks */,
+				183D3D91E039448FA975700D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeatherPOV;
+			productName = WeatherPOV;
+			productReference = B3F8C6551D12C2CF00A997A5 /* WeatherMasterDeluxe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3F8C6681D12C2D000A997A5 /* WeatherPOVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3F8C6801D12C2D000A997A5 /* Build configuration list for PBXNativeTarget "WeatherPOVTests" */;
+			buildPhases = (
+				B3F8C6651D12C2D000A997A5 /* Sources */,
+				B3F8C6661D12C2D000A997A5 /* Frameworks */,
+				B3F8C6671D12C2D000A997A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3F8C66B1D12C2D000A997A5 /* PBXTargetDependency */,
+			);
+			name = WeatherPOVTests;
+			productName = WeatherPOVTests;
+			productReference = B3F8C6691D12C2D000A997A5 /* WeatherPOVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B3F8C6731D12C2D000A997A5 /* WeatherPOVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3F8C6831D12C2D000A997A5 /* Build configuration list for PBXNativeTarget "WeatherPOVUITests" */;
+			buildPhases = (
+				B3F8C6701D12C2D000A997A5 /* Sources */,
+				B3F8C6711D12C2D000A997A5 /* Frameworks */,
+				B3F8C6721D12C2D000A997A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3F8C6761D12C2D000A997A5 /* PBXTargetDependency */,
+			);
+			name = WeatherPOVUITests;
+			productName = WeatherPOVUITests;
+			productReference = B3F8C6741D12C2D000A997A5 /* WeatherPOVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3F8C64D1D12C2CF00A997A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Super Art Software";
+				TargetAttributes = {
+					B3F8C6541D12C2CF00A997A5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = AKGR9TT483;
+					};
+					B3F8C6681D12C2D000A997A5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B3F8C6541D12C2CF00A997A5;
+					};
+					B3F8C6731D12C2D000A997A5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B3F8C6541D12C2CF00A997A5;
+					};
+				};
+			};
+			buildConfigurationList = B3F8C6501D12C2CF00A997A5 /* Build configuration list for PBXProject "WeatherPOV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B3F8C64C1D12C2CF00A997A5;
+			productRefGroup = B3F8C6561D12C2CF00A997A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3F8C6541D12C2CF00A997A5 /* WeatherPOV */,
+				B3F8C6681D12C2D000A997A5 /* WeatherPOVTests */,
+				B3F8C6731D12C2D000A997A5 /* WeatherPOVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3F8C6531D12C2CF00A997A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F8C6BA1D15182200A997A5 /* splash.png in Resources */,
+				B3F8C6B71D150F4A00A997A5 /* forecast.png in Resources */,
+				B3F8C6BC1D151FFF00A997A5 /* game.png in Resources */,
+				B3F8C6C81D15789700A997A5 /* settings.png in Resources */,
+				B3F8C6631D12C2D000A997A5 /* LaunchScreen.storyboard in Resources */,
+				B3F8C6B81D150F4A00A997A5 /* radar.png in Resources */,
+				B3F8C6601D12C2D000A997A5 /* Assets.xcassets in Resources */,
+				B3F8C6BE1D1546A000A997A5 /* icon.png in Resources */,
+				B3F8C6B51D150F4A00A997A5 /* MuseoSans_500.otf in Resources */,
+				B3F8C6B61D150F4A00A997A5 /* astronomy.png in Resources */,
+				B3F8C65E1D12C2CF00A997A5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F8C6671D12C2D000A997A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F8C6721D12C2D000A997A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		183D3D91E039448FA975700D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeatherPOV/Pods-WeatherPOV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3F8C6C91D1659C700A997A5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Update build number\nbuildNumber=$(git rev-list HEAD | wc -l | tr -d ' ')\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+		C5039EEFCB0C478A7866DC62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeatherPOV/Pods-WeatherPOV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5E34860B5D8D334F56D64A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3F8C6511D12C2CF00A997A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F8C6A41D142D5300A997A5 /* WPModels.swift in Sources */,
+				B3F8C69B1D142D4C00A997A5 /* WeatherPOV.swift in Sources */,
+				B3F8C6A91D1433B100A997A5 /* WPForecastDetailController.swift in Sources */,
+				B3F8C6C01D155CE300A997A5 /* WPGdayController.swift in Sources */,
+				B3F8C6A21D142D5300A997A5 /* WPForecastController.swift in Sources */,
+				B3F8C6A31D142D5300A997A5 /* WPForecastThumbnailController.swift in Sources */,
+				B3F8C6AB1D14460100A997A5 /* WPRadarController.swift in Sources */,
+				B3F8C6A11D142D5300A997A5 /* WPClients.swift in Sources */,
+				B3F8C6C21D1577A100A997A5 /* WPLoginController.swift in Sources */,
+				B3F8C6AD1D150E2900A997A5 /* WPAstronomyController.swift in Sources */,
+				B3F8C6A51D142D5300A997A5 /* WPSettingController.swift in Sources */,
+				B3F8C6591D12C2CF00A997A5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F8C6651D12C2D000A997A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F8C66E1D12C2D000A997A5 /* WeatherPOVTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F8C6701D12C2D000A997A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F8C6791D12C2D000A997A5 /* WeatherPOVUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3F8C66B1D12C2D000A997A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3F8C6541D12C2CF00A997A5 /* WeatherPOV */;
+			targetProxy = B3F8C66A1D12C2D000A997A5 /* PBXContainerItemProxy */;
+		};
+		B3F8C6761D12C2D000A997A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3F8C6541D12C2CF00A997A5 /* WeatherPOV */;
+			targetProxy = B3F8C6751D12C2D000A997A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B3F8C65C1D12C2CF00A997A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3F8C65D1D12C2CF00A997A5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B3F8C6611D12C2D000A997A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3F8C6621D12C2D000A997A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B3F8C67B1D12C2D000A997A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3F8C67C1D12C2D000A997A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3F8C67E1D12C2D000A997A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96D5F1584A71FD11A5909387 /* Pods-WeatherPOV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = WeatherPOV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOV;
+				PRODUCT_NAME = WeatherMasterDeluxe;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = WeatherPOV/bridging.h;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Pods/*";
+			};
+			name = Debug;
+		};
+		B3F8C67F1D12C2D000A997A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE1CA8B67341FE76AEF6AAC1 /* Pods-WeatherPOV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				INFOPLIST_FILE = WeatherPOV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOV;
+				PRODUCT_NAME = WeatherMasterDeluxe;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = WeatherPOV/bridging.h;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Pods/*";
+			};
+			name = Release;
+		};
+		B3F8C6811D12C2D000A997A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WeatherPOVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherMasterDeluxe.app/WeatherMasterDeluxe";
+			};
+			name = Debug;
+		};
+		B3F8C6821D12C2D000A997A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WeatherPOVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherMasterDeluxe.app/WeatherMasterDeluxe";
+			};
+			name = Release;
+		};
+		B3F8C6841D12C2D000A997A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WeatherPOVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TEST_TARGET_NAME = WeatherPOV;
+			};
+			name = Debug;
+		};
+		B3F8C6851D12C2D000A997A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WeatherPOVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TEST_TARGET_NAME = WeatherPOV;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3F8C6501D12C2CF00A997A5 /* Build configuration list for PBXProject "WeatherPOV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F8C67B1D12C2D000A997A5 /* Debug */,
+				B3F8C67C1D12C2D000A997A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3F8C67D1D12C2D000A997A5 /* Build configuration list for PBXNativeTarget "WeatherPOV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F8C67E1D12C2D000A997A5 /* Debug */,
+				B3F8C67F1D12C2D000A997A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3F8C6801D12C2D000A997A5 /* Build configuration list for PBXNativeTarget "WeatherPOVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F8C6811D12C2D000A997A5 /* Debug */,
+				B3F8C6821D12C2D000A997A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3F8C6831D12C2D000A997A5 /* Build configuration list for PBXNativeTarget "WeatherPOVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F8C6841D12C2D000A997A5 /* Debug */,
+				B3F8C6851D12C2D000A997A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3F8C64D1D12C2CF00A997A5 /* Project object */;
+}
