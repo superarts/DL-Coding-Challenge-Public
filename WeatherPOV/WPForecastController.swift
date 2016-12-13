@@ -19,7 +19,7 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
 		table.alpha = 0
 	}
 
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		//	Update location and reload UI while switching tabs, etc.
 		//	TODO: pull to reload
@@ -40,7 +40,7 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
 		locationManager.startUpdatingLocation()
 	}
 
-	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
+	func locationManager(_ manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
 		for location in locations {
 			//	SA.log("LOCATION updated", location)
 			//	Stop updating as soon as a recent location is obtained.
@@ -55,14 +55,14 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
 		}
 	}
 
-	func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+	func locationManager(_ manager: CLLocationManager, didFailWithError error: NSError) {
 		print("LOCATION error: \(error)")
 		//	TODO: check authorization status and prompt user to change this in settings. 
 		//	For a POV we always grant permission so minimal effect was spent here.
 		WP.showError(error, text: WP.s.location_failed)
 	}
 
-	func loadWeather(location: CLLocation) {
+	func loadWeather(_ location: CLLocation) {
 		if isLoadingWeather {
 			return
 		}
@@ -108,7 +108,7 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
 		}
 	}
 
-	func reloadTable(forecastdays: [WPForecastdayModel]) {
+	func reloadTable(_ forecastdays: [WPForecastdayModel]) {
 		//print("TABLE reload: \(forecastdays)")
 		source.counts = [forecastdays.count]
 		source.func_cell = {
@@ -140,23 +140,23 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
 	@IBOutlet var carousel: iCarousel!
 	var carouselDays: [WPForecastdayModel]?
 
-	func reloadCarousel(forecastdays: [WPForecastdayModel]) {
+	func reloadCarousel(_ forecastdays: [WPForecastdayModel]) {
 		carouselDays = forecastdays
-        carousel.type = .InvertedTimeMachine
+        carousel.type = .invertedTimeMachine
 		carousel.reloadData()
 	}
 
-    func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
+    func numberOfItemsInCarousel(_ carousel: iCarousel) -> Int {
 		if let count = carouselDays?.count {
 			return count
 		}
 		return 0
     }
 
-    func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
+    func carousel(_ carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
 		var controller: WPForecastThumbnailController!
         if (view == nil) {
-			controller = WP.storyboard.instantiateViewControllerWithIdentifier("WPForecastThumbnailController") as! WPForecastThumbnailController
+			controller = WP.storyboard.instantiateViewController(withIdentifier: "WPForecastThumbnailController") as! WPForecastThumbnailController
 			controller.view.frame = CGRect(x:0, y:0, width:200, height:200)
         } else if let view = view as? WPView {
 			controller = view.parentViewController as! WPForecastThumbnailController 
@@ -166,7 +166,7 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
         return controller.view
     }
 
-	func carousel(carousel: iCarousel, didSelectItemAtIndex index: Int) {
+	func carousel(_ carousel: iCarousel, didSelectItemAtIndex index: Int) {
 		if let controller = push_identifier("WPForecastDetailController") as? WPForecastDetailController {
 			controller.forecast = carouselDays?[index]
 		}
@@ -195,9 +195,9 @@ class WPForecastCell: UITableViewCell {
 		} else {
 			labelTitle.text = WP.s.unknown
 		}
-		if let text = forecast.fcttext where WP.isF {
+		if let text = forecast.fcttext , WP.isF {
 			labelText.text = text
-		} else if let text = forecast.fcttext_metric where WP.isC {
+		} else if let text = forecast.fcttext_metric , WP.isC {
 			labelText.text = text
 		} else {
 			labelText.text = WP.s.unknown

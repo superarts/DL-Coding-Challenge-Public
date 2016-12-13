@@ -4,7 +4,7 @@ import SAKit
 import Flurry_iOS_SDK
 
 protocol FizzBuzz {
-    static func getFizzBuzz(i: Int) -> String;
+    static func getFizzBuzz(_ i: Int) -> String;
 }
 
 /*
@@ -23,7 +23,7 @@ class FizzBuzzSpec: QuickSpec {
 */
 
 class MyFizzBuzz: FizzBuzz {
-    class func getFizzBuzz(i: Int) -> String {
+    class func getFizzBuzz(_ i: Int) -> String {
         if i % 15 == 0 {
             return "FizzBuzz"
         }
@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		//UIFont.print_all()
 		initParse(launchOptions)
 		initFlurry()
@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return true
 	}
 
-func test3(N : Int, inout _ S : String) -> Int {
+func test3(_ N : Int, _ S : inout String) -> Int {
     // write your code in Swift 2.2 (Linux)
     var count = 0
 	let array = S.characters.split{$0 == " "}.map(String.init)
@@ -89,7 +89,7 @@ func test3(N : Int, inout _ S : String) -> Int {
     return count
 }
 
-func sum(array: [Int], head: Int, tail a_tail: Int) -> Int {
+func sum(_ array: [Int], head: Int, tail a_tail: Int) -> Int {
 	var tail = a_tail
     var ret = 0
 	if tail >= array.count {
@@ -104,7 +104,7 @@ func sum(array: [Int], head: Int, tail a_tail: Int) -> Int {
     return ret
 }
 
-func solution1(inout A : [Int]) -> Int {
+func solution1(_ A : inout [Int]) -> Int {
     // write your code in Swift 2.2 (Linux)
 	for i in 0 ..< A.count - 1 {
 		let sum1 = sum(A, head: 0, tail: i - 1)
@@ -116,7 +116,7 @@ func solution1(inout A : [Int]) -> Int {
     return -1
 }
 
-internal func solution2(inout A : [Int]) -> Int {
+internal func solution2(_ A : inout [Int]) -> Int {
     // write your code in Swift 2.2 (Linux)
     var i = 0
     var count = 1
@@ -127,25 +127,25 @@ internal func solution2(inout A : [Int]) -> Int {
     return count
 }
 
-func weekday_to_int(weekday: String) -> Int {
+func weekday_to_int(_ weekday: String) -> Int {
     let weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    var i: Int! = weekdays.indexOf(weekday)
+    var i: Int! = weekdays.index(of: weekday)
     if i == nil {
         i = 0   // should be -1 but weekday is assumed to be valid
     }
     return i
 }
 
-func month_to_int(month: String) -> Int {
+func month_to_int(_ month: String) -> Int {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    var i: Int! = months.indexOf(month)
+    var i: Int! = months.index(of: month)
     if i == nil {
         i = 0   // should be -1 but weekday is assumed to be valid
     }
     return i
 }
 
-func is_leap_year(year: Int) -> Bool {
+func is_leap_year(_ year: Int) -> Bool {
 	//	"Assume that a year is a leap year if it is devisible by 4": so it's not on earth and we cannot use earth calander
 	if year < 0 || year > 999999999 {
 		return false
@@ -153,7 +153,7 @@ func is_leap_year(year: Int) -> Bool {
 	return year % 4 == 0
 }
 
-func days_of_month(month: Int, year: Int) -> Int {
+func days_of_month(_ month: Int, year: Int) -> Int {
 	let days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 	if month > 11 {
 		return 0
@@ -164,7 +164,7 @@ func days_of_month(month: Int, year: Int) -> Int {
 	return days[month]
 }
 
-func first_monday(month: String, year: Int, weekday: String) -> Int {
+func first_monday(_ month: String, year: Int, weekday: String) -> Int {
 	//print(weekday)
 	//print(weekday_to_int(weekday))
 	var days = 0
@@ -174,7 +174,7 @@ func first_monday(month: String, year: Int, weekday: String) -> Int {
 	return (10 - (days + weekday_to_int(weekday)) % 7) % 7
 }
 
-internal func solution(Y : Int, inout _ A : String, inout _ B : String, inout _ W : String) -> Int {
+internal func solution(_ Y : Int, _ A : inout String, _ B : inout String, _ W : inout String) -> Int {
     // write your code in Swift 2.2 (Linux)
     //day(B) - day(A) - week(A) % 7
     var ret = 0
@@ -186,7 +186,7 @@ internal func solution(Y : Int, inout _ A : String, inout _ B : String, inout _ 
     return (ret - weekday_to_int(W) - first_monday(A, year: Y, weekday: W) - 2) / 7
 }
 
-internal func solution3(A: [Int]) -> Int {
+internal func solution3(_ A: [Int]) -> Int {
     // write your code in Swift 2.2 (Linux)
     var count = 0
     for i in 0 ..< A.count - 1 {
@@ -244,22 +244,22 @@ internal func solution3(A: [Int]) -> Int {
 		print("test2 ----");
 	}
 
-	func applicationWillResignActive(application: UIApplication) {
+	func applicationWillResignActive(_ application: UIApplication) {
 	}
 
-	func applicationDidEnterBackground(application: UIApplication) {
+	func applicationDidEnterBackground(_ application: UIApplication) {
 	}
 
-	func applicationWillEnterForeground(application: UIApplication) {
+	func applicationWillEnterForeground(_ application: UIApplication) {
 	}
 
-	func applicationDidBecomeActive(application: UIApplication) {
+	func applicationDidBecomeActive(_ application: UIApplication) {
 	}
 
-	func applicationWillTerminate(application: UIApplication) {
+	func applicationWillTerminate(_ application: UIApplication) {
 	}
 
-	func initParse(launchOptions: [NSObject: AnyObject]?) {
+	func initParse(_ launchOptions: [AnyHashable: Any]?) {
 		//	Parse keys for project "playground": production keys should be
 		//	obfuscated and shouldn't be pushed to a public repo.
 		let applicationId	= "C4MCodjI5pFuctdLMDKSjgGSybVm9XWLFc7cmDQF"
@@ -272,7 +272,7 @@ internal func solution3(A: [Int]) -> Int {
 		})
 
 		//PFUser.logInWithUsername("no@name.com", password:"asdf")
-        if let user = PFUser.currentUser() {
+        if let user = PFUser.current() {
             WP.user = user
         } else {
 			//PFUser.enableAutomaticUser()
@@ -304,7 +304,7 @@ internal func solution3(A: [Int]) -> Int {
 		}
 	}
 
-	func getMultiplicationTable(max: Int) -> String {
+	func getMultiplicationTable(_ max: Int) -> String {
 		var ret = ""
 		for i in 1 ... max {
 			for ii in 1 ... max {
@@ -320,7 +320,7 @@ internal func solution3(A: [Int]) -> Int {
 	//  Default: US
 	//  US: isStartZero: false, isNoonAM: false
 	//  JP: isStartZero: true, isNoonAM: true
-	func getClock(hour: Int, isStartZero: Bool = false, isNoonAM: Bool = false) -> String {
+	func getClock(_ hour: Int, isStartZero: Bool = false, isNoonAM: Bool = false) -> String {
 		//  boundary checking
 		if hour < 0 {
 			return "Warning: input should not be less than 0"

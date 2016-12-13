@@ -89,12 +89,12 @@ class WPForecastDetailController: UITableViewController {
 			cellSnowAll.detailTextLabel?.text = str
 		}
 	}
-	override func viewDidAppear(animated: Bool) {
+	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		UIApplication.sharedApplication().statusBarStyle = .Default
+		UIApplication.shared.statusBarStyle = .default
 	}
     @IBAction func lf_actionPop() {
 		super.sakitActionPop()
-		UIApplication.sharedApplication().statusBarStyle = .LightContent
+		UIApplication.shared.statusBarStyle = .lightContent
 	}
 }

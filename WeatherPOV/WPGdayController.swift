@@ -12,17 +12,17 @@ class WPGdayController: SATableController {
 	// tap 100 buttons in 10 seconds
 	let gameMax = 25
 	let gameDuration = 10
-	var timer: NSTimer!
+	var timer: Timer!
 	var count = 0
 	var score = 0
 
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		//	update leaderboard silently
 		reloadTable()
 		//SA.log("GDAY user", WP.user)
 		if WP.user != nil {
-			buttonPlay.setTitle("PLAY GAME", forState:.Normal)
+			buttonPlay.setTitle("PLAY GAME", for:UIControlState())
 		}
 	}
 
@@ -38,8 +38,8 @@ class WPGdayController: SATableController {
 	func reloadTable() {
 		if let query = PFUser.query() {
 			query.limit = 100
-			query.orderByDescending("gday_score")
-			query.findObjectsInBackgroundWithBlock() {
+			query.order(byDescending: "gday_score")
+			query.findObjectsInBackground() {
 				(users, error) in
 				if let users = users as? [PFUser] {
 					self.source.counts = [users.count]
@@ -73,13 +73,13 @@ class WPGdayController: SATableController {
 
 //	MARK: gameplay
 	func gameStart() {
-		buttonPlay.setTitle("Start tapping!", forState:.Normal)
-		buttonPlay.enabled = false
+		buttonPlay.setTitle("Start tapping!", for:UIControlState())
+		buttonPlay.isEnabled = false
 		tabBarController?.tabBar.hidden = true
 	
 		score = 0
 		count = gameDuration
-		timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector:#selector(gameUpdate), userInfo:nil, repeats: true)
+		timer = Timer.scheduledTimer(timeInterval: 1, target:self, selector:#selector(gameUpdate), userInfo:nil, repeats: true)
 		   
 		for _ in 1...gameMax {
 			let max:UInt32 = UInt32(gameMax) + 1
@@ -112,7 +112,7 @@ class WPGdayController: SATableController {
 		}
 	}
 	func gameUpdate() {
-		buttonPlay.setTitle(String(count), forState:.Normal)
+		buttonPlay.setTitle(String(count), for:UIControlState())
 		count -= 1
 		if count == -1 {
 			gameEnd()
@@ -120,17 +120,17 @@ class WPGdayController: SATableController {
 	}
 	func gameEnd() {
 		timer.invalidate()
-		buttonPlay.setTitle("PLAY GAME", forState:.Normal)
+		buttonPlay.setTitle("PLAY GAME", for:UIControlState())
 		tabBarController?.tabBar.hidden = false
-		buttonPlay.enabled = true
+		buttonPlay.isEnabled = true
 		for button in self.buttons {
-			UIView.animateWithDuration(0.2, animations:{ 
+			UIView.animate(withDuration: 0.2, animations:{ 
 				() -> Void in
 				button.alpha = 0
-			}) {
+			}, completion: {
 				(done) -> Void in
 				button.removeFromSuperview()
-			}
+			}) 
 		}
 		buttons.removeAll()
 		gameSubmit()
@@ -152,7 +152,7 @@ class WPGdayController: SATableController {
 			}
 
 			WP.show(WP.s.submitting)
-			user.saveInBackgroundWithBlock() {
+			user.saveInBackground() {
 				(success, error) in
 				WP.hide()
 				if error != nil {
@@ -177,14 +177,14 @@ class WPGdayController: SATableController {
 			}
 		}
 	}
-	func gameTapped(button: UIButton) {
+	func gameTapped(_ button: UIButton) {
 		score += 1
-		UIView.animateWithDuration(0.2, animations:{ 
+		UIView.animate(withDuration: 0.2, animations:{ 
 			() -> Void in
 			button.alpha = 0
-		}) {
+		}, completion: {
 			(done) -> Void in
 			button.removeFromSuperview()
-		}
+		}) 
 	}
 }

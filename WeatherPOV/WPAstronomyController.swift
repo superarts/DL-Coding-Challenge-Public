@@ -22,7 +22,7 @@ class WPAstronomyController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	}
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		if let city = WP.station?.city {
 			labelTitle.text = city

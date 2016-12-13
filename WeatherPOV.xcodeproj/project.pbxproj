@@ -350,13 +350,16 @@
 					B3F8C6541D12C2CF00A997A5 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = AKGR9TT483;
+						LastSwiftMigration = 0800;
 					};
 					B3F8C6681D12C2D000A997A5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = B3F8C6541D12C2CF00A997A5;
 					};
 					B3F8C6731D12C2D000A997A5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = B3F8C6541D12C2CF00A997A5;
 					};
 				};
@@ -649,6 +652,7 @@
 				PRODUCT_NAME = WeatherMasterDeluxe;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = WeatherPOV/bridging.h;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Pods/*";
 			};
@@ -668,6 +672,7 @@
 				PRODUCT_NAME = WeatherMasterDeluxe;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = WeatherPOV/bridging.h;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Pods/*";
 			};
@@ -682,6 +687,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOVTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherMasterDeluxe.app/WeatherMasterDeluxe";
 			};
 			name = Debug;
@@ -695,6 +701,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOVTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherMasterDeluxe.app/WeatherMasterDeluxe";
 			};
 			name = Release;
@@ -707,6 +714,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOVUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = WeatherPOV;
 			};
 			name = Debug;
@@ -719,6 +727,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.superarts.WeatherPOVUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = WeatherPOV;
 			};
 			name = Release;

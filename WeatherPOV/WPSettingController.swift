@@ -14,22 +14,22 @@ class WPSettingController: UITableViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		if let unit = NSUserDefaults.integer(WP.key.unitTemperature) {
+		if let unit = UserDefaults.integer(WP.key.unitTemperature) {
 			segmentTemperature.selectedSegmentIndex = unit
 		}
-		if let unit = NSUserDefaults.integer(WP.key.unitShortDistance) {
+		if let unit = UserDefaults.integer(WP.key.unitShortDistance) {
 			segmentShortDistance.selectedSegmentIndex = unit
 		}
-		if let unit = NSUserDefaults.integer(WP.key.unitLongDistance) {
+		if let unit = UserDefaults.integer(WP.key.unitLongDistance) {
 			segmentLongDistance.selectedSegmentIndex = unit
 		}
 		reloadUnitSystem()
-		if let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String,
-			let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String {
+		if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
+			let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
 			cellVersion.detailTextLabel?.text = version + "." + build
 		}
 	}
-	override func viewDidAppear(animated: Bool) {
+	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		//UIApplication.sharedApplication().statusBarStyle = .Default
 	}
@@ -48,25 +48,25 @@ class WPSettingController: UITableViewController {
 		}
 	}
 
-	@IBAction func actionUnitChanged(segment: UISegmentedControl) {
+	@IBAction func actionUnitChanged(_ segment: UISegmentedControl) {
 		if segment == segmentTemperature {
-			NSUserDefaults.integer(WP.key.unitTemperature, segment.selectedSegmentIndex)
+			UserDefaults.integer(WP.key.unitTemperature, segment.selectedSegmentIndex)
 		} else if segment == segmentShortDistance {
-			NSUserDefaults.integer(WP.key.unitShortDistance, segment.selectedSegmentIndex)
+			UserDefaults.integer(WP.key.unitShortDistance, segment.selectedSegmentIndex)
 		} else if segment == segmentLongDistance {
-			NSUserDefaults.integer(WP.key.unitLongDistance, segment.selectedSegmentIndex)
+			UserDefaults.integer(WP.key.unitLongDistance, segment.selectedSegmentIndex)
 		} else if segment == segmentUnit {
 			segmentTemperature.selectedSegmentIndex		= segment.selectedSegmentIndex
 			segmentShortDistance.selectedSegmentIndex	= segment.selectedSegmentIndex
 			segmentLongDistance.selectedSegmentIndex	= segment.selectedSegmentIndex
-			NSUserDefaults.integer(WP.key.unitTemperature, segment.selectedSegmentIndex)
-			NSUserDefaults.integer(WP.key.unitShortDistance, segment.selectedSegmentIndex)
-			NSUserDefaults.integer(WP.key.unitLongDistance, segment.selectedSegmentIndex)
+			UserDefaults.integer(WP.key.unitTemperature, segment.selectedSegmentIndex)
+			UserDefaults.integer(WP.key.unitShortDistance, segment.selectedSegmentIndex)
+			UserDefaults.integer(WP.key.unitLongDistance, segment.selectedSegmentIndex)
 		}
 		reloadUnitSystem()
 	}
     @IBAction func lf_actionDismiss() {
 		super.sakitActionDismiss()
-		UIApplication.sharedApplication().statusBarStyle = .LightContent
+		UIApplication.shared.statusBarStyle = .lightContent
 	}
 }

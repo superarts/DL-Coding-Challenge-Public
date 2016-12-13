@@ -16,25 +16,25 @@ class WPRestClient<T: WPResultModel>: SARESTClient<T> {
 	RESTful API client wrapper class with helper function(s)
 */
 class WPClients {
-	class func geolookup(coordinate: CLLocationCoordinate2D, block: ((WPGeolookupResultModel?, NSError?) -> Void)? = nil) {
+	class func geolookup(_ coordinate: CLLocationCoordinate2D, block: ((WPGeolookupResultModel?, NSError?) -> Void)? = nil) {
 		let api = String(format:"%@%f,%f.json", WP.api.geolookup, coordinate.latitude, coordinate.longitude)
 		let client = WPRestClient<WPGeolookupResultModel>(api: api)
 		client.func_model = block
 		client.execute()
 	}
-	class func forecast(station: WPStationModel, block: ((WPForecastResultModel?, NSError?) -> Void)? = nil) {
+	class func forecast(_ station: WPStationModel, block: ((WPForecastResultModel?, NSError?) -> Void)? = nil) {
 		let api = String(format:"%@%@.json", WP.api.forecast, getLocationQuery(station))
 		let client = WPRestClient<WPForecastResultModel>(api: api)
 		client.func_model = block
 		client.execute()
 	}
-	class func astronomy(station: WPStationModel, block: ((WPAstronomyResultModel?, NSError?) -> Void)? = nil) {
+	class func astronomy(_ station: WPStationModel, block: ((WPAstronomyResultModel?, NSError?) -> Void)? = nil) {
 		let api = String(format:"%@%@.json", WP.api.astronomy, getLocationQuery(station))
 		let client = WPRestClient<WPAstronomyResultModel>(api: api)
 		client.func_model = block
 		client.execute()
 	}
-	class func getLocationQuery(station: WPStationModel) -> String {
+	class func getLocationQuery(_ station: WPStationModel) -> String {
 		//	In city like Sydney AU, state can be empty.
 		var country = ""
 		var state = ""

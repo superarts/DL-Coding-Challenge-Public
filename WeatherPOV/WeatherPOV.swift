@@ -62,7 +62,7 @@ struct WP {
 	}
 
 	//	utilities
-	static func periodToString(period: Int) -> String {
+	static func periodToString(_ period: Int) -> String {
 		if period == 1 {
 			return "Today"
 		} else if period == 2 {
@@ -72,10 +72,10 @@ struct WP {
 	}
 	//	temperature
 	static func isFahrenheit() -> Bool {
-		return NSUserDefaults.integer(WP.key.unitTemperature) == 0
+		return UserDefaults.integer(WP.key.unitTemperature) == 0
 	}
 	static func isCelsius() -> Bool {
-		return NSUserDefaults.integer(WP.key.unitTemperature) == 1
+		return UserDefaults.integer(WP.key.unitTemperature) == 1
 	}
 	static var isF: Bool {
 		return isFahrenheit()
@@ -85,10 +85,10 @@ struct WP {
 	}
 	//	short distance
 	static func isShortDistanceInch() -> Bool {
-		return NSUserDefaults.integer(WP.key.unitShortDistance) == 0
+		return UserDefaults.integer(WP.key.unitShortDistance) == 0
 	}
 	static func isShortDistanceCM() -> Bool {
-		return NSUserDefaults.integer(WP.key.unitShortDistance) == 1
+		return UserDefaults.integer(WP.key.unitShortDistance) == 1
 	}
 	static var isInch: Bool {
 		return isShortDistanceInch()
@@ -98,10 +98,10 @@ struct WP {
 	}
 	//	long distance
 	static func isLongDistanceMile() -> Bool {
-		return NSUserDefaults.integer(WP.key.unitLongDistance) == 0
+		return UserDefaults.integer(WP.key.unitLongDistance) == 0
 	}
 	static func isLongDistanceKM() -> Bool {
-		return NSUserDefaults.integer(WP.key.unitLongDistance) == 1
+		return UserDefaults.integer(WP.key.unitLongDistance) == 1
 	}
 	static var isMile: Bool {
 		return isLongDistanceMile()
@@ -110,20 +110,20 @@ struct WP {
 		return isLongDistanceKM()
 	}
 	//	display and hide a text message
-    static func show(text:String) {
-        if let app = UIApplication.sharedApplication().delegate as? AppDelegate, let window = app.window {
+    static func show(_ text:String) {
+        if let app = UIApplication.shared.delegate as? AppDelegate, let window = app.window {
             MBProgressHUD.show(text, view:window)
         }
     }
     static func hide() {
-        if let app = UIApplication.sharedApplication().delegate as? AppDelegate, let window = app.window {
-            MBProgressHUD.hideAllHUDsForView(window, animated:true)
+        if let app = UIApplication.shared.delegate as? AppDelegate, let window = app.window {
+            MBProgressHUD.hideAllHUDs(for: window, animated:true)
         }
     }
 	//	display an error for 2 seconds
-    static func showError(error:NSError?, text: String? = nil) {
+    static func showError(_ error:NSError?, text: String? = nil) {
 		hide()
-        if let app = UIApplication.sharedApplication().delegate as? AppDelegate, let window = app.window, let error = error {
+        if let app = UIApplication.shared.delegate as? AppDelegate, let window = app.window, let error = error {
             var message = error.localizedDescription
             if text != nil {
                 message = text! + message
@@ -132,9 +132,9 @@ struct WP {
         }
     }
 	//	display a text message for 2 seconds
-    static func showText(text:String) {
+    static func showText(_ text:String) {
 		hide()
-        if let app = UIApplication.sharedApplication().delegate as? AppDelegate, let window = app.window {
+        if let app = UIApplication.shared.delegate as? AppDelegate, let window = app.window {
             MBProgressHUD.show(text, view:window, duration:2)
         }
     }
@@ -148,16 +148,16 @@ class WPView: UIView {
 
 //	helper
 extension MBProgressHUD {
-	class func show(title: String, view: UIView, duration: Float? = nil) -> MBProgressHUD {
-		let hud = MBProgressHUD.showHUDAddedTo(view, animated: true) 
-		hud.detailsLabelFont = UIFont.systemFontOfSize(18)
-		hud.detailsLabelText = title
+	class func show(_ title: String, view: UIView, duration: Float? = nil) -> MBProgressHUD {
+		let hud = MBProgressHUD.showAdded(to: view, animated: true) 
+		hud?.detailsLabelFont = UIFont.systemFont(ofSize: 18)
+		hud?.detailsLabelText = title
 		if duration != nil {
-			hud.mode = MBProgressHUDMode.Text
-			hud.minShowTime = duration!
-			hud.graceTime = duration!
-			MBProgressHUD.hideAllHUDsForView(view, animated:true)
+			hud?.mode = MBProgressHUDMode.text
+			hud?.minShowTime = duration!
+			hud?.graceTime = duration!
+			MBProgressHUD.hideAllHUDs(for: view, animated:true)
 		}
-        return hud
+        return hud!
 	}
 }
