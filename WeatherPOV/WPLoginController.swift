@@ -25,8 +25,8 @@ class WPLoginController: SAViewController {
 		}
 		//	try to login first
         WP.show(WP.s.signing_in)
-		SA.log("username", fieldUsername.text)
-		SA.log("password", fieldPassword.text)
+		SA.log("username", fieldUsername.text as AnyObject?)
+		SA.log("password", fieldPassword.text as AnyObject?)
 		PFUser.logInWithUsername(inBackground: fieldUsername.text!, password:fieldPassword.text!) {
             (user, error) -> Void in
             WP.hide()
@@ -35,11 +35,11 @@ class WPLoginController: SAViewController {
                 self.sakitActionDismiss()
                 WP.user = user
             } else {
-				if let code = error?.code , code == 101 {
+				if let error = error as? NSError, error.code == 101 {
 					//	Got "invalid login parameters", now we try to sigin up
 					self.signup()
 				} else {
-					WP.showError(error, text:WP.s.signin_failed)
+					WP.showError(error as NSError?, text:WP.s.signin_failed)
 				}
             }
         }
@@ -67,7 +67,7 @@ class WPLoginController: SAViewController {
                 WP.showText(WP.s.signup_successful)
                 self.signin()
             } else {
-                WP.showError(error, text:WP.s.signup_failed)
+                WP.showError(error as NSError?, text:WP.s.signup_failed)
             }
         }
 	}

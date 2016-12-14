@@ -266,10 +266,12 @@ internal func solution3(_ A: [Int]) -> Int {
 		let clientKey		= "ik5E1yuhvPwUqiUBc6QyhSN3NSz3KyQmLWtOWHWw"
 		Parse.setApplicationId(applicationId, clientKey:clientKey)
 
+		/*
 		PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block:{
 			(success, error) in
 			SA.log("ANALYTICS success", success)
 		})
+        */
 
 		//PFUser.logInWithUsername("no@name.com", password:"asdf")
         if let user = PFUser.current() {

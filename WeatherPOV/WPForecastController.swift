@@ -15,7 +15,7 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		tabBarController?.tabBar.hidden = true
+		tabBarController?.tabBar.isHidden = true
 		table.alpha = 0
 	}
 
@@ -63,20 +63,23 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
 	}
 
 	func loadWeather(_ location: CLLocation) {
+		print("xx1")
 		if isLoadingWeather {
 			return
 		}
+		print("xx2")
 		isLoadingWeather = true
 		WPClients.geolookup(location.coordinate) {
 			(geolookup, error) -> Void in
-			//print("\(geolookup), \(error)")
+			print("\(geolookup), \(error)")
 			if error != nil {
-				SA.alert("Failed to connect to weather service", error!.localizedDescription)
+				SA.alert("Failed to connect to weather service", error!.localizedDescription as AnyObject?)
 			} else if let desc = geolookup?.response?.error?.type {
-				SA.alert("Failed to get location info", "Error type: " + desc)
+				let s = "Error type: " + desc
+				SA.alert("Failed to get location info", s as AnyObject?)
 			} else if let stations = geolookup?.location?.nearby_weather_stations?.airport?.station {
 				if stations.count <= 0 {
-					SA.alert("No weather station found", "There doesn't seem to be any weather stations around you. Please contact us at support@weatherpov.com")
+					SA.alert("No weather station found", "There doesn't seem to be any weather stations around you. Please contact us at support@weatherpov.com" as AnyObject?)
 				} else {
 					print("WEATHER 1st station: \(stations[0])")
 					//	Use the first (closest) weather station to get forecast.
@@ -93,7 +96,7 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
 							self.reloadTable(days)
 							if self.isTarBarHidden {
 								self.isTarBarHidden = false
-								self.tabBarController?.tabBar.hidden = false
+								self.tabBarController?.tabBar.isHidden = false
 							}
 						}
 						if let days = forecast?.forecast?.simpleforecast?.forecastday {
@@ -103,7 +106,7 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
 					}
 				}
 			} else {
-				SA.alert("Unknown data format from weather service", "Please make sure your app is up to date.")
+				SA.alert("Unknown data format from weather service", "Please make sure your app is up to date." as AnyObject?)
 			}
 		}
 	}
@@ -113,11 +116,11 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
 		source.counts = [forecastdays.count]
 		source.func_cell = {
 			(path) -> UITableViewCell in
-			let cell = self.table.dequeueReusableCellWithIdentifier("WPForecastCell") as! WPForecastCell
+			let cell = self.table.dequeueReusableCell(withIdentifier: "WPForecastCell") as! WPForecastCell
 			let forecast = forecastdays[path.row]
 			cell.forecast = forecast
 			if path.row % 2 == 0 {
-				cell.contentView.backgroundColor = .whiteColor()
+				cell.contentView.backgroundColor = .white
 			} else {
 				cell.contentView.backgroundColor = WP.color.tableInterlace
 			}
@@ -129,7 +132,7 @@ class WPForecastController: SATableController, CLLocationManagerDelegate {
 			return cell
 		}
 		table.reloadData()
-		UIView.animateWithDuration(0.3) { 
+		UIView.animate(withDuration: 0.3) { 
 			() -> Void in
 			self.table.alpha = 1
 		}

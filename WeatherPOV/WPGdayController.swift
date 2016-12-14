@@ -45,7 +45,7 @@ class WPGdayController: SATableController {
 					self.source.counts = [users.count]
 					self.source.func_cell = {
 						(path) -> UITableViewCell in
-						let cell = self.table.dequeueReusableCellWithIdentifier("WPGdayRankCell")!
+						let cell = self.table.dequeueReusableCell(withIdentifier: "WPGdayRankCell")!
 						let user = users[path.row]
 						if let username = user.username {
 							cell.textLabel?.text = String(format: "%zi. %@", path.row + 1, username)
@@ -59,7 +59,7 @@ class WPGdayController: SATableController {
 							cell.detailTextLabel?.text = "-"
 						}
 						if path.row % 2 == 0 {
-							cell.contentView.backgroundColor = .whiteColor()
+							cell.contentView.backgroundColor = .white
 						} else {
 							cell.contentView.backgroundColor = WP.color.tableInterlace
 						}
@@ -75,7 +75,7 @@ class WPGdayController: SATableController {
 	func gameStart() {
 		buttonPlay.setTitle("Start tapping!", for:UIControlState())
 		buttonPlay.isEnabled = false
-		tabBarController?.tabBar.hidden = true
+		tabBarController?.tabBar.isHidden = true
 	
 		score = 0
 		count = gameDuration
@@ -97,12 +97,12 @@ class WPGdayController: SATableController {
 				let h:CGFloat = 50
 				let x = CGFloat(arc4random_uniform(UInt32(self.view.w) - UInt32(bw) * 2)) + CGFloat(bw) - w / 2
 				let y = CGFloat(arc4random_uniform(UInt32(self.view.h) - UInt32(bh) * 2)) + CGFloat(bh) - h / 2
-				let button = UIButton(frame: CGRectMake(x, y, w, h))
-				button.enable_border(width:0, color:.blueColor(), is_circle:true)
-				button.setImage(UIImage(named:"icon.png"), forState:.Normal)
-				button.addTarget(self, action:#selector(self.gameTapped), forControlEvents:.TouchUpInside)
+				let button = UIButton(frame: CGRect(x: x, y: y, width: w, height: h))
+				button.enable_border(width:0, color:.blue, is_circle:true)
+				button.setImage(UIImage(named:"icon.png"), for:.normal)
+				button.addTarget(self, action:#selector(self.gameTapped), for:.touchUpInside)
 				button.alpha = 0
-				UIView.animateWithDuration(0.5) { 
+				UIView.animate(withDuration: 0.5) { 
 					() -> Void in
 					button.alpha = 1
 				}
@@ -121,7 +121,7 @@ class WPGdayController: SATableController {
 	func gameEnd() {
 		timer.invalidate()
 		buttonPlay.setTitle("PLAY GAME", for:UIControlState())
-		tabBarController?.tabBar.hidden = false
+		tabBarController?.tabBar.isHidden = false
 		buttonPlay.isEnabled = true
 		for button in self.buttons {
 			UIView.animate(withDuration: 0.2, animations:{ 
@@ -156,13 +156,13 @@ class WPGdayController: SATableController {
 				(success, error) in
 				WP.hide()
 				if error != nil {
-					WP.showError(error, text:WP.s.submit_failed)
+					WP.showError(error as NSError?, text:WP.s.submit_failed)
 					return
 				}
 				SA.alert("Congratulations!", 
 					String(format: "Your score has been posted!\n\nPrevious: %zi\n\nTapped: %zi\nWeather: x%zi\nThis score: %zi\n\nYOUR TOTAL SCORE: %zi", 
 						scorePrev, self.score, factor, self.score * factor, user["gday_score"] as! Int
-					)
+					) as AnyObject?
 				)
 				self.reloadTable()
 			}
@@ -171,10 +171,12 @@ class WPGdayController: SATableController {
 			scoreObject["user"] = user
 			scoreObject["score"] = score
 			scoreObject["factor"] = factor
+			/*
 			scoreObject.saveInBackgroundWithBlock() {
 				(success, error) in
 				SA.log("SCORE submission result", error)
 			}
+            */
 		}
 	}
 	func gameTapped(_ button: UIButton) {

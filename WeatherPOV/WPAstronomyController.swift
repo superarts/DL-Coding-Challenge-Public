@@ -32,7 +32,7 @@ class WPAstronomyController: UITableViewController {
 				(astronomy, error) -> Void in
 				//print(astronomy)
 				if error != nil {
-					SA.alert("Failed to connect to weather service", error!.localizedDescription)
+					SA.alert("Failed to connect to weather service", error!.localizedDescription as AnyObject?)
 					return
 				}
 				if let time = astronomy?.moon_phase?.current_time?.str {

@@ -20,6 +20,7 @@ class WPClients {
 		let api = String(format:"%@%f,%f.json", WP.api.geolookup, coordinate.latitude, coordinate.longitude)
 		let client = WPRestClient<WPGeolookupResultModel>(api: api)
 		client.func_model = block
+		print("geolookup: \(api)")
 		client.execute()
 	}
 	class func forecast(_ station: WPStationModel, block: ((WPForecastResultModel?, NSError?) -> Void)? = nil) {
@@ -47,7 +48,7 @@ class WPClients {
 		}
 		if let s = station.city?.escape() {
 			//	e.g. France/Paris-Montsouris doesn't work
-			city = "/" + s.stringByReplacingOccurrencesOfString("-", withString:"%20")
+			city = "/" + s.replacingOccurrences(of: "-", with: "%20")
 		}
 		return country + state + city
 	}

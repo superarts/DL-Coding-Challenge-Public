@@ -21,7 +21,7 @@ class WPRadarController: UIViewController {
 		if let api = WP.api.radar() {
 			//	TODO: error handling while fetching image failed
 			SA.dispatch_main() {
-				self.imageRadar.image = UIImage.animatedImageWithAnimatedGIFURL(URL(string: api))
+				self.imageRadar.image = UIImage.animatedImage(withAnimatedGIFURL: URL(string: api))
 			}
 		} else {
 			labelTitle.text = WP.s.unknown
